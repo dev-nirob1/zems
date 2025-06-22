@@ -1,8 +1,18 @@
 <script setup>
-
+import FooterSection from '@/components/Section/FooterSection.vue';
+import HeaderSection from '@/components/Section/HeaderSection.vue';
 import { RouterView } from 'vue-router';
 </script>
 
 <template>
-  <RouterView/>
+  <HeaderSection />
+  <main>
+<RouterView />
+  </main>
+  <FooterSection />
 </template>
+<style>
+main {
+  min-height:100vh;
+}
+</style>
