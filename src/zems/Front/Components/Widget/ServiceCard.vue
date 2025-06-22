@@ -2,7 +2,6 @@
 import BaseParagraph from '@/components/Elements/BaseParagraph.vue';
 import BaseTitle from '@/components/Elements/BaseTitle.vue';
 import { RouterLink } from 'vue-router';
-
 </script>
 
 <template>
@@ -20,7 +19,7 @@ import { RouterLink } from 'vue-router';
 .service-card {
   border-radius: .75rem;
   padding: 2rem 1.5rem;
-  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
+  box-shadow: var(--box-shadow);
   cursor: pointer;
   transition: all 0.3s ease;
 }
@@ -33,7 +32,7 @@ import { RouterLink } from 'vue-router';
   height: 70px;
   width: 70px;
   border-radius: 50%;
-  margin-bottom: 1rem;
+  margin-bottom: 1.5rem;
   background-color: rgb(from var(--primary-light-color)r g b / 70%);
   display: flex;
   align-items: center;
