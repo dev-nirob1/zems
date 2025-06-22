@@ -7,7 +7,7 @@ import HeroTitle from '@/components/Elements/HeroTitle.vue';
 </script>
 
 <template>
-  <section class="hero">
+  <section class="hero bg-light">
     <div class="container medium-2 align-center gap-2 py-4">
       <!-- content container  -->
       <div>
@@ -40,7 +40,15 @@ import HeroTitle from '@/components/Elements/HeroTitle.vue';
 .hero {
   padding: 3.75rem 0;
 }
+.hero .btn {
+  padding: 1rem;
+}
 .hero p {
   font-size: 1.15rem;
+}
+@media (min-width: 768px){
+ .hero .btn {
+  padding: 1.25rem 2rem;
+}
 }
 </style>

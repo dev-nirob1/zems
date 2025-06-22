@@ -6,7 +6,7 @@ import ListItem from '../Elements/ListItem.vue';
 </script>
 
 <template>
-  <header class="navbar bg-primary">
+  <header class="navbar">
     <nav class="flex justify-between align-center container">
       <!-- Logo -->
       <RouterLink to="/" class="logo">

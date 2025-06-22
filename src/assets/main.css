@@ -11,17 +11,15 @@ html {
   --montserrat-font: 'Montserrat', sans-serif;
   --roboto-font: 'Roboto', serif;
 
-  --primary-color: #63c8d4;
-  --primary-light-color: #a3feff;
-  --primary-lighten-color: #d0f1f8;
-  --primary-light-black-color: #adbfbf;
-  --secondary-color: #002e5b;
-  --alternative-color: #f69052;
-  --dark-color: #212529;
+  --primary-color: #237B00;
+  --primary-light-color: #22C503;
+  --secondary-color: #e73b3b;
+  --alternative-color: #f58f92;
+  --dark-color: #213036;
   --light-color: #585b5e;
   --white-color: #fff;
   --border-color: #dee2e6;
-
+  --body-bg: #faf9f6;
   --danger-color: #dc3545;
   --warning-color: #ffc107;
   --success-color: #198754;
@@ -44,8 +42,8 @@ body {
   font-family: var(--montserrat-font);
   line-height: 1.6;
   font-size: 1rem;
-  color: var(--secondary-color);
-  background-color: #faf9f6;
+  color: var(--dark-color);
+  background-color: var(--body-bg);
 }
 
 h1,
@@ -57,7 +55,6 @@ h6 {
   margin: 0;
   line-height: 1.3;
   font-family: var(--roboto-font);
-  /* color: var(--dark-color); */
 }
 
 h1 {
@@ -128,10 +125,9 @@ a {
 }
 
 .bg-light {
-  /* background-color: rgb(from var(--primary-color) r g b/ 5%); */
-  background-color: #d4ebff;
+  background-color: rgb(from var(--primary-color) r g b / 10%);
 }
-.bg-lighten{
+.bg-lighten {
   background-color: var(--primary-lighten-color);
 }
 
@@ -216,7 +212,6 @@ a {
   border: none;
   outline: none;
   /* padding: 1rem 1rem; */
-  border-radius: 4px;
   font-size: 1rem;
   text-align: center;
   transition: all 0.3s ease;

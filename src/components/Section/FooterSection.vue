@@ -1,5 +1,11 @@
 <script setup>
 import { RouterLink } from 'vue-router';
+import BaseImage from '../Elements/BaseImage.vue';
+import SubTitle from '../Elements/SubTitle.vue';
+import ListItem from '../Elements/ListItem.vue';
+import BaseButton from '../Elements/BaseButton.vue';
+import InputField from '../Elements/InputField.vue';
+import BaseParagraph from '../Elements/BaseParagraph.vue';
 
 </script>
 
@@ -8,86 +14,82 @@ import { RouterLink } from 'vue-router';
       <div class="container medium-2 large-4 gap-2 py-2">
         <!-- Footer logo and social media links -->
         <div>
-          <RouterLink to="/" class="logo" style="width: 250px;">
-            <img
-              class="width-full"
-              src="https://zems.uk/uploads/brands/logo.png"
-              alt="logo"
-            />
+          <RouterLink to="/" class="logo">
+            <BaseImage image="https://zems.uk/uploads/brands/logo.png" class="width-full"  alt="logo"/>
           </RouterLink>
 
-          <p>Your gateway to exclusive discounts and savings</p>
+          <BaseParagraph>Your gateway to exclusive discounts and savings</BaseParagraph>
           <div class="social-links">
-            <a href="/#"><i class="fab fa-facebook-f"></i></a>
-            <a href="/#"><i class="fab fa-twitter"></i></a>
-            <a href="/#"><i class="fab fa-instagram"></i></a>
-            <a href="/#"><i class="fab fa-pinterest-p"></i></a>
+            <RouterLink to="/#"><i class="fab fa-facebook-f"></i></RouterLink>
+            <RouterLink to="/#"><i class="fab fa-twitter"></i></RouterLink>
+            <RouterLink to="/#"><i class="fab fa-instagram"></i></RouterLink>
+            <RouterLink to="/#"><i class="fab fa-pinterest-p"></i></RouterLink>
           </div>
         </div>
         <!-- Quick navigation links -->
         <div>
-          <h5 class="title">Quick Links</h5>
+          <SubTitle>Quick Links</SubTitle>
           <ul class="footer-links">
-            <li>
-              <a href="/">Home</a>
-            </li>
-            <li>
-              <a href="/">All Coupons</a>
-            </li>
-            <li>
-              <a href="/">Stores</a>
-            </li>
-            <li>
-              <a href="/">Categories</a>
-            </li>
-            <li>
-              <a href="/">Savings Tips</a>
-            </li>
+            <ListItem>
+              <RouterLink to="/">Home</RouterLink>
+            </ListItem>
+            <ListItem>
+              <RouterLink to="/">All Coupons</RouterLink>
+            </ListItem>
+            <ListItem>
+              <RouterLink to="/">Stores</RouterLink>
+            </ListItem>
+            <ListItem>
+              <RouterLink to="/">Categories</RouterLink>
+            </ListItem>
+            <ListItem>
+              <RouterLink to="/">Savings Tips</RouterLink>
+            </ListItem>
           </ul>
         </div>
         <!-- Coupon policy related links -->
         <div>
-          <h5 class="title">Coupon Policies</h5>
+          <SubTitle>Coupon Policies</SubTitle>
           <ul class="footer-links">
-            <li>
-              <a href="/">How it Works</a>
-            </li>
-            <li>
-              <a href="/">FAQ</a>
-            </li>
-            <li>
-              <a href="/">Terms of Services</a>
-            </li>
-            <li>
-              <a href="/">Privacy Policy</a>
-            </li>
-            <li>
-              <a href="/">Contact Us</a>
-            </li>
+            <ListItem>
+              <RouterLink to="/">How it Works</RouterLink>
+            </ListItem>
+            <ListItem>
+              <RouterLink to="/">FAQ</RouterLink>
+            </ListItem>
+            <ListItem>
+              <RouterLink to="/">Terms of Services</RouterLink>
+            </ListItem>
+            <ListItem>
+              <RouterLink to="/">Privacy Policy</RouterLink>
+            </ListItem>
+            <ListItem>
+              <RouterLink to="/">Contact Us</RouterLink>
+            </ListItem>
           </ul>
         </div>
         <!-- Newsletter subscription form -->
         <div>
           <h5 class="title">Get Exclusive Deals</h5>
-          <p>Subscribe to receive special offers before anyone else</p>
+          <BaseParagraph>Subscribe to receive special offers before anyone else</BaseParagraph>
           <form class="subscribe-form">
-            <input type="email" placeholder="Your email address" required />
-            <button class="btn" type="submit">
+            <InputField type="email" placeholder="Your email address" required />
+            <BaseButton type="submit">
               <i class="fas fa-paper-plane"></i>
-            </button>
+            </BaseButton>
           </form>
         </div>
       </div>
       <!-- Footer bottom copyright -->
       <div class="footer-bottom">
-        © 2025 CouponSavings. All rights reserved.
+        All rights reserved. © Zems 2025.
       </div>
     </footer>
 </template>
 
 <style scoped>
 .footer {
-  background-color: var(--secondary-color);
+  background-color: var(--primary-color);
   color: var(--white-color);
 }
 .footer h5 {
@@ -121,7 +123,7 @@ import { RouterLink } from 'vue-router';
   display: flex;
   align-items: center;
   justify-content: center;
-  background-color: var(--primary-color);
+  background-color: var(--primary-light-color);
 }
 .social-links a:hover i {
   transform: scale(1.2);
@@ -134,7 +136,7 @@ import { RouterLink } from 'vue-router';
   bottom: 0;
   width: 70px;
   height: 3px;
-  background-color: var(--primary-color);
+  background-color: var(--primary-light-color);
 }
 .footer ul {
   list-style: none;
@@ -153,13 +155,13 @@ import { RouterLink } from 'vue-router';
 }
 .footer ul a::before {
   content: "→";
-  color: var(--primary-color);
+  color: var(--primary-light-color);
   opacity: 0;
   display: none;
   transition: all 0.3s ease;
 }
 .footer ul a:hover {
-  color: var(--primary-color);
+  color: var(--primary-light-color);
   padding-left: 5px;
 }
 .footer ul a:hover::before {
@@ -175,22 +177,20 @@ import { RouterLink } from 'vue-router';
   flex: 1;
   padding: 0.8rem 1.2rem;
   border: none;
-  border-radius: 0.5rem 0 0 0.5rem;
   outline: none;
   font-size: 0.95rem;
   background-color: var(--white-color);
 }
 .subscribe-form .btn {
   padding: 1rem 2rem;
-  background-color: var(--primary-color);
+  background-color: var(--primary-light-color);
   color: var(--white-color);
   border: none;
-  border-radius: 0 0.5rem 0.5rem 0;
 }
 /* Footer copyright bar*/
 .footer-bottom {
   padding: 1.5rem;
   text-align: center;
-  background-color: rgb(from var(--primary-color) r g b/ 10%);
+  background-color: rgb(from var(--primary-light-color)r g b / 25%);
 }
 </style>
