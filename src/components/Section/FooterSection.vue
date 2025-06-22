@@ -10,7 +10,7 @@ import BaseParagraph from '../Elements/BaseParagraph.vue';
 </script>
 
 <template>
-     <footer class="footer pt-5">
+     <footer class="footer">
       <div class="container medium-2 large-4 gap-2 py-2">
         <!-- Footer logo and social media links -->
         <div>
@@ -89,7 +89,7 @@ import BaseParagraph from '../Elements/BaseParagraph.vue';
 
 <style scoped>
 .footer {
-  background-color: var(--primary-color);
+  background-color: rgb(from var(--primary-light-color) r g b / 50%);
   color: var(--white-color);
 }
 .footer h5 {

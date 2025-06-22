@@ -2,15 +2,20 @@
 import BaseParagraph from '@/components/Elements/BaseParagraph.vue';
 import BaseTitle from '@/components/Elements/BaseTitle.vue';
 import { RouterLink } from 'vue-router';
+defineProps({
+  service: {
+    type: Object
+  }
+})
 </script>
 
 <template>
   <div class="service-card">
     <div class="icon">
-      <i class="fas fa-code fa-2x text-primary"></i>
+      <img :src="service.icon" alt="icon">
     </div>
-    <BaseTitle tag="h5">Web Development</BaseTitle>
-    <BaseParagraph>Custom websites and web applications built with modern technologies.</BaseParagraph>
+    <BaseTitle tag="h5">{{ service.title }}</BaseTitle>
+    <BaseParagraph>{{service.description}}</BaseParagraph>
     <RouterLink to="">Learn More <i class="fas fa-arrow-right"></i></RouterLink>
   </div>
 </template>
@@ -28,7 +33,7 @@ import { RouterLink } from 'vue-router';
   transform: translateY(-.5rem);
 }
 
-.service-card .icon {
+/* .service-card .icon {
   height: 70px;
   width: 70px;
   border-radius: 50%;
@@ -37,8 +42,10 @@ import { RouterLink } from 'vue-router';
   display: flex;
   align-items: center;
   justify-content: center;
+} */
+.service-card .icon {
+  margin-bottom: 1rem;
 }
-
 .service-card a {
   text-decoration: none;
   color: var(--secondary-color);

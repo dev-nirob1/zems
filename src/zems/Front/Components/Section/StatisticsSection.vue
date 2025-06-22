@@ -73,7 +73,7 @@ import ListItem from '@/components/Elements/ListItem.vue';
 }
 
 .statistics .stats-content li i {
-  color: var(--primary-color);
+  color: var(--primary-light-color);
 }
 
 .statistics .stats-content p {
