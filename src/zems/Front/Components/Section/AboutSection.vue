@@ -8,7 +8,7 @@ import SectionTitle from '@/components/Widget/SectionTitle.vue';
 </script>
 
 <template>
-  <section class="about">
+  <section class="about mt-5 bg-white">
     <div class="container medium-2 gap-3 align-center">
       <!-- img container  -->
       <div class="width-full height-full">
