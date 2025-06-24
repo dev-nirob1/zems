@@ -7,7 +7,7 @@ import HeroTitle from '@/components/Elements/HeroTitle.vue';
 </script>
 
 <template>
-  <section class="hero bg-light">
+  <section class="hero">
     <div class="container medium-2 align-center gap-2 py-4">
       <!-- content container  -->
       <div>
@@ -39,6 +39,7 @@ import HeroTitle from '@/components/Elements/HeroTitle.vue';
 <style scoped>
 .hero {
   padding: 3.75rem 0;
+ background-color: rgb(from var(--primary-color) r g b / 10%);
 }
 .hero .btn {
   padding: 1rem;

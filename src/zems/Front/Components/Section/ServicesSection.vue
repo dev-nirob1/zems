@@ -39,7 +39,7 @@ const services = ref([
 
 <template>
 
-  <section class="services">
+  <section class="services bg-light">
     <div class="container">
       <SectionTitle title="Our Main Focus" subTitle="Our Services"/>
       <div class="medium-2 large-3 gap-2">

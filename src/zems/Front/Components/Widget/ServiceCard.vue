@@ -24,6 +24,7 @@ defineProps({
 .service-card {
   border-radius: .75rem;
   padding: 2rem 1.5rem;
+  background-color: var(--white-color);
   box-shadow: var(--box-shadow);
   cursor: pointer;
   transition: all 0.3s ease;

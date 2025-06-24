@@ -11,7 +11,7 @@ import BaseParagraph from '../Elements/BaseParagraph.vue';
 
 <template>
       <footer class="footer">
-      <div class="container medium-2 large-4 gap-2 py-2">
+      <div class="container medium-2 large-4 gap-2 pb-2">
         <!-- Company logo and description -->
         <div>
           <RouterLink to="/" class="logo">
@@ -89,8 +89,8 @@ import BaseParagraph from '../Elements/BaseParagraph.vue';
 
 <style scoped>
 .footer {
+  padding-top: 10rem;
   background-color: rgb(from var(--primary-light-color) r g b / 10%);
-  /* color: var(--white-color); */
 }
 .footer h5 {
   margin-bottom: 1.5rem;

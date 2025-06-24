@@ -125,7 +125,7 @@ a {
 }
 
 .bg-light {
-  background-color: rgb(from var(--primary-color) r g b / 10%);
+  background-color: rgb(from var(--primary-color) r g b / 5%);
 }
 .bg-lighten {
   background-color: var(--primary-lighten-color);
