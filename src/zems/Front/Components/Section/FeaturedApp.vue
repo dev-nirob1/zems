@@ -27,7 +27,7 @@ import SectionTitle from '@/components/Widget/SectionTitle.vue';
           <!-- <ListItem><BaseButton>Upcoming</BaseButton></ListItem> -->
         </ul>
       </div>
-      
+
       <div class="medium-2 gap-2 align-center">
         <div class="app-image">
           <BaseImage
@@ -95,8 +95,8 @@ import SectionTitle from '@/components/Widget/SectionTitle.vue';
 
 @media (min-width: 768px) {
   .tab-panel ul li .btn {
-    font-size: 1.25rem;
-    padding: 1.25rem 2rem;
+    font-size: 1.15rem;
+    padding: 1.15rem 1.75rem;
   }
 }
 </style>

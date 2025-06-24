@@ -1,4 +1,5 @@
 <script setup>
+import AboutSection from '../Components/Section/AboutSection.vue';
 import FeaturedApp from '../Components/Section/FeaturedApp.vue';
 import HeroSection from '../Components/Section/HeroSection.vue';
 import PricingSection from '../Components/Section/PricingSection.vue';
@@ -10,6 +11,7 @@ import StatisticsSection from '../Components/Section/StatisticsSection.vue';
 
 <template>
   <HeroSection />
+  <AboutSection/>
   <ServicesSection />
   <FeaturedApp/>
   <StatisticsSection />
