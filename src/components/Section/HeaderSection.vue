@@ -53,7 +53,7 @@ import ListItem from '../Elements/ListItem.vue';
 
 .navbar {
   backdrop-filter: blur(50px);
-  color: var(--white-color);
+  /* color: var(--white-color); */
   padding: 0.75rem 0;
   position: fixed;
   top: 0;
@@ -103,7 +103,7 @@ import ListItem from '../Elements/ListItem.vue';
   left: -100%;
   width: 80%;
   margin: 0;
-  color: var(--white-color);
+  /* color: var(--white-color); */
   background: var(--secondary-color);
   flex-direction: column;
   align-items: flex-start;
@@ -158,7 +158,7 @@ import ListItem from '../Elements/ListItem.vue';
 
   .navbar ul {
     position: inherit;
-    color: var(--white-color);
+    /* color: var(--white-color); */
     width: 100%;
     flex-direction: row;
     justify-content: flex-end;

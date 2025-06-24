@@ -10,55 +10,55 @@ import BaseParagraph from '../Elements/BaseParagraph.vue';
 </script>
 
 <template>
-     <footer class="footer">
+      <footer class="footer">
       <div class="container medium-2 large-4 gap-2 py-2">
-        <!-- Footer logo and social media links -->
+        <!-- Company logo and description -->
         <div>
           <RouterLink to="/" class="logo">
-            <BaseImage image="https://zems.uk/uploads/brands/logo.png" class="width-full"  alt="logo"/>
+            <BaseImage image="https://zems.uk/uploads/brands/logo.png" class="width-full" alt="Company Logo"/>
           </RouterLink>
 
-          <BaseParagraph>Your gateway to exclusive discounts and savings</BaseParagraph>
+          <BaseParagraph>Innovative software solutions for businesses across Ireland and beyond</BaseParagraph>
           <div class="social-links">
-            <RouterLink to="/#"><i class="fab fa-facebook-f"></i></RouterLink>
-            <RouterLink to="/#"><i class="fab fa-twitter"></i></RouterLink>
-            <RouterLink to="/#"><i class="fab fa-instagram"></i></RouterLink>
-            <RouterLink to="/#"><i class="fab fa-pinterest-p"></i></RouterLink>
+            <RouterLink to="/"><i class="fab fa-linkedin-in"></i></RouterLink>
+            <RouterLink to="/"><i class="fab fa-twitter"></i></RouterLink>
+            <RouterLink to="/"><i class="fab fa-github"></i></RouterLink>
+            <RouterLink to="/"><i class="fab fa-facebook-f"></i></RouterLink>
           </div>
         </div>
-        <!-- Quick navigation links -->
+        <!-- Services links -->
         <div>
-          <SubTitle>Quick Links</SubTitle>
+          <SubTitle>Our Services</SubTitle>
           <ul class="footer-links">
             <ListItem>
-              <RouterLink to="/">Home</RouterLink>
+              <RouterLink to="/">Software Development</RouterLink>
             </ListItem>
             <ListItem>
-              <RouterLink to="/">All Coupons</RouterLink>
+              <RouterLink to="/">Web Applications</RouterLink>
             </ListItem>
             <ListItem>
-              <RouterLink to="/">Stores</RouterLink>
+              <RouterLink to="/">Mobile App Development</RouterLink>
             </ListItem>
             <ListItem>
-              <RouterLink to="/">Categories</RouterLink>
+              <RouterLink to="/">Cloud Solutions</RouterLink>
             </ListItem>
             <ListItem>
-              <RouterLink to="/">Savings Tips</RouterLink>
+              <RouterLink to="/">IT Consulting</RouterLink>
             </ListItem>
           </ul>
         </div>
-        <!-- Coupon policy related links -->
+        <!-- Company information links -->
         <div>
-          <SubTitle>Coupon Policies</SubTitle>
+          <SubTitle>Company</SubTitle>
           <ul class="footer-links">
             <ListItem>
-              <RouterLink to="/">How it Works</RouterLink>
+              <RouterLink to="/">About Us</RouterLink>
             </ListItem>
             <ListItem>
-              <RouterLink to="/">FAQ</RouterLink>
+              <RouterLink to="/">Careers</RouterLink>
             </ListItem>
             <ListItem>
-              <RouterLink to="/">Terms of Services</RouterLink>
+              <RouterLink to="/">Case Studies</RouterLink>
             </ListItem>
             <ListItem>
               <RouterLink to="/">Privacy Policy</RouterLink>
@@ -70,8 +70,8 @@ import BaseParagraph from '../Elements/BaseParagraph.vue';
         </div>
         <!-- Newsletter subscription form -->
         <div>
-          <h5 class="title">Get Exclusive Deals</h5>
-          <BaseParagraph>Subscribe to receive special offers before anyone else</BaseParagraph>
+          <h5 class="title">Stay Updated</h5>
+          <BaseParagraph>Subscribe to our newsletter for tech insights and company news</BaseParagraph>
           <form class="subscribe-form">
             <InputField type="email" placeholder="Your email address" required />
             <BaseButton type="submit">
@@ -80,17 +80,17 @@ import BaseParagraph from '../Elements/BaseParagraph.vue';
           </form>
         </div>
       </div>
-      <!-- Footer bottom copyright -->
+      <!-- Footer bottom copyright with Irish location -->
       <div class="footer-bottom">
-        All rights reserved. © Zems 2025.
+        <p>© 2025 Zems. All rights reserved. Registered in Ireland.</p>
       </div>
     </footer>
 </template>
 
 <style scoped>
 .footer {
-  background-color: rgb(from var(--primary-light-color) r g b / 50%);
-  color: var(--white-color);
+  background-color: rgb(from var(--primary-light-color) r g b / 10%);
+  /* color: var(--white-color); */
 }
 .footer h5 {
   margin-bottom: 1.5rem;
@@ -123,7 +123,8 @@ import BaseParagraph from '../Elements/BaseParagraph.vue';
   display: flex;
   align-items: center;
   justify-content: center;
-  background-color: var(--primary-light-color);
+  background-color: var(--secondary-color);
+  color: var(--white-color);
 }
 .social-links a:hover i {
   transform: scale(1.2);
@@ -136,7 +137,7 @@ import BaseParagraph from '../Elements/BaseParagraph.vue';
   bottom: 0;
   width: 70px;
   height: 3px;
-  background-color: var(--primary-light-color);
+  background-color: var(--secondary-color);
 }
 .footer ul {
   list-style: none;
@@ -155,13 +156,13 @@ import BaseParagraph from '../Elements/BaseParagraph.vue';
 }
 .footer ul a::before {
   content: "→";
-  color: var(--primary-light-color);
+  /* color: var(--primary-light-color); */
   opacity: 0;
   display: none;
   transition: all 0.3s ease;
 }
 .footer ul a:hover {
-  color: var(--primary-light-color);
+  /* color: var(--secondary-color); */
   padding-left: 5px;
 }
 .footer ul a:hover::before {
@@ -183,14 +184,14 @@ import BaseParagraph from '../Elements/BaseParagraph.vue';
 }
 .subscribe-form .btn {
   padding: 1rem 2rem;
-  background-color: var(--primary-light-color);
+  background-color: var(--secondary-color);
   color: var(--white-color);
   border: none;
 }
 /* Footer copyright bar*/
 .footer-bottom {
-  padding: 1.5rem;
+  padding: 1rem;
   text-align: center;
-  background-color: rgb(from var(--primary-light-color)r g b / 25%);
+  background-color: rgb(from var(--primary-light-color)r g b / 10%);
 }
 </style>
