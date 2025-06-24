@@ -14,7 +14,7 @@ import SectionTitle from '@/components/Widget/SectionTitle.vue';
       <div class="width-full height-full">
         <BaseImage image="https://zems.uk//uploads/media/1744748295.png" alt="about-image" />
       </div>
-      <!-- content container  -->
+      <!-- about us content  -->
       <div>
         <SectionTitle title="Behind Zems Success" sub-title="About Us" style="text-align:left" />
         <BaseParagraph>Zems empowers businesses with cutting-edge software solutions designed to streamline operations,
