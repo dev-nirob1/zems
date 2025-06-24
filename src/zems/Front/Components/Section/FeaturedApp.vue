@@ -1,6 +1,9 @@
 <script setup>
 import BaseButton from '@/components/Elements/BaseButton.vue';
+import BaseImage from '@/components/Elements/BaseImage.vue';
+import BaseParagraph from '@/components/Elements/BaseParagraph.vue';
 import ListItem from '@/components/Elements/ListItem.vue';
+import SubTitle from '@/components/Elements/SubTitle.vue';
 import SectionTitle from '@/components/Widget/SectionTitle.vue';
 
 </script>
@@ -12,35 +15,43 @@ import SectionTitle from '@/components/Widget/SectionTitle.vue';
 
       <div class="tab-panel">
         <ul>
-          <ListItem><BaseButton class="active">Restaurant Solution</BaseButton></ListItem>
-          <ListItem><BaseButton>Grocery POS</BaseButton></ListItem>
-          <ListItem><BaseButton>Real State App</BaseButton></ListItem>
+          <ListItem>
+            <BaseButton class="active">Restaurant Solution</BaseButton>
+          </ListItem>
+          <ListItem>
+            <BaseButton>Grocery POS</BaseButton>
+          </ListItem>
+          <ListItem>
+            <BaseButton>Real State App</BaseButton>
+          </ListItem>
           <!-- <ListItem><BaseButton>Upcoming</BaseButton></ListItem> -->
         </ul>
       </div>
-      <section>
-        <div class="medium-2 large-3 gap-2">
-          <div class="properties-card">
-            <div class="relative image-responsive">
-              <img class="image-responsive" src="../assets/about-3.jpg" alt="">
-            </div>
-            <div class="text-light p-1">
-              <span class="primary-color">ON GOING</span>
-              <h4 class="heading-4 my-1 text-dark"><a href="#">Modern Apartments</a></h4>
-              <a class="flex mb-1" href="#">
-                <span class="material-symbols-outlined location-icon">
-                  location_on
-                </span>
-                <small>Brooklyn, New York, United States</small>
-              </a>
-              <div>
-                <p><strong>3.8 </strong>Katha, Height: <strong>G 7</strong></p>
-              </div>
-            </div>
+      
+      <div class="medium-2 gap-2 align-center">
+        <div class="app-image">
+          <BaseImage
+            image="https://zems.uk/uploads/media/1747030497.gif"
+            alt="project image" />
+        </div>
+        <div>
+          <SubTitle>A complete restaurant solution</SubTitle>
+          <BaseParagraph>
+            Streamline your restaurant operations with our all-in-one solution featuring:
+            <ul class="feature-list">
+              <li>Table management & reservations</li>
+              <li>Integrated POS with kitchen display</li>
+              <li>Inventory tracking & supplier management</li>
+              <li>Staff scheduling & performance analytics</li>
+              <li>Customer loyalty programs</li>
+            </ul>
+          </BaseParagraph>
+          <div class="flex gap-1">
+            <BaseButton class="bg-primary text-white">Live Demo</BaseButton>
+            <BaseButton class="bg-secondary text-white">Case Study</BaseButton>
           </div>
         </div>
-      </section>
-
+      </div>
     </div>
   </section>
 </template>
@@ -49,26 +60,40 @@ import SectionTitle from '@/components/Widget/SectionTitle.vue';
 .featured {
   padding: 3.75rem 0;
 }
+
 .tab-panel ul {
   padding: 0;
   list-style: none;
   display: flex;
   flex-wrap: wrap;
   gap: 1rem;
+  margin: 3rem 0;
 }
+
 .tab-panel ul li .btn {
   font-size: 1rem;
   padding: 1rem;
   margin: 0;
   border: 1px solid;
-
 }
+
 .active {
   background-color: var(--dark-color);
   color: var(--white-color);
 }
 
-@media (min-width: 768px){
+.featured .app-image {
+  height: 100%;
+  width: 100%;
+}
+
+.featured .app-image img {
+  height: 100%;
+  width: 100%;
+  object-fit: cover;
+}
+
+@media (min-width: 768px) {
   .tab-panel ul li .btn {
     font-size: 1.25rem;
     padding: 1.25rem 2rem;
