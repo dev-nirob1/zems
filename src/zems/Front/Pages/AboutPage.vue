@@ -1,6 +1,7 @@
 <script setup>
 import AboutSection from '../Components/Section/AboutSection.vue';
 import BreadCrumb from '../Components/Section/BreadCrumb.vue';
+import OurFounder from '../Components/Section/OurFounder.vue';
 import StatisticsSection from '../Components/Section/StatisticsSection.vue';
 
 </script>
@@ -9,6 +10,7 @@ import StatisticsSection from '../Components/Section/StatisticsSection.vue';
   <div>
     <BreadCrumb/>
     <AboutSection />
+    <OurFounder/>
     <StatisticsSection />
   </div>
 </template>
