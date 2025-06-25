@@ -18,7 +18,7 @@ import SectionTitle from '@/components/Widget/SectionTitle.vue';
       <div class=" order-1 large-order-2">
         <SectionTitle style="text-align: left;" title="Meet Our Inspiring Founder" sub-title="Founder Spotlight" />
 
-        <div class="content-block mb-1">
+        <div class="mb-1">
           <SubTitle>Meet the Visionary</SubTitle>
           <BaseParagraph>
             Driven by innovation and a passion for solving real-world problems, our founder laid the foundation for this

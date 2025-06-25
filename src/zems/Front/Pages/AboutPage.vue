@@ -3,6 +3,7 @@ import AboutSection from '../Components/Section/AboutSection.vue';
 import BreadCrumb from '../Components/Section/BreadCrumb.vue';
 import OurFounder from '../Components/Section/OurFounder.vue';
 import StatisticsSection from '../Components/Section/StatisticsSection.vue';
+import TeamMembers from '../Components/Section/TeamMembers.vue';
 
 </script>
 
@@ -11,6 +12,7 @@ import StatisticsSection from '../Components/Section/StatisticsSection.vue';
     <BreadCrumb/>
     <AboutSection />
     <OurFounder/>
+    <TeamMembers/>
     <StatisticsSection />
   </div>
 </template>

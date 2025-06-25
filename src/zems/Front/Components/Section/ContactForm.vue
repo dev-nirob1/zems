@@ -46,7 +46,7 @@ import SelectDropdown from '@/components/Elements/SelectDropdown.vue';
         <small> Save my name, email, and website in this browser for the next time I comment.
         </small>
       </div>
-      <BaseButton class="btn bg-primary">GET A FREE SERVICE</BaseButton>
+      <BaseButton class="bg-dark">GET A FREE SERVICE</BaseButton>
     </form>
   </div>
 </template>

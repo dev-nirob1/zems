@@ -78,7 +78,7 @@ const apps = ref([
 }
 
 .app-card {
-  border-radius: .75rem .75rem 0 0;
+  border-radius: .75rem;
   padding: 1rem 1rem 1.5rem 1rem;
   background-color: var(--white-color);
 }

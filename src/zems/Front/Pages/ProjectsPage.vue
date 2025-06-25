@@ -7,5 +7,5 @@ import OurApplication from '../Components/Section/OurApplication.vue';
 <template>
   <BreadCrumb/>
   <FeaturedApp/>
-  <OurApplication/>
+  <OurApplication class="bg-light"/>
 </template>
