@@ -1,8 +1,15 @@
+<script setup>
+import { useRoute } from 'vue-router';
+
+const route = useRoute()
+console.log(route);
+</script>
+
 <template>
   <section class="breadcrumb">
     <ul class="container flex align-center gap-1">
       <li><a href="/">Home</a></li>
-      <li>Contact Us</li>
+      <li>{{route.name}}</li>
     </ul>
   </section>
 </template>
