@@ -34,22 +34,22 @@ defineProps({
   transform: translateY(-.5rem);
 }
 
-/* .service-card .icon {
-  height: 70px;
-  width: 70px;
-  border-radius: 50%;
-  margin-bottom: 1.5rem;
-  background-color: rgb(from var(--primary-light-color)r g b / 70%);
-  display: flex;
-  align-items: center;
-  justify-content: center;
-} */
 .service-card .icon {
   margin-bottom: 1rem;
+}
+.service-card a,
+.service-card i {
+  transition: all .3s ease-in-out;
 }
 .service-card a {
   text-decoration: none;
   color: var(--secondary-color);
   padding: .5rem 0;
+  display:flex;
+  align-items: center;
+  gap: .5rem;
+}
+.service-card a:hover i {
+  padding-left: .5rem;
 }
 </style>

@@ -46,8 +46,8 @@ import SectionTitle from '@/components/Widget/SectionTitle.vue';
         </div>
       </div>
       <div class="flex justify-center gap-1 mt-1">
-        <BaseButton class="bg-primary text-white">Prev</BaseButton>
-        <BaseButton class="bg-primary text-white">Next</BaseButton>
+        <BaseButton class="bg-dark text-white">Prev</BaseButton>
+        <BaseButton class="bg-dark text-white">Next</BaseButton>
       </div>
     </div>
   </section>

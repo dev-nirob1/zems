@@ -15,7 +15,7 @@ html {
   --primary-light-color: #22C503;
   --secondary-color: #e73b3b;
   --alternative-color: #f58f92;
-  --dark-color: #213036;
+  --dark-color: #002E5B;
   --light-color: #585b5e;
   --white-color: #fff;
   --border-color: #dee2e6;
@@ -127,8 +127,8 @@ a {
 .bg-light {
   background-color: rgb(from var(--primary-color) r g b / 5%);
 }
-.bg-lighten {
-  background-color: var(--primary-lighten-color);
+.bg-dark {
+  background-color: var(--dark-color);
 }
 
 .bg-primary {
@@ -209,7 +209,7 @@ a {
 .btn {
   display: inline-block;
   text-decoration: none;
-  border: none;
+  border: 1px solid var(--dark-color);
   outline: none;
   /* padding: 1rem 1rem; */
   font-size: 1rem;

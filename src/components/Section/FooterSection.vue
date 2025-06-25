@@ -90,7 +90,7 @@ import BaseParagraph from '../Elements/BaseParagraph.vue';
 <style scoped>
 .footer {
   padding-top: 10rem;
-  background-color: rgb(from var(--primary-light-color) r g b / 10%);
+  background-color: rgb(from var(--primary-color) r g b / 10%);
 }
 .footer h5 {
   margin-bottom: 1.5rem;
@@ -192,6 +192,6 @@ import BaseParagraph from '../Elements/BaseParagraph.vue';
 .footer-bottom {
   padding: 1rem;
   text-align: center;
-  background-color: rgb(from var(--primary-light-color)r g b / 10%);
+  background-color: rgb(from var(--primary-color)r g b / 15%);
 }
 </style>

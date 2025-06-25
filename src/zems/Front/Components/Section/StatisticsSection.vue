@@ -72,10 +72,6 @@ import ListItem from '@/components/Elements/ListItem.vue';
   gap: 1rem;
 }
 
-.statistics .stats-content li i {
-  color: var(--primary-light-color);
-}
-
 .statistics .stats-content p {
   margin: 0;
 }

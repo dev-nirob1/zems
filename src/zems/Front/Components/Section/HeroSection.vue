@@ -20,10 +20,10 @@ import HeroTitle from '@/components/Elements/HeroTitle.vue';
         </BaseParagraph>
         <!-- button container  -->
         <div class="flex align-center gap-1">
-          <BaseButton class="bg-primary text-white">
+          <BaseButton class="bg-dark text-white">
             OUR SERVICES
           </BaseButton>
-          <BaseButton class="bg-secondary text-white">
+          <BaseButton>
             LEARN MORE
           </BaseButton>
         </div>

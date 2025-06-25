@@ -26,7 +26,7 @@ import SectionTitle from '@/components/Widget/SectionTitle.vue';
           <ListItem>Dedicated support teams for every clien</ListItem>
           <ListItem>Continuous innovation with quarterly feature updates</ListItem>
         </ul>
-        <BaseButton class="bg-primary text-white">Our Services</BaseButton>
+        <BaseButton class="bg-dark text-white">Our Services</BaseButton>
       </div>
     </div>
   </section>
@@ -48,9 +48,9 @@ import SectionTitle from '@/components/Widget/SectionTitle.vue';
   font-size: 1.15rem;
 }
 
-@media (min-width: 768px) {
-  .about .btn {
-    padding: 1rem 2rem;
-  }
+@media (min-width: 768px){
+ .about .btn {
+  padding: 1.25rem 2rem;
+}
 }
 </style>

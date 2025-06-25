@@ -30,9 +30,7 @@ import SectionTitle from '@/components/Widget/SectionTitle.vue';
 
       <div class="medium-2 gap-2 align-center">
         <div class="app-image">
-          <BaseImage
-            image="https://zems.uk/uploads/media/1747030497.gif"
-            alt="project image" />
+          <BaseImage image="https://zems.uk/uploads/media/1747030497.gif" alt="project image" />
         </div>
         <div>
           <SubTitle>A complete restaurant solution</SubTitle>
@@ -47,8 +45,8 @@ import SectionTitle from '@/components/Widget/SectionTitle.vue';
             </ul>
           </BaseParagraph>
           <div class="flex gap-1">
-            <BaseButton class="bg-primary text-white">Live Demo</BaseButton>
-            <BaseButton class="bg-secondary text-white">Case Study</BaseButton>
+            <BaseButton class="bg-dark text-white">Live Demo</BaseButton>
+            <BaseButton>Case Study</BaseButton>
           </div>
         </div>
       </div>
@@ -97,6 +95,13 @@ import SectionTitle from '@/components/Widget/SectionTitle.vue';
   .tab-panel ul li .btn {
     font-size: 1.15rem;
     padding: 1.15rem 1.75rem;
+  }
+
+  @media (min-width: 768px) {
+    .featured .btn {
+      padding: 1.25rem 2rem;
+      font-size: 1.15rem;
+    }
   }
 }
 </style>
