@@ -1,37 +1,63 @@
+<script setup lang="ts">
+import BaseImage from '@/components/Elements/BaseImage.vue';
+import BaseParagraph from '@/components/Elements/BaseParagraph.vue';
+import SubTitle from '@/components/Elements/SubTitle.vue';
+import SectionTitle from '@/components/Widget/SectionTitle.vue';
+
+</script>
+
 <template>
   <!-- our founder section  -->
-  <section class="container founder py-2 medium-py-3 large-py-5">
-    <div class="medium-2 gap-2">
-      <div class="founder-image bg-light flex align-center justify-center">
-        <img src="https://images.pexels.com/photos/901424/pexels-photo-901424.jpeg?_gl=1*1od4usr*_ga*OTAzOTgwMTguMTczNzAwNTI1OA..*_ga_8JE65Q40S6*czE3NTA4NzM4MjIkbzE4JGcxJHQxNzUwODc0MDQ4JGo0NSRsMCRoMA.." alt="">
+  <section class="container founder">
+    <div class="large-2 gap-2">
+      <div class="founder-image bg-light flex align-center justify-center order-2 large-order-1">
+        <BaseImage
+          image="https://images.pexels.com/photos/901424/pexels-photo-901424.jpeg?_gl=1*1od4usr*_ga*OTAzOTgwMTguMTczNzAwNTI1OA..*_ga_8JE65Q40S6*czE3NTA4NzM4MjIkbzE4JGcxJHQxNzUwODc0MDQ4JGo0NSRsMCRoMA.."
+          alt="founder image" />
       </div>
-      <div>
-        <h3 class="title">
-          INTORDUCING <br>OUR FOUNDER
-        </h3>
+      <div class=" order-1 large-order-2">
+        <SectionTitle style="text-align: left;" title="Meet Our Inspiring Founder" sub-title="Founder Spotlight" />
+
         <div class="content-block mb-1">
-          <h6>Paragraph Title</h6>
-          <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nisi asperiores quaerat
-            excepturi.</p>
+          <SubTitle>Meet the Visionary</SubTitle>
+          <BaseParagraph>
+            Driven by innovation and a passion for solving real-world problems, our founder laid the foundation for this
+            company to empower businesses through smart technology solutions.
+          </BaseParagraph>
         </div>
-        <div class="flex gap-1">
+
+        <div class="medium-2 gap-1">
           <div class="founder-card">
-            <i class="fa-solid fa-user"></i>
-            <h6>Content</h6>
-            <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Eos, ipsa!</p>
+            <div class="py-1">
+              <i class="fa-solid fa-user-tie fa-2x"></i>
+            </div>
+            <SubTitle>Leadership & Mission</SubTitle>
+            <BaseParagraph>
+              With 10+ years of experience, our founder leads with purpose and a vision to build impactful software.
+            </BaseParagraph>
           </div>
+
           <div class="founder-card">
-            <i class="fa-solid fa-user"></i>
-            <h6 >Content</h6>
-            <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Eos, ipsa!</p>
+            <div class="py-1">
+              <i class="fa-solid fa-lightbulb fa-2x"></i>
+            </div>
+            <SubTitle>Innovation First</SubTitle>
+            <BaseParagraph>
+              From the first prototype to global reach, innovation has guided every decision and fueled lasting growth.
+            </BaseParagraph>
           </div>
         </div>
       </div>
+
     </div>
   </section>
 </template>
 <style scoped>
 /* founder section  */
+.founder {
+  padding: 3.75rem 0;
+}
+
 .founder-image {
   padding: 1rem;
 }
@@ -44,20 +70,13 @@
 }
 
 .founder-card {
-  text-align: center;
-  padding: 1.5rem .5rem;
-  border-radius: 1.5rem;
-  /* background-color: rgb(from var(--primary-color)r g b / 10%); */
-  background-color: var(--dark-color);
+  padding: 1rem;
+  border-radius: .75rem;
+  background-color: rgb(from var(--dark-color) r g b/ 80%);
   color: var(--white-color);
+  text-align: center;
 }
 
-.founder-card i {
-  border: 1px solid var(--white-color);
-  padding: 1rem;
-  border-radius: 8px;
-  margin-bottom: 1rem;
-}
 
 @media (min-width: 992px) {
   .founder-image {
