@@ -1,0 +1,38 @@
+<template>
+  <section class="breadcrumb">
+    <ul class="container flex align-center gap-1">
+      <li><a href="/">Home</a></li>
+      <li>Contact Us</li>
+    </ul>
+  </section>
+</template>
+<style scoped>
+.breadcrumb {
+  padding: 8rem 0 3rem 0;
+  /* background: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3)),
+    url("https://images.unsplash.com/photo-1733503747506-773e56e4078f?q=80&w=870&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D")
+      no-repeat center / 100%; */
+  background: rgb(from var(--primary-color)r g b / 5%);
+}
+.breadcrumb ul {
+  list-style: none;
+  font-size: 1rem;
+  padding: 0;
+}
+.breadcrumb ul li a {
+  color: var(--primary-color);
+  text-decoration: none;
+}
+.breadcrumb ul li:hover a {
+  text-decoration: underline;
+}
+.breadcrumb ul li:not(:last-child)::after {
+  content: "/";
+  padding-left: 1rem;
+}
+@media (min-width: 768px){
+  .breadcrumb ul {
+  font-size: 1.25rem;
+}
+}
+</style>

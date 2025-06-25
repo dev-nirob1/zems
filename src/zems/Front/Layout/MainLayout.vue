@@ -2,6 +2,7 @@
 import FooterSection from '@/components/Section/FooterSection.vue';
 import HeaderSection from '@/components/Section/HeaderSection.vue';
 import { RouterView } from 'vue-router';
+import CtaSection from '../Components/Section/CtaSection.vue';
 </script>
 
 <template>
@@ -9,6 +10,7 @@ import { RouterView } from 'vue-router';
   <main>
 <RouterView />
   </main>
+  <CtaSection/>
   <FooterSection />
 </template>
 <style>

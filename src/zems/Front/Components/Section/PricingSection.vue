@@ -57,7 +57,7 @@ import SectionTitle from '@/components/Widget/SectionTitle.vue';
               <li>1 Month Support</li>
               <li>CMS Integration</li>
             </ul>
-            <BaseButton>Choose Plan</BaseButton>
+            <BaseButton>Get Started</BaseButton>
           </div>
         </div>
         <div>
@@ -75,7 +75,7 @@ import SectionTitle from '@/components/Widget/SectionTitle.vue';
               <li>1 Month Support</li>
               <li>CMS Integration</li>
             </ul>
-            <BaseButton>Contact Us</BaseButton>
+            <BaseButton>Get Started</BaseButton>
           </div>
         </div>
       </div>
@@ -120,7 +120,6 @@ import SectionTitle from '@/components/Widget/SectionTitle.vue';
   border: 1px solid transparent;
   background: var(--secondary-color);
   color: var(--white-color);
-  border-radius: 1.5rem;
   width: 100%;
 }
 .pricing-card .btn:hover {

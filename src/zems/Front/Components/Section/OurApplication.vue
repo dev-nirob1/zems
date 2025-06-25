@@ -1,7 +1,3 @@
 <template>
-  <section class="our-application">
-
-  </section>
+  our application
 </template>
-<style scoped>
-</style>
