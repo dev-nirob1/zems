@@ -1,248 +1,83 @@
+<script setup>
+import BaseButton from '@/components/Elements/BaseButton.vue';
+import SectionTitle from '@/components/Widget/SectionTitle.vue';
+
+</script>
+
 <template>
-  <section class="process-section">
+  <section class="testimonials bg-light">
     <div class="container">
-      <h2 class="section-title">Our Development Process</h2>
-      <p class="section-subtitle">Transparent workflow that delivers quality results</p>
+      <SectionTitle title="What Our Clients Say" sub-title="Success Stories" />
 
-      <div class="timeline">
-        <!-- Process Step 1 -->
-        <div class="process-step">
-          <div class="step-header">
-            <div class="step-number">01</div>
-            <div class="step-icon">
-              <i class="fa-solid fa-lightbulb"></i>
-            </div>
-            <h3 class="step-title">Discovery</h3>
+      <div class="medium-2 gap-2 swiper-testimonials">
+        <div class="testimonial-card">
+          <div class="flex">
+            <p>
+              <i class="fa-solid fa-quote-left fa-2x"></i>
+              Zems POS reduced our order errors by 40% and increased table turnover. The kitchen display system is a
+              game-changer for our busy restaurant.
+            </p>
           </div>
-          <div class="step-content">
-            <p>Requirement analysis, project scoping, and technical feasibility study</p>
-            <ul class="step-features">
-              <li><i class="fa-solid fa-check"></i> Stakeholder interviews</li>
-              <li><i class="fa-solid fa-check"></i> Technical documentation</li>
-              <li><i class="fa-solid fa-check"></i> Project roadmap</li>
-            </ul>
+          <div class="flex align-center gap-1 mt-1">
+            <img class="height-full width-full"
+              src="https://tunatheme.com/tf/html/quarter-preview/quarter/img/testimonial/2.jpg" alt="profile" />
+            <div>
+              <h5 class="sub-title">Adam Josheph</h5>
+              <span>Owner, Bella Cucina</span>
+            </div>
           </div>
         </div>
-
-        <!-- Process Step 2 -->
-        <div class="process-step">
-          <div class="step-header">
-            <div class="step-number">02</div>
-            <div class="step-icon">
-              <i class="fa-solid fa-pen-ruler"></i>
-            </div>
-            <h3 class="step-title">Design</h3>
+        <div class="testimonial-card">
+          <div class="flex">
+            <p>
+              <i class="fa-solid fa-quote-left fa-2x"></i>
+              Inventory management became effortless with Zems. We reduced waste by 30% in the first month thanks to
+              expiry alerts and automated ordering
+            </p>
           </div>
-          <div class="step-content">
-            <p>UI/UX design, system architecture, and technical specifications</p>
-            <ul class="step-features">
-              <li><i class="fa-solid fa-check"></i> Wireframes & prototypes</li>
-              <li><i class="fa-solid fa-check"></i> Database design</li>
-              <li><i class="fa-solid fa-check"></i> API architecture</li>
-            </ul>
+          <div class="flex align-center gap-1 mt-1">
+            <img class="height-full width-full"
+              src="https://tunatheme.com/tf/html/quarter-preview/quarter/img/testimonial/3.jpg" alt="profile" />
+            <div>
+              <h5 class="sub-title">Adam Josheph</h5>
+              <span>Manager, FreshMart</span>
+            </div>
           </div>
         </div>
-
-        <!-- Process Step 3 -->
-        <div class="process-step">
-          <div class="step-header">
-            <div class="step-number">03</div>
-            <div class="step-icon">
-              <i class="fa-solid fa-code"></i>
-            </div>
-            <h3 class="step-title">Development</h3>
-          </div>
-          <div class="step-content">
-            <p>Agile development with continuous integration and testing</p>
-            <ul class="step-features">
-              <li><i class="fa-solid fa-check"></i> Sprint planning</li>
-              <li><i class="fa-solid fa-check"></i> Code reviews</li>
-              <li><i class="fa-solid fa-check"></i> Daily standups</li>
-            </ul>
-          </div>
-        </div>
-
-        <!-- Process Step 4 -->
-        <div class="process-step">
-          <div class="step-header">
-            <div class="step-number">04</div>
-            <div class="step-icon">
-              <i class="fa-solid fa-vial"></i>
-            </div>
-            <h3 class="step-title">Testing</h3>
-          </div>
-          <div class="step-content">
-            <p>Comprehensive QA and performance optimization</p>
-            <ul class="step-features">
-              <li><i class="fa-solid fa-check"></i> Unit & integration tests</li>
-              <li><i class="fa-solid fa-check"></i> Security audits</li>
-              <li><i class="fa-solid fa-check"></i> User acceptance testing</li>
-            </ul>
-          </div>
-        </div>
-
-        <!-- Process Step 5 -->
-        <div class="process-step">
-          <div class="step-header">
-            <div class="step-number">05</div>
-            <div class="step-icon">
-              <i class="fa-solid fa-rocket"></i>
-            </div>
-            <h3 class="step-title">Deployment</h3>
-          </div>
-          <div class="step-content">
-            <p>Seamless launch and post-deployment support</p>
-            <ul class="step-features">
-              <li><i class="fa-solid fa-check"></i> CI/CD pipeline</li>
-              <li><i class="fa-solid fa-check"></i> Monitoring setup</li>
-              <li><i class="fa-solid fa-check"></i> Maintenance plan</li>
-            </ul>
-          </div>
-        </div>
+      </div>
+      <div class="flex justify-center gap-1 mt-1">
+        <BaseButton class="bg-primary text-white">Prev</BaseButton>
+        <BaseButton class="bg-primary text-white">Next</BaseButton>
       </div>
     </div>
   </section>
 </template>
-
 <style scoped>
-/* Base Styles */
-.process-section {
-  padding: 5rem 1rem;
-  background: #f9fafc;
+.testimonials {
+  padding: 3.75rem 0;
 }
 
-.container {
-  max-width: 1200px;
-  margin: 0 auto;
+.testimonial-card {
+  padding: 2rem 1.5rem;
+  background: var(--white-color);
+  border-radius: 0.5rem;
+  box-shadow: var(--box-shadow);
+  scroll-snap-align: start;
+  transition: all 0.5 ease-in-out;
 }
 
-.section-title {
-  font-size: 2.5rem;
-  text-align: center;
-  color: #2d3748;
-  margin-bottom: 1rem;
+.testimonial-card p {
+  font-size: 1.15rem;
 }
 
-.section-subtitle {
-  text-align: center;
-  color: #718096;
-  margin-bottom: 3rem;
-  font-size: 1.1rem;
+.testimonial-card span,
+.testimonial-card p {
+  font-size: 1.15rem;
 }
 
-/* Timeline Design */
-.timeline {
-  position: relative;
-  padding-left: 50px;
-}
-
-.timeline::before {
-  content: '';
-  position: absolute;
-  left: 35px;
-  top: 0;
-  bottom: 0;
-  width: 4px;
-  background: #e2e8f0;
-  border-radius: 2px;
-}
-
-.process-step {
-  position: relative;
-  margin-bottom: 3rem;
-  background: white;
-  border-radius: 12px;
-  padding: 2rem;
-  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.05);
-}
-
-.step-header {
-  display: flex;
-  align-items: center;
-  margin-bottom: 1.5rem;
-  position: relative;
-}
-
-.step-number {
-  position: absolute;
-  left: -70px;
-  font-size: 1.5rem;
-  font-weight: 700;
-  color: #cbd5e0;
-}
-
-.step-icon {
-  width: 60px;
-  height: 60px;
-  border-radius: 50%;
-  background: #ebf8ff;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  margin-right: 1.5rem;
-  color: #4299e1;
-  font-size: 1.5rem;
-}
-
-.step-title {
-  font-size: 1.5rem;
-  color: #2d3748;
-}
-
-.step-content p {
-  color: #4a5568;
-  margin-bottom: 1rem;
-  line-height: 1.6;
-}
-
-.step-features {
-  list-style: none;
-  padding-left: 0;
-}
-
-.step-features li {
-  margin-bottom: 0.5rem;
-  color: #718096;
-  display: flex;
-  align-items: center;
-}
-
-.step-features i {
-  color: #48bb78;
-  margin-right: 0.5rem;
-  font-size: 0.9rem;
-}
-
-/* Responsive Design */
-@media (max-width: 768px) {
-  .timeline {
-    padding-left: 30px;
-  }
-
-  .timeline::before {
-    left: 15px;
-  }
-
-  .step-number {
-    left: -50px;
-  }
-
-  .step-icon {
-    width: 50px;
-    height: 50px;
-    font-size: 1.2rem;
-  }
-}
-
-@media (max-width: 480px) {
-  .step-header {
-    flex-direction: column;
-    align-items: flex-start;
-  }
-
-  .step-icon {
-    margin-bottom: 1rem;
-    margin-right: 0;
-  }
+.testimonial-card img {
+  height: 4rem;
+  width: 4rem;
+  border-radius: .5rem;
 }
 </style>

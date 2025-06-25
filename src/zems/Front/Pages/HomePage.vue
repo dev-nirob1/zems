@@ -6,17 +6,17 @@ import OurApplication from '../Components/Section/OurApplication.vue';
 import PricingSection from '../Components/Section/PricingSection.vue';
 import ServicesSection from '../Components/Section/ServicesSection.vue';
 import StatisticsSection from '../Components/Section/StatisticsSection.vue';
-// import TestimonialSection from '../Components/Section/TestimonialSection.vue';
+import TestimonialSection from '../Components/Section/TestimonialSection.vue';
 
 </script>
 
 <template>
   <HeroSection />
   <AboutSection />
-  <OurApplication/>
-  <ServicesSection />
   <FeaturedApp />
+  <ServicesSection />
+  <OurApplication/>
   <StatisticsSection />
   <PricingSection />
-  <!-- <TestimonialSection/> -->
+  <TestimonialSection/>
 </template>
