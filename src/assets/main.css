@@ -16,7 +16,7 @@ html {
   --secondary-color: #e73b3b;
   --alternative-color: #f58f92;
   --dark-color: #002E5B;
-  --light-color: #585b5e;
+  --light-color: rgb(from var(--primary-color) r g b / 5%);
   --white-color: #fff;
   --border-color: #dee2e6;
   --body-bg: #faf9f6;

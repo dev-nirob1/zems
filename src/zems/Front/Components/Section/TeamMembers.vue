@@ -28,7 +28,7 @@ const members = ref([
     "id": 4,
     "name": "Ms. Sofia",
     "role": "Product Manager",
-    "image": "https://images.pexels.com/photos/415829/pexels-photo-415829.jpeg"
+    "image": "https://images.unsplash.com/photo-1564564321837-a57b7070ac4f?q=80&w=876&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
   },
   {
     "id": 5,
@@ -40,7 +40,7 @@ const members = ref([
     "id": 6,
     "name": "Ms. Clara",
     "role": "Backend Developer",
-    "image": "https://images.pexels.com/photos/733872/pexels-photo-733872.jpeg"
+    "image": "https://images.unsplash.com/photo-1600486913747-55e5470d6f40?q=80&w=870&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
   }
 ])
 </script>
@@ -68,7 +68,9 @@ const members = ref([
 .team-members {
   padding: 3.75rem 0;
 }
-
+.member-card {
+  border-radius: .75rem;
+}
 
 .member-card p {
   margin: 0;
@@ -81,6 +83,7 @@ const members = ref([
 }
 
 .member-card .image img {
+  border-radius: .75rem .75rem 0 0;
   width: 100%;
   height: 100%;
   object-fit: cover;
