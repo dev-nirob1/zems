@@ -63,7 +63,7 @@ const apps = ref([
             </BaseParagraph>
           </div>
           <div class="flex gap-1">
-            <BaseButton class="bg-dark text-white">Live Demo</BaseButton>
+            <BaseButton class="bg-primary text-white">Live Demo</BaseButton>
             <BaseButton>Case Study</BaseButton>
           </div>
         </div>

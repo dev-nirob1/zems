@@ -119,11 +119,11 @@ import BaseParagraph from '../Elements/BaseParagraph.vue';
   font-size: 1.25rem;
   height: 36px;
   width: 36px;
-  border-radius: 50%;
+  border-radius: .25rem;
   display: flex;
   align-items: center;
   justify-content: center;
-  background-color: var(--dark-color);
+  background-color: var(--primary-color);
   color: var(--white-color);
 }
 .social-links a:hover i {
@@ -137,7 +137,7 @@ import BaseParagraph from '../Elements/BaseParagraph.vue';
   bottom: 0;
   width: 70px;
   height: 3px;
-  background-color: var(--dark-color);
+  background-color: var(--primary-color);
 }
 .footer ul {
   list-style: none;
@@ -184,7 +184,7 @@ import BaseParagraph from '../Elements/BaseParagraph.vue';
 }
 .subscribe-form .btn {
   padding: 1rem 2rem;
-  background-color: var(--dark-color);
+  background-color: var(--primary-color);
   color: var(--white-color);
   border: none;
 }

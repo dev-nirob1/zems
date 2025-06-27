@@ -23,13 +23,13 @@ import BaseTitle from '@/components/Elements/BaseTitle.vue';
 
 <style scoped>
 .call-to-action {
-  background-color: var(--dark-color);
+  background-color: var(--primary-color);
   padding: 5rem;
 }
 
 .cta {
   flex-direction: column;
-  background-color: var(--dark-color);
+  background-color: var(--primary-color);
   color: var(--white-color);
   width: 100%;
   padding: 3rem 3rem 3rem 3rem;

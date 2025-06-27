@@ -34,16 +34,13 @@ defineProps({
   transform: translateY(-.5rem);
 }
 
-.service-card .icon {
-  margin-bottom: 1rem;
-}
 .service-card a,
 .service-card i {
   transition: all .3s ease-in-out;
 }
 .service-card a {
   text-decoration: none;
-  color: var(--secondary-color);
+  color: var(--primary-color);
   padding: .5rem 0;
   display:flex;
   align-items: center;

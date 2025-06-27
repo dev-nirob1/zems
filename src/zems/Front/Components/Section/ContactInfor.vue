@@ -64,7 +64,7 @@ import SubTitle from '@/components/Elements/SubTitle.vue';
 
 .contact-info ul li i {
   padding: 1rem;
-  background-color: var(--dark-color);
+  background-color: var(--primary-color);
   color: var(--white-color);
   display: flex;
   align-items: center;

@@ -72,7 +72,7 @@ import SectionTitle from '@/components/Widget/SectionTitle.vue';
 .founder-card {
   padding: 1rem;
   border-radius: .75rem;
-  background-color: rgb(from var(--dark-color) r g b/ 80%);
+  background-color: rgb(from var(--primary-color) r g b/ 80%);
   color: var(--white-color);
   text-align: center;
 }

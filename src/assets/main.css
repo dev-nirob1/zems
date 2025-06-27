@@ -11,11 +11,11 @@ html {
   --montserrat-font: 'Montserrat', sans-serif;
   --roboto-font: 'Roboto', serif;
 
-  --primary-color: #237B00;
+  --primary-color: #03624c;
   --primary-light-color: #22C503;
   --secondary-color: #e73b3b;
   --alternative-color: #f58f92;
-  --dark-color: #002E5B;
+  --dark-color: #002223;
   --light-color: rgb(from var(--primary-color) r g b / 5%);
   --white-color: #fff;
   --border-color: #dee2e6;
@@ -125,7 +125,7 @@ a {
 }
 
 .bg-light {
-  background-color: rgb(from var(--primary-color) r g b / 5%);
+  background-color: rgb(from var(--primary-color) r g b / 10%);
 }
 .bg-dark {
   background-color: var(--dark-color);
@@ -209,7 +209,7 @@ a {
 .btn {
   display: inline-block;
   text-decoration: none;
-  border: 1px solid var(--dark-color);
+  border: 1px solid var(--primary-color);
   outline: none;
   /* padding: 1rem 1rem; */
   font-size: 1rem;

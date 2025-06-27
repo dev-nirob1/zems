@@ -71,7 +71,7 @@ import SectionTitle from '@/components/Widget/SectionTitle.vue';
 
 .team-member .icon {
   border-radius: .5rem;
-  background-color: var(--dark-color);
+  background-color: var(--primary-color);
   color: var(--white-color);
   height: 80px;
   width: 80px;
@@ -86,12 +86,21 @@ import SectionTitle from '@/components/Widget/SectionTitle.vue';
 
 .team-member::after {
   content: '';
-  width: 50vw;
-  height: 100%;
+  width: 100vw;
+  height: 50%;
   position: absolute;
-  top: 0;
+  top: 50%;
   right: 0;
   background-color: var(--light-color);
   z-index: -1;
+}
+
+@media (min-width: 992px) {
+  .team-member::after {
+    height: 100%;
+    top: 0;
+    right: 0;
+    width: 50vw;
+  }
 }
 </style>

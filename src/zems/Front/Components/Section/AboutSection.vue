@@ -26,7 +26,7 @@ import SectionTitle from '@/components/Widget/SectionTitle.vue';
           <ListItem>Dedicated support teams for every clien</ListItem>
           <ListItem>Continuous innovation with quarterly feature updates</ListItem>
         </ul>
-        <BaseButton class="bg-dark text-white">Our Services</BaseButton>
+        <BaseButton class="bg-primary text-white">Our Services</BaseButton>
       </div>
     </div>
   </section>

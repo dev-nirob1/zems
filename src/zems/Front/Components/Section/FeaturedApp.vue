@@ -45,7 +45,7 @@ import SectionTitle from '@/components/Widget/SectionTitle.vue';
             </ul>
           </BaseParagraph>
           <div class="flex gap-1">
-            <BaseButton class="bg-dark text-white">Live Demo</BaseButton>
+            <BaseButton class="bg-primary text-white">Live Demo</BaseButton>
             <BaseButton>Case Study</BaseButton>
           </div>
         </div>
@@ -72,11 +72,11 @@ import SectionTitle from '@/components/Widget/SectionTitle.vue';
   font-size: 1rem;
   padding: 1rem;
   margin: 0;
-  border: 1px solid;
+  border: 1px solid var(--primary-color);
 }
 
 .active {
-  background-color: var(--dark-color);
+  background-color: var(--primary-color);
   color: var(--white-color);
 }
 

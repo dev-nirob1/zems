@@ -100,6 +100,7 @@ import SectionTitle from '@/components/Widget/SectionTitle.vue';
 }
 .pricing-card .price-icon {
   font-size: 5rem;
+  color: var(--primary-color);
 }
 .pricing-card:hover {
   transform: translateY(-0.5rem);
@@ -117,14 +118,15 @@ import SectionTitle from '@/components/Widget/SectionTitle.vue';
 }
 .pricing-card .btn {
   border: 1px solid transparent;
-  background: var(--dark-color);
+  font-size: 1.25rem;
+  background: var(--primary-color);
   color: var(--white-color);
   width: 100%;
 }
 .pricing-card .btn:hover {
   background-color: var(--white-color);
-  color: var(--dark-color);
-  border: 1px solid var(--dark-color);
+  color: var(--primary-color);
+  border: 1px solid var(--primary-color);
 }
 .pricing-card .exclusive-badge {
   width: 280px;
