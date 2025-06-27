@@ -1,8 +1,49 @@
 <script setup>
-import BaseParagraph from '@/components/Elements/BaseParagraph.vue';
-import BaseTitle from '@/components/Elements/BaseTitle.vue';
-import ListItem from '@/components/Elements/ListItem.vue';
+import { ref, onMounted } from 'vue'
+import BaseParagraph from '@/components/Elements/BaseParagraph.vue'
+import BaseTitle from '@/components/Elements/BaseTitle.vue'
+import ListItem from '@/components/Elements/ListItem.vue'
 
+// Refs for each count
+const projectCount = ref(0)
+const clientCount = ref(0)
+const techStackCount = ref(0)
+const awardCount = ref(0)
+
+// Target values
+const targetValues = {
+  project: 120,
+  client: 80,
+  techStack: 25,
+  award: 15,
+}
+
+// Frame-based smooth counter
+function animateCount(refValue, target, duration = 2000) {
+  const startTime = performance.now()
+
+  function update(currentTime) {
+    const elapsed = currentTime - startTime
+    const progress = Math.min(elapsed / duration, 1)
+    refValue.value = Math.floor(progress * target)
+
+    if (progress < 1) {
+      requestAnimationFrame(update)
+    } else {
+      refValue.value = target // Ensure it ends at target
+    }
+  }
+
+  requestAnimationFrame(update)
+}
+
+// Trigger on mount
+onMounted(() => {
+  animateCount(projectCount, targetValues.project)
+  animateCount(clientCount, targetValues.client)
+  animateCount(techStackCount, targetValues.techStack)
+  animateCount(awardCount, targetValues.award)
+})
 </script>
 
 <template>
@@ -13,7 +54,7 @@ import ListItem from '@/components/Elements/ListItem.vue';
         <ListItem>
           <i class="fa-solid fa-laptop-code fa-3x"></i>
           <div>
-            <BaseTitle>120+</BaseTitle>
+            <BaseTitle>{{projectCount}}+</BaseTitle>
             <BaseParagraph>Completed Projects</BaseParagraph>
           </div>
         </ListItem>
@@ -22,7 +63,7 @@ import ListItem from '@/components/Elements/ListItem.vue';
         <ListItem>
           <i class="fa-solid fa-user-tie fa-3x"></i>
           <div>
-            <BaseTitle>80+</BaseTitle>
+            <BaseTitle>{{clientCount}}+</BaseTitle>
             <BaseParagraph>Clients Worldwide</BaseParagraph>
           </div>
         </ListItem>
@@ -31,7 +72,7 @@ import ListItem from '@/components/Elements/ListItem.vue';
         <ListItem>
           <i class="fa-solid fa-layer-group fa-3x"></i>
           <div>
-            <BaseTitle>25+</BaseTitle>
+            <BaseTitle>{{techStackCount}}+</BaseTitle>
             <BaseParagraph>Tech Stacks Used</BaseParagraph>
           </div>
         </ListItem>
@@ -40,7 +81,7 @@ import ListItem from '@/components/Elements/ListItem.vue';
         <ListItem>
           <i class="fa-solid fa-award fa-3x"></i>
           <div>
-            <BaseTitle>15+</BaseTitle>
+            <BaseTitle>{{ awardCount }}+</BaseTitle>
             <BaseParagraph>Industry Awards</BaseParagraph>
           </div>
         </ListItem>

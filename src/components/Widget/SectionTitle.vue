@@ -9,10 +9,10 @@ defineProps({
 </script>
 
 <template>
-    <div>
-      <SubTitle>{{ subTitle }}</SubTitle>
+  <div>
+    <SubTitle>{{ subTitle }}</SubTitle>
     <BaseTitle>{{ title }}</BaseTitle>
-    </div>
+  </div>
 </template>
 
 <style scoped>
