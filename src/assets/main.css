@@ -13,7 +13,7 @@ html {
 
   --primary-color: #03624c;
   --primary-light-color: #22C503;
-  --secondary-color: #e73b3b;
+  --secondary-color: #0F9781;
   --alternative-color: #f58f92;
   --dark-color: #002223;
   --light-color: rgb(from var(--primary-color) r g b / 5%);

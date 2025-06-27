@@ -9,18 +9,18 @@ defineProps({
 </script>
 
 <template>
-  <div class="text-center mb-2">
-    <SubTitle>{{ subTitle }}</SubTitle>
+    <div>
+      <SubTitle>{{ subTitle }}</SubTitle>
     <BaseTitle>{{ title }}</BaseTitle>
-  </div>
+    </div>
 </template>
 
 <style scoped>
 .sub-title {
   display: inline-block;
   margin-bottom: .75rem;
-  background-color: rgb(from var(--primary-light-color)r g b / 10%);
-  color: var(--primary-light-color);
+  background-color: rgb(from var(--primary-color)r g b / 10%);
+  color: var(--secondary-color);
   padding: .25rem 1.5rem;
   border-radius: 1.25rem;
 }

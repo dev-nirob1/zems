@@ -48,7 +48,7 @@ const members = ref([
 <template>
   <section class="team-members">
     <div class="container">
-      <SectionTitle title="Meet Our Skilled Team" sub-title="Core Members" />
+      <SectionTitle class="text-center mb-2" title="Meet Our Skilled Team" sub-title="Core Members" />
 
       <div class="medium-2 large-3 gap-2">
         <div class="member-card bg-light" v-for="member in members" :key="member.id">

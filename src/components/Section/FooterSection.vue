@@ -162,7 +162,7 @@ import BaseParagraph from '../Elements/BaseParagraph.vue';
   transition: all 0.3s ease;
 }
 .footer ul a:hover {
-  /* color: var(--secondary-color); */
+  color: var(--primary-color);
   padding-left: 5px;
 }
 .footer ul a:hover::before {

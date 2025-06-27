@@ -11,7 +11,7 @@ import SectionTitle from '@/components/Widget/SectionTitle.vue';
   <section class="pricing bg-lighten">
     <div class="container">
       <!-- Section header -->
-      <SectionTitle title="Scalable Development Packages" sub-title="Pricing Options"></SectionTitle>
+      <SectionTitle class="text-center mb-2" title="Scalable Development Packages" sub-title="Pricing Options"></SectionTitle>
       <!-- card container grid: small/medium/large = 1/2/3 -->
       <div class="medium-2 large-3 align-center justify-center gap-1 medium-gap-2">
         <div>

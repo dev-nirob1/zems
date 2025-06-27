@@ -46,7 +46,7 @@ import SelectDropdown from '@/components/Elements/SelectDropdown.vue';
         <small> Save my name, email, and website in this browser for the next time I comment.
         </small>
       </div>
-      <BaseButton class="bg-dark">GET A FREE SERVICE</BaseButton>
+      <BaseButton class="bg-primary">GET A FREE SERVICE</BaseButton>
     </form>
   </div>
 </template>
@@ -58,11 +58,12 @@ import SelectDropdown from '@/components/Elements/SelectDropdown.vue';
 }
 .form {
   padding: 2rem;
-  border: 2px solid;
+  border: 2px solid var(--primary-color);
 }
 input, select,
 textarea {
   padding: 1rem;
+  border-color: var(--primary-color);
 }
 input:focus,
 textarea:focus {

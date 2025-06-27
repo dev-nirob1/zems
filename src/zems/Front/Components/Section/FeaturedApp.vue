@@ -11,7 +11,7 @@ import SectionTitle from '@/components/Widget/SectionTitle.vue';
 <template>
   <section class="featured">
     <div class="container">
-      <SectionTitle title="Exclusive Software We Developed" sub-title="Featured Applications" />
+      <SectionTitle title="Exclusive Software We Developed" sub-title="Featured Applications" class="text-center" />
 
       <div class="tab-panel">
         <ul>

@@ -16,7 +16,7 @@ import SectionTitle from '@/components/Widget/SectionTitle.vue';
       </div>
       <!-- about us content  -->
       <div>
-        <SectionTitle title="Behind Zems Success" sub-title="About Us" style="text-align:left" />
+        <SectionTitle title="Behind Zems Success" sub-title="About Us"/>
         <BaseParagraph>Zems empowers businesses with cutting-edge software solutions designed to streamline operations,
           boost efficiency, and drive growth. Our customizable platforms adapt to your unique workflow needs.
         </BaseParagraph>

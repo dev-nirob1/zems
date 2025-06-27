@@ -15,8 +15,8 @@ import SectionTitle from '@/components/Widget/SectionTitle.vue';
           image="https://images.pexels.com/photos/901424/pexels-photo-901424.jpeg?_gl=1*1od4usr*_ga*OTAzOTgwMTguMTczNzAwNTI1OA..*_ga_8JE65Q40S6*czE3NTA4NzM4MjIkbzE4JGcxJHQxNzUwODc0MDQ4JGo0NSRsMCRoMA.."
           alt="founder image" />
       </div>
-      <div class=" order-1 large-order-2">
-        <SectionTitle style="text-align: left;" title="Meet Our Inspiring Founder" sub-title="Founder Spotlight" />
+      <div class="order-1 large-order-2">
+        <SectionTitle class="mb-1" title="Meet Our Inspiring Founder" sub-title="Founder Spotlight" />
 
         <div class="mb-1">
           <SubTitle>Meet the Visionary</SubTitle>

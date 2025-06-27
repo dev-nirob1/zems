@@ -41,7 +41,7 @@ const services = ref([
 
   <section class="services bg-light">
     <div class="container">
-      <SectionTitle title="Our Main Focus" subTitle="Our Services"/>
+      <SectionTitle class="text-center mb-2" title="Our Main Focus" subTitle="Our Services"/>
       <div class="medium-2 large-3 gap-2">
         <ServiceCard v-for="(service, i) in services" :key="i" :service="service"/>
       </div>

@@ -7,7 +7,13 @@ import SectionTitle from '@/components/Widget/SectionTitle.vue';
 <template>
   <section class="testimonials bg-light">
     <div class="container">
-      <SectionTitle title="What Our Clients Say" sub-title="Success Stories" />
+      <div class=" mb-2 flex align-center justify-between">
+        <SectionTitle title="What Our Clients Say" sub-title="Success Stories" />
+        <div class="flex justify-center gap-1">
+          <BaseButton class="bg-primary text-white">Prev</BaseButton>
+          <BaseButton class="bg-primary text-white">Next</BaseButton>
+        </div>
+      </div>
 
       <div class="medium-2 gap-2 swiper-testimonials">
         <div class="testimonial-card">
@@ -45,10 +51,7 @@ import SectionTitle from '@/components/Widget/SectionTitle.vue';
           </div>
         </div>
       </div>
-      <div class="flex justify-center gap-1 mt-1">
-        <BaseButton class="bg-primary text-white">Prev</BaseButton>
-        <BaseButton class="bg-primary text-white">Next</BaseButton>
-      </div>
+
     </div>
   </section>
 </template>

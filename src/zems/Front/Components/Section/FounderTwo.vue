@@ -11,7 +11,7 @@ import SectionTitle from '@/components/Widget/SectionTitle.vue';
     <div class="container">
       <div class="medium-3 align-center gap-2">
         <div>
-          <SectionTitle style="text-align: left;" title="Our Visionary Leadership" sub-title="Zems Founder" />
+          <SectionTitle class="mb-1" title="Our Visionary Leadership" sub-title="Zems Founder" />
           <div>
             <SubTitle>Innovative Minds Behind Us</SubTitle>
             <BaseParagraph>Our founders bring together decades of combined experience in technology and business
