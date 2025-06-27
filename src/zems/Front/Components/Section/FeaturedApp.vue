@@ -91,6 +91,24 @@ import SectionTitle from '@/components/Widget/SectionTitle.vue';
   object-fit: cover;
 }
 
+.feature-list {
+  list-style: none;
+  padding-left: 1rem;
+}
+
+.feature-list li {
+  position: relative;
+  padding-left: 1rem;
+  margin-bottom: .25rem;
+}
+
+.feature-list li::before {
+  content: "✓";
+  position: absolute;
+  left: 0;
+  color: var(--primary-color);
+}
+
 @media (min-width: 768px) {
   .tab-panel ul li .btn {
     font-size: 1.15rem;

@@ -47,7 +47,23 @@ import SectionTitle from '@/components/Widget/SectionTitle.vue';
   padding: 1rem;
   font-size: 1.15rem;
 }
+.about ul {
+  list-style: none;
+  padding-left: 1rem;
+}
 
+.about ul li {
+  position: relative;
+  padding-left: 1rem;
+  margin-bottom: .25rem;
+}
+
+.about ul li::before {
+  content: "✓";
+  position: absolute;
+  left: 0;
+  color: var(--primary-color);
+}
 @media (min-width: 768px){
  .about .btn {
   padding: 1.25rem 2rem;

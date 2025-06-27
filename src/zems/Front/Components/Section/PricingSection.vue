@@ -8,7 +8,7 @@ import SectionTitle from '@/components/Widget/SectionTitle.vue';
 </script>
 
 <template>
- <section class="pricing bg-lighten">
+  <section class="pricing bg-lighten">
     <div class="container">
       <!-- Section header -->
       <SectionTitle title="Scalable Development Packages" sub-title="Pricing Options"></SectionTitle>
@@ -41,7 +41,7 @@ import SectionTitle from '@/components/Widget/SectionTitle.vue';
               <div class="exclusive-badge">
                 <BaseParagraph class="badge">
                   <i class="fa-solid fa-crown"></i>
-                 Most Popular
+                  Most Popular
                 </BaseParagraph>
               </div>
             </div>
@@ -51,7 +51,7 @@ import SectionTitle from '@/components/Widget/SectionTitle.vue';
             <SubTitle>Business</SubTitle>
             <HeroTitle>€3,500 <span>/project</span></HeroTitle>
             <BaseParagraph>Comprehensive solutions for growing businesses with custom features</BaseParagraph>
-           <ul class="feature-list">
+            <ul class="feature-list">
               <li>Responsive Website</li>
               <li>Basic SEO Setup</li>
               <li>1 Month Support</li>
@@ -69,7 +69,7 @@ import SectionTitle from '@/components/Widget/SectionTitle.vue';
             <SubTitle>Enterprise</SubTitle>
             <HeroTitle>€8,000+ <span>/project</span></HeroTitle>
             <BaseParagraph>Tailored solutions for large organizations with complex requirements</BaseParagraph>
-           <ul class="feature-list">
+            <ul class="feature-list">
               <li>Responsive Website</li>
               <li>Basic SEO Setup</li>
               <li>1 Month Support</li>
@@ -88,6 +88,7 @@ import SectionTitle from '@/components/Widget/SectionTitle.vue';
 .pricing {
   padding: 3.75rem 0;
 }
+
 /* pricing card */
 .pricing-card {
   position: relative;
@@ -98,24 +99,30 @@ import SectionTitle from '@/components/Widget/SectionTitle.vue';
   box-shadow: var(--box-shadow);
   cursor: pointer;
 }
+
 .pricing-card .price-icon {
   font-size: 5rem;
   color: var(--primary-color);
 }
+
 .pricing-card:hover {
   transform: translateY(-0.5rem);
 }
+
 .pricing-card .sub-title {
   margin: 0.5rem 0;
 }
+
 .pricing-card .hero-title {
   display: flex;
   align-items: center;
 }
+
 .pricing-card .hero-title span {
   font-size: 1.75rem;
   font-weight: bold;
 }
+
 .pricing-card .btn {
   border: 1px solid transparent;
   font-size: 1.25rem;
@@ -123,11 +130,13 @@ import SectionTitle from '@/components/Widget/SectionTitle.vue';
   color: var(--white-color);
   width: 100%;
 }
+
 .pricing-card .btn:hover {
   background-color: var(--white-color);
   color: var(--primary-color);
   border: 1px solid var(--primary-color);
 }
+
 .pricing-card .exclusive-badge {
   width: 280px;
   position: relative;
@@ -135,6 +144,7 @@ import SectionTitle from '@/components/Widget/SectionTitle.vue';
   margin-top: -1.5rem;
   overflow: hidden;
 }
+
 .badge {
   background-color: var(--secondary-color);
   color: var(--white-color);
@@ -144,6 +154,7 @@ import SectionTitle from '@/components/Widget/SectionTitle.vue';
   text-transform: uppercase;
   box-shadow: 3px 3px 6px rgba(0, 0, 0, 0.3);
 }
+
 .pricing-card .badge::before {
   content: "";
   position: absolute;
@@ -155,15 +166,17 @@ import SectionTitle from '@/components/Widget/SectionTitle.vue';
   background: var(--white-color);
 }
 
-.feature-list{
- list-style: none;
- padding-left: 0;
+.feature-list {
+  list-style: none;
+  padding-left: 0;
 }
+
 .feature-list li {
   position: relative;
-   padding-left: 1rem;
-   margin-bottom: .25rem;
+  padding-left: 1rem;
+  margin-bottom: .25rem;
 }
+
 .feature-list li::before {
   content: "✓";
   position: absolute;
@@ -171,10 +184,11 @@ import SectionTitle from '@/components/Widget/SectionTitle.vue';
   color: var(--primary-color);
 }
 
-@media (min-width: 992px){
+@media (min-width: 992px) {
   .pricing-card {
     padding: 3rem 2rem;
   }
+
   .pricing-card .exclusive-badge {
     margin-right: -2rem;
   }
