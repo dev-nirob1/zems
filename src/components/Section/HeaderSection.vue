@@ -8,35 +8,40 @@ import ListItem from '../Elements/ListItem.vue';
 <template>
   <header class="navbar">
     <nav class="flex justify-between align-center container">
+       <!-- Mobile Menu Toggle Button -->
+      <BaseButton class="hamburger">
+        <i class="fas fa-bars fa-2xl"></i>
+      </BaseButton>
       <!-- Logo -->
       <RouterLink to="/" class="logo">
         <img class="width-full" src="https://zems.uk/uploads/brands/logo.png" alt="logo" />
       </RouterLink>
 
-      <!-- Mobile Menu Toggle Button -->
-      <BaseButton class="hamburger">
-        <i class="fas fa-bars fa-2xl"></i>
-      </BaseButton>
-
       <!-- Navigation Links -->
-      <ul class="nav-links">
-        <ListItem>
-          <RouterLink to="/">Home</RouterLink>
-        </ListItem>
-        <ListItem>
-          <RouterLink to="/about-us">About</RouterLink>
-        </ListItem>
-        <ListItem>
-          <RouterLink to="/projects">Projects</RouterLink>
-        </ListItem>
-        <ListItem>
-          <RouterLink to="/">Gallery</RouterLink>
-        </ListItem>
-        <ListItem>
-          <RouterLink to="/contact-us">Contact</RouterLink>
-        </ListItem>
-
-      </ul>
+      <div class="flex align-center gap-1">
+        <ul class="nav-links">
+          <ListItem>
+            <RouterLink to="/">Home</RouterLink>
+          </ListItem>
+          <ListItem>
+            <RouterLink to="/about-us">About</RouterLink>
+          </ListItem>
+          <ListItem>
+            <RouterLink to="/projects">Projects</RouterLink>
+          </ListItem>
+          <ListItem>
+            <RouterLink to="/">Gallery</RouterLink>
+          </ListItem>
+          <ListItem>
+            <RouterLink to="/contact-us">Contact</RouterLink>
+          </ListItem>
+        </ul>
+        <div style="border-left: 1px solid;padding-left: .75rem; gap: .5rem;" class="flex align-center">
+          <i style="padding: .5rem; border-radius: .25rem;" class="fa-solid fa-phone bg-primary text-white"></i>
+          <div>
+            +353050436340</div>
+        </div>
+      </div>
     </nav>
   </header>
 </template>

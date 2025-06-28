@@ -39,8 +39,7 @@ defineProps({
 }
 
 .app-card .btn {
-  width: 100%;
-  padding: .75rem;
+  padding: .75rem 1.5rem;
 }
 
 .app-card .image {

@@ -6,16 +6,16 @@ import BaseTitle from '@/components/Elements/BaseTitle.vue';
 </script>
 
 <template>
-  <div class="container relative mt-3">
+  <div class="container relative mt-5">
     <div class="call-to-action">
-      <div class="cta flex align-center justify-between">
+      <div class="cta flex align-center justify-center text-center">
         <div>
           <BaseTitle>Need Custom Software Solutions?</BaseTitle>
           <BaseParagraph>
             Our experts are ready to discuss your unique business requirements
           </BaseParagraph>
+          <BaseButton class="bg-white">Contact Us</BaseButton>
         </div>
-        <BaseButton class="bg-white">Contact Us</BaseButton>
       </div>
     </div>
   </div>
@@ -32,9 +32,9 @@ import BaseTitle from '@/components/Elements/BaseTitle.vue';
   background-color: var(--primary-color);
   color: var(--white-color);
   width: 100%;
-  padding: 3rem 3rem 3rem 3rem;
+  padding: 5rem 3rem 3rem 3rem;
   position: absolute;
-  top: 0;
+  top: -3rem;
   left: 0;
   z-index: 1;
 }
