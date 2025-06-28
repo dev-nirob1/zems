@@ -1,57 +1,68 @@
 <script setup>
+import { onMounted, ref } from 'vue';
 import BaseButton from '@/components/Elements/BaseButton.vue';
 import SectionTitle from '@/components/Widget/SectionTitle.vue';
+import TestimonialCard from '../Widget/TestimonialCard.vue';
+import { owlCarousel } from '@/plugins/slider';
 
+const reviews = ref([
+    {
+      "review": "Zems helped us digitize student records and automate class schedules. It’s now easier to focus on what matters most — teaching.",
+      "name": "Emily Johnson",
+      "image": "https://images.unsplash.com/photo-1573496359142-b8d87734a5a2",
+      "description": "School Principal"
+    },
+    {
+      "review": "Managing patient appointments and medical records has never been this smooth. Zems truly transformed our clinic operations.",
+      "name": "Dr. Michael Chen",
+      "image": "https://images.pexels.com/photos/5327585/pexels-photo-5327585.jpeg",
+      "description": "Medical Director"
+    },
+    {
+      "review": "With Zems ERP, our manufacturing workflow is streamlined, and inventory syncs across all departments automatically.",
+      "name": "Raj Patel",
+      "image": "https://images.unsplash.com/photo-1560250097-0b93528c311a",
+      "description": "Plant Manager"
+    },
+    {
+      "review": "The restaurant POS is super intuitive. Staff training now takes minutes, not hours. Sales tracking is also much clearer.",
+      "name": "Sophia Martinez",
+      "image": "https://images.pexels.com/photos/5905902/pexels-photo-5905902.jpeg",
+      "description": "Restaurant Owner"
+    },
+    {
+      "review": "Zems’ HR software made our onboarding, leave tracking, and payroll totally stress-free. A must-have for any modern company.",
+      "name": "David Kim",
+      "image": "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d",
+      "description": "HR Director"
+    },
+    {
+      "review": "Our logistics team now works faster and smarter with Zems. Real-time delivery tracking made a big difference in customer satisfaction.",
+      "name": "Olivia Wilson",
+      "image": "https://images.pexels.com/photos/712521/pexels-photo-712521.jpeg",
+      "description": "Logistics Head"
+    }
+  ])
+
+onMounted(() => {
+  owlCarousel()
+})
 </script>
 
 <template>
   <section class="testimonials bg-light">
     <div class="container">
-      <div class=" mb-2 flex align-center justify-between">
+      <div class="mb-2 flex align-center justify-between">
         <SectionTitle title="What Our Clients Say" sub-title="Success Stories" />
         <div class="flex justify-center gap-1">
-          <BaseButton class="bg-primary text-white">Prev</BaseButton>
-          <BaseButton class="bg-primary text-white">Next</BaseButton>
+          <BaseButton class="bg-primary text-white" id="prev">&laquo; Prev</BaseButton>
+          <BaseButton class="bg-primary text-white" id="next">Next &raquo;</BaseButton>
         </div>
       </div>
 
-      <div class="medium-2 gap-2 swiper-testimonials">
-        <div class="testimonial-card">
-          <div class="flex">
-            <p>
-              <i class="fa-solid fa-quote-left fa-2x"></i>
-              Zems POS reduced our order errors by 40% and increased table turnover. The kitchen display system is a
-              game-changer for our busy restaurant.
-            </p>
-          </div>
-          <div class="flex align-center gap-1 mt-1">
-            <img class="height-full width-full"
-              src="https://tunatheme.com/tf/html/quarter-preview/quarter/img/testimonial/2.jpg" alt="profile" />
-            <div>
-              <h5 class="sub-title">Adam Josheph</h5>
-              <span>Owner, Bella Cucina</span>
-            </div>
-          </div>
-        </div>
-        <div class="testimonial-card">
-          <div class="flex">
-            <p>
-              <i class="fa-solid fa-quote-left fa-2x"></i>
-              Inventory management became effortless with Zems. We reduced waste by 30% in the first month thanks to
-              expiry alerts and automated ordering
-            </p>
-          </div>
-          <div class="flex align-center gap-1 mt-1">
-            <img class="height-full width-full"
-              src="https://tunatheme.com/tf/html/quarter-preview/quarter/img/testimonial/3.jpg" alt="profile" />
-            <div>
-              <h5 class="sub-title">Adam Josheph</h5>
-              <span>Manager, FreshMart</span>
-            </div>
-          </div>
-        </div>
+      <div class="flex gap-2 swiper-testimonials">
+        <TestimonialCard v-for="(review, i) in reviews" :review="review" :key="i" />
       </div>
-
     </div>
   </section>
 </template>
@@ -59,28 +70,10 @@ import SectionTitle from '@/components/Widget/SectionTitle.vue';
 .testimonials {
   padding: 3.75rem 0;
 }
-
-.testimonial-card {
-  padding: 2rem 1.5rem;
-  background: var(--white-color);
-  border-radius: 0.5rem;
-  box-shadow: var(--box-shadow);
-  scroll-snap-align: start;
-  transition: all 0.5 ease-in-out;
+.testimonials .btn {
+  padding: .75rem 1rem;
 }
-
-.testimonial-card p {
-  font-size: 1.15rem;
-}
-
-.testimonial-card span,
-.testimonial-card p {
-  font-size: 1.15rem;
-}
-
-.testimonial-card img {
-  height: 4rem;
-  width: 4rem;
-  border-radius: .5rem;
+.swiper-testimonials {
+  overflow-x: hidden;
 }
 </style>

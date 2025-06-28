@@ -22,6 +22,6 @@ defineProps({
   background-color: rgb(from var(--primary-color)r g b / 10%);
   color: var(--secondary-color);
   padding: .25rem 1.5rem;
-  border-radius: 1.25rem;
+  /* border-radius: 1.25rem; */
 }
 </style>
