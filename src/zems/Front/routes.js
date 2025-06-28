@@ -3,6 +3,7 @@ import HomePage from '@zems/Front/Pages/HomePage.vue'
 import AboutPage from './Pages/AboutPage.vue'
 import ContactPage from './Pages/ContactPage.vue'
 import ProjectsPage from './Pages/ProjectsPage.vue'
+import ProjectDetails from './Pages/ProjectDetails.vue'
 
 export default [
   {
@@ -23,6 +24,11 @@ export default [
         path: '/projects',
         name: 'projects',
         component: ProjectsPage,
+      },
+      {
+        path: '/projects/:slug',
+        name: 'project-details',
+        component: ProjectDetails
       },
       {
         path: '/contact-us',

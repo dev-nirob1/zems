@@ -83,7 +83,6 @@ const currentFeature = computed(() => {
       </div>
 
       <div class="medium-2 gap-2 align-center">
-
         <div class="app-image">
           <BaseImage :image="currentFeature.image" :alt="currentFeature.alt" />
         </div>
@@ -97,7 +96,7 @@ const currentFeature = computed(() => {
           </ul>
 
           <div class="flex gap-1">
-            <RouterLink :to="`/project/${currentFeature.title}`" class="btn bg-primary text-white">VIEW DETAILS</RouterLink>
+            <RouterLink :to="`/projects/${currentFeature.title}`" class="btn bg-primary text-white">VIEW DETAILS</RouterLink>
           </div>
 
         </div>

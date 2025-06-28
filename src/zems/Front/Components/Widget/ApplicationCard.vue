@@ -20,9 +20,8 @@ defineProps({
       <SubTitle>{{ app.title }}</SubTitle>
       <BaseParagraph>{{ app.description.substring(0, 60) }}...
       </BaseParagraph>
-      <div class="flex gap-1 mb-1">
-        <RouterLink class="btn bg-primary text-white" to="" target="_blank">Live Demo</RouterLink>
-        <RouterLink class="btn" to="">Details</RouterLink>
+      <div>
+        <RouterLink class="btn bg-primary text-white" :to="`/projects/${app.title}`">VIEW DETAILS</RouterLink>
       </div>
     </div>
   </div>
@@ -64,5 +63,8 @@ defineProps({
 
 .app-card .image:hover img {
   transform: scale(1.1);
+}
+.app-card a {
+  margin: .5rem 0;
 }
 </style>
