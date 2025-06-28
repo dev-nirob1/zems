@@ -1,5 +1,4 @@
 <script setup>
-import BaseParagraph from '@/components/Elements/BaseParagraph.vue'
 import SectionTitle from '@/components/Widget/SectionTitle.vue';
 import { ref } from 'vue';
 import PricingCard from '../Widget/PricingCard.vue';
@@ -77,5 +76,4 @@ const pricing = ref([
 .pricing {
   padding: 3.75rem 0;
 }
-
 </style>

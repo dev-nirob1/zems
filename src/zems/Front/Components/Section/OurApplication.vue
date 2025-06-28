@@ -1,11 +1,8 @@
 <script setup>
-import BaseButton from '@/components/Elements/BaseButton.vue';
-import BaseImage from '@/components/Elements/BaseImage.vue';
-import BaseParagraph from '@/components/Elements/BaseParagraph.vue';
-import SubTitle from '@/components/Elements/SubTitle.vue';
 import SectionTitle from '@/components/Widget/SectionTitle.vue';
 import { ref } from 'vue';
 import { RouterLink } from 'vue-router';
+import ApplicationCard from '../Widget/ApplicationCard.vue';
 
 const apps = ref([
   {
@@ -50,26 +47,13 @@ const apps = ref([
 <template>
   <div class="our-app">
     <div class="container">
-    <div class="flex justify-between align-center mb-2">
+      <div class="flex justify-between align-center mb-2">
         <SectionTitle title="Industry-Standard Applications" sub-title="Our Application" />
         <RouterLink to="/projects">See More →</RouterLink>
-    </div>
+      </div>
 
       <div class="medium-2 large-3 gap-2">
-        <div class="app-card" v-for="app in apps" :key="app.id">
-          <div class="image">
-            <BaseImage :image="app.image" alt="project image" />
-          </div>
-          <div class="mt-2">
-            <SubTitle>{{ app.title }}</SubTitle>
-            <BaseParagraph>{{ app.description.substring(0, 60) }}...
-            </BaseParagraph>
-          </div>
-          <div class="flex gap-1">
-            <BaseButton class="bg-primary text-white">Live Demo</BaseButton>
-            <BaseButton>Case Study</BaseButton>
-          </div>
-        </div>
+        <ApplicationCard v-for="app in apps" :key="app.id" :app="app" />
       </div>
     </div>
   </div>
@@ -79,32 +63,11 @@ const apps = ref([
 .our-app {
   padding: 3.75rem 0;
 }
+
 .our-app a {
   padding: .5rem .75rem;
   text-decoration: none;
   color: var(--secondary-color);
   border: 1px solid var(--secondary-color);
-}
-.app-card {
-  border-radius: .75rem;
-  padding: 1rem 1rem 1.5rem 1rem;
-  background-color: var(--white-color);
-}
-
-.btn {
-  width: 100%;
-  padding: 1rem;
-}
-
-.image {
-  height: 180px;
-  width: 100%;
-}
-
-.image img {
-  border-radius: .75rem .75rem 0 0;
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
 }
 </style>

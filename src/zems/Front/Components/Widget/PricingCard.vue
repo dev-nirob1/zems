@@ -12,28 +12,28 @@ defineProps({
 </script>
 
 <template>
-    <!-- Pricing Card -->
-    <div class="pricing-card">
-      <!-- badge  -->
-      <div v-if="price.badge" class="exclusive-badge">
-        <BaseParagraph class="badge">
-          <i :class="`fa-solid ${price.badge}`"></i>
-          Most Popular
-        </BaseParagraph>
-      </div>
-      <span class="price-icon">
-        <i :class="`fa-solid ${price.icon}`"></i>
-      </span>
-      <SubTitle>{{ price.title }}</SubTitle>
-      <HeroTitle>{{ price.price }} <span>/{{ price.pricePeriod }}</span></HeroTitle>
-      <BaseParagraph>
-        {{ price.description }}
+  <!-- Pricing Card -->
+  <div class="pricing-card">
+    <!-- badge  -->
+    <div v-if="price.badge" class="exclusive-badge">
+      <BaseParagraph class="badge">
+        <i :class="`fa-solid ${price.badge}`"></i>
+        Most Popular
       </BaseParagraph>
-      <ul v-for="(feature, i) in price.features" :key="i" class="feature-list">
-        <li>{{ feature }}</li>
-      </ul>
-      <BaseButton class="bg-primary text-white">Get Started</BaseButton>
     </div>
+    <span class="price-icon">
+      <i :class="`fa-solid ${price.icon}`"></i>
+    </span>
+    <SubTitle>{{ price.title }}</SubTitle>
+    <HeroTitle>{{ price.price }} <span>/{{ price.pricePeriod }}</span></HeroTitle>
+    <BaseParagraph>
+      {{ price.description }}
+    </BaseParagraph>
+    <ul v-for="(feature, i) in price.features" :key="i" class="feature-list">
+      <li>{{ feature }}</li>
+    </ul>
+    <BaseButton class="bg-primary text-white">Get Started</BaseButton>
+  </div>
 </template>
 <style scoped>
 /* pricing card */
@@ -88,7 +88,7 @@ defineProps({
 .pricing-card .exclusive-badge {
   width: 280px;
   position: relative;
-  margin-left: 3rem;
+  margin-right: -1.75rem !important;
   margin-top: -1.5rem;
   overflow: hidden;
 }
