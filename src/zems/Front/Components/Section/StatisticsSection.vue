@@ -19,7 +19,6 @@ const targetValues = {
 onMounted(() => {
   const interval = setInterval(() => {
     let done = true
-
     if (projectCount.value < targetValues.project) {
       projectCount.value++
       done = false
@@ -36,7 +35,6 @@ onMounted(() => {
       awardCount.value++
       done = false
     }
-
     if (done) clearInterval(interval)
   }, 20)
 })
@@ -46,7 +44,7 @@ onMounted(() => {
   <section class="bg-light statistics">
     <div class="container">
       <!-- grid-container: small/large = 2/4 -->
-      <ul class="medius-2 larger-4 gap-2 stats-content">
+      <ul class="medium-2 larger-4 gap-2 stats-content">
         <ListItem>
           <i class="fa-solid fa-laptop-code fa-3x"></i>
           <div>
@@ -102,7 +100,7 @@ onMounted(() => {
   background-color: var(--white-color);
   box-shadow: var(--box-shadow);
   padding: 2rem;
-  /* border-radius: 0.75rem; */
+  border-radius: 0.75rem;
   display: flex;
   flex-direction: column;
   align-items: center;

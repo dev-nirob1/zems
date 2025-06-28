@@ -15,8 +15,8 @@ export default [
         component: HomePage,
       },
       {
-        path: '/about',
-        name: 'about',
+        path: '/about-us',
+        name: 'about-us',
         component: AboutPage,
       },
       {

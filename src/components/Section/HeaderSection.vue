@@ -24,7 +24,7 @@ import ListItem from '../Elements/ListItem.vue';
           <RouterLink to="/">Home</RouterLink>
         </ListItem>
         <ListItem>
-          <RouterLink to="/about">About</RouterLink>
+          <RouterLink to="/about-us">About</RouterLink>
         </ListItem>
         <ListItem>
           <RouterLink to="/projects">Projects</RouterLink>

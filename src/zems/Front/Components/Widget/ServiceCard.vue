@@ -1,6 +1,6 @@
 <script setup>
 import BaseParagraph from '@/components/Elements/BaseParagraph.vue';
-import BaseTitle from '@/components/Elements/BaseTitle.vue';
+import SubTitle from '@/components/Elements/SubTitle.vue';
 import { RouterLink } from 'vue-router';
 defineProps({
   service: {
@@ -14,9 +14,11 @@ defineProps({
     <div class="icon">
       <img :src="service.icon" alt="icon">
     </div>
-    <BaseTitle tag="h5">{{ service.title }}</BaseTitle>
-    <BaseParagraph>{{service.description}}</BaseParagraph>
-    <RouterLink to="">Learn More <i class="fas fa-arrow-right"></i></RouterLink>
+    <div class="mt-1">
+      <SubTitle>{{ service.title }}</SubTitle>
+      <BaseParagraph>{{ service.description }}</BaseParagraph>
+      <RouterLink to="">Learn More <i class="fas fa-arrow-right"></i></RouterLink>
+    </div>
   </div>
 </template>
 
@@ -29,11 +31,12 @@ defineProps({
   cursor: pointer;
   transition: all 0.3s ease;
 }
-
+.service-card p {
+  margin: .75rem 0;
+}
 .service-card:hover {
   transform: translateY(-.5rem);
 }
-
 .service-card a,
 .service-card i {
   transition: all .3s ease-in-out;
@@ -41,8 +44,8 @@ defineProps({
 .service-card a {
   text-decoration: none;
   color: var(--primary-color);
-  padding: .5rem 0;
-  display:flex;
+  /* padding: .5rem 0; */
+  display: flex;
   align-items: center;
   gap: .5rem;
 }
