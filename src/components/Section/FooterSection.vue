@@ -192,6 +192,6 @@ import BaseParagraph from '../Elements/BaseParagraph.vue';
 .footer-bottom {
   padding: 1rem;
   text-align: center;
-  background-color: rgb(from var(--primary-color)r g b / 15%);
+  background-color: rgb(from var(--primary-color)r g b / 5%);
 }
 </style>

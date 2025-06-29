@@ -2,55 +2,46 @@
 import BaseButton from '@/components/Elements/BaseButton.vue';
 import BaseParagraph from '@/components/Elements/BaseParagraph.vue';
 import BaseTitle from '@/components/Elements/BaseTitle.vue';
+import { RouterLink } from 'vue-router';
 
 </script>
 
 <template>
-  <div class="container relative mt-5">
+  <section class="container">
     <div class="call-to-action">
-      <div class="cta flex align-center justify-center text-center">
-        <div>
-          <BaseTitle>Need Custom Software Solutions?</BaseTitle>
-          <BaseParagraph>
-            Our experts are ready to discuss your unique business requirements
-          </BaseParagraph>
-          <BaseButton class="bg-white">Contact Us</BaseButton>
-        </div>
+      <div class="text-center text-white">
+        <BaseTitle>Need Custom Software Solutions?</BaseTitle>
+        <BaseParagraph>
+          Our experts are ready to discuss your unique business requirements
+        </BaseParagraph>
+        <RouterLink to="/contact-us" class="btn bg-white text-primary mt-1">CONTACT US</RouterLink>
       </div>
     </div>
-  </div>
+  </section>
 </template>
 
 <style scoped>
 .call-to-action {
-  background-color: var(--primary-color);
-  padding: 5rem;
+  position: relative;
+  margin-bottom: -7rem;
+  margin-top: 3.75rem;
+  background-color: var(--secondary-color);
+  padding: 3rem 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
-.cta {
-  flex-direction: column;
+.call-to-action p {
+  margin: .5rem 0;
+}
+.call-to-action .btn {
+  padding: 1rem 2rem;
+  border: none;
+  font-size: 1.15rem;
+}
+.call-to-action .btn:hover{
   background-color: var(--primary-color);
   color: var(--white-color);
-  width: 100%;
-  padding: 5rem 3rem 3rem 3rem;
-  position: absolute;
-  top: -3rem;
-  left: 0;
-  z-index: 1;
-}
-@media (min-width: 768px){
-  .call-to-action .btn {
-    font-size: 1.25rem;
-    padding: 1.25rem 2rem;
-    border: none;
-  }
-}
-@media (min-width: 992px) {
-  .cta {
-    flex-direction: row;
-  }
-  .call-to-action {
-    padding: 3rem;
-  }
 }
 </style>
