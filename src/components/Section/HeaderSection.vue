@@ -11,7 +11,6 @@ const toggleMenu = () => {
 };
 
 onMounted(() => {
-
   const navbar = document.querySelector('.nav-links')
   console.log(navbar.childNodes);
   navbar.childNodes.forEach(element => {
@@ -65,15 +64,6 @@ onMounted(() => {
 </template>
 
 <style scoped>
-/* Sticky navbar with scroll effects */
-.scroll-down .navbar {
-  transform: translate3d(0, -100%, 0);
-}
-
-.scroll-up .navbar {
-  background-color: var(--secondary-color);
-}
-
 .navbar {
   backdrop-filter: blur(50px);
   box-shadow: var(--box-shadow);

@@ -15,7 +15,7 @@ import BaseParagraph from '../Elements/BaseParagraph.vue';
         <!-- Company logo and description -->
         <div>
           <RouterLink to="/" class="logo">
-            <BaseImage image="https://zems.uk/uploads/brands/logo.png" class="width-full" alt="Company Logo"/>
+            <BaseImage image="https://zems.uk/uploads/brands/logo-2.png" class="width-full" alt="Company Logo"/>
           </RouterLink>
 
           <BaseParagraph>Innovative software solutions for businesses across Ireland and beyond</BaseParagraph>
@@ -105,8 +105,8 @@ import BaseParagraph from '../Elements/BaseParagraph.vue';
   margin-bottom: 1rem;
 }
 .footer .logo img {
-  height: 50px;
-  width: 50px;
+  height: 70px;
+  width: 80px;
 }
 .social-links {
   display: flex;

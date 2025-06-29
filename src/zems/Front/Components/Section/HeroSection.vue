@@ -8,7 +8,7 @@ import HeroTitle from '@/components/Elements/HeroTitle.vue';
 
 <template>
   <section class="hero">
-    <div class="container medium-2 align-center gap-2 py-4">
+    <div class="container medium-2 align-center gap-2 pt-5">
       <!-- content container  -->
       <div>
         <HeroTitle>
