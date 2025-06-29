@@ -2,24 +2,42 @@
 import { RouterLink } from 'vue-router';
 import BaseButton from '../Elements/BaseButton.vue';
 import ListItem from '../Elements/ListItem.vue';
+import { onMounted, ref } from 'vue';
 
+const isMenuOpen = ref(false)
+
+const toggleMenu = () => {
+  isMenuOpen.value = !isMenuOpen.value;
+};
+
+onMounted(() => {
+
+  const navbar = document.querySelector('.nav-links')
+  console.log(navbar.childNodes);
+  navbar.childNodes.forEach(element => {
+    element.addEventListener('click', () => {
+      isMenuOpen.value = false
+    })
+  });
+})
 </script>
 
 <template>
   <header class="navbar">
     <nav class="flex justify-between align-center container">
-       <!-- Mobile Menu Toggle Button -->
-      <BaseButton class="hamburger">
-        <i class="fas fa-bars fa-2xl"></i>
+      <!-- Mobile Menu Toggle Button -->
+      <BaseButton class="hamburger" @click="toggleMenu">
+        <i :class="isMenuOpen ? 'fas fa-xmark' : 'fas fa-bars'" class="fa-2xl"></i>
       </BaseButton>
       <!-- Logo -->
       <RouterLink to="/" class="logo">
-        <img class="width-full" src="https://zems.uk/uploads/brands/logo.png" alt="logo" />
+        <img class="width-full desktop-logo" src="https://zems.uk/uploads/brands/logo.png" alt="logo" />
+        <img class="width-full mobile-logo" src="https://zems.uk/uploads/brands/logo-2.png" alt="logo" />
       </RouterLink>
 
       <!-- Navigation Links -->
       <div class="flex align-center gap-1">
-        <ul class="nav-links">
+        <ul class="nav-links" :class="{ 'active': isMenuOpen }">
           <ListItem>
             <RouterLink to="/">Home</RouterLink>
           </ListItem>
@@ -36,8 +54,8 @@ import ListItem from '../Elements/ListItem.vue';
             <RouterLink to="/contact-us">Contact</RouterLink>
           </ListItem>
         </ul>
-        <div style="border-left: 1px solid;padding-left: .75rem; gap: .5rem;" class="flex align-center">
-          <i style="padding: .5rem; border-radius: .25rem;" class="fa-solid fa-phone bg-primary text-white"></i>
+        <div class="phone-num flex align-center">
+          <i class="fa-solid fa-phone"></i>
           <div>
             +353050436340</div>
         </div>
@@ -58,7 +76,7 @@ import ListItem from '../Elements/ListItem.vue';
 
 .navbar {
   backdrop-filter: blur(50px);
-  /* color: var(--white-color); */
+  box-shadow: var(--box-shadow);
   padding: 0.75rem 0;
   position: fixed;
   top: 0;
@@ -72,28 +90,19 @@ import ListItem from '../Elements/ListItem.vue';
   text-decoration: none;
 }
 
-.logo {
-  display: flex;
-  gap: 0.5rem;
-}
-
-.logo span {
-  font-size: 1.8rem;
-  font-weight: bold;
-}
-
-.logo p {
-  margin-top: -0.5rem;
-  font-size: 0.8rem;
-}
-
 .logo img {
   height: 65px;
-  width: 100%;
+  width: 150px;
 }
 
-.brand {
+/* logo vissibility hidden/block */
+.logo .desktop-logo {
   display: none;
+}
+
+.logo .mobile-logo {
+  height: 65px;
+  width: fit-content;
 }
 
 .nav-links {
@@ -118,8 +127,9 @@ import ListItem from '../Elements/ListItem.vue';
 }
 
 .navbar ul.active {
-  top: 0;
+  top: 5rem;
   left: 0;
+  color: var(--white-color);
 }
 
 .navbar ul li a {
@@ -130,21 +140,20 @@ import ListItem from '../Elements/ListItem.vue';
 }
 
 .navbar ul li a:hover {
-  color: var(--alternative-color);
+  color: var(--secondary-color);
 }
 
-/* dropdown menu  */
-.dropdown-container {
-  position: relative;
+.phone-num {
+  gap: .5rem;
+  padding-left: .75rem;
+  font-weight: 500;
 }
 
-.dropdown-menu {
-  margin-left: 1.5rem;
-  margin-top: 1rem;
-}
-
-.dropdown-menu a {
-  display: block;
+.phone-num i {
+  color: var(--white-color);
+  background-color: var(--secondary-color);
+  padding: .5rem;
+  border-radius: .25rem;
 }
 
 /* Mobile menu toggle */
@@ -156,11 +165,6 @@ import ListItem from '../Elements/ListItem.vue';
 }
 
 @media (min-width: 992px) {
-  .brand {
-    display: block;
-    margin: 0;
-  }
-
   .navbar ul {
     position: inherit;
     /* color: var(--white-color); */
@@ -180,7 +184,7 @@ import ListItem from '../Elements/ListItem.vue';
     left: 0;
     width: 0;
     height: 2px;
-    background: var(--alternative-color);
+    background: var(--secondary-color);
     transition: width 0.3s ease;
   }
 
@@ -188,25 +192,17 @@ import ListItem from '../Elements/ListItem.vue';
     width: 100%;
   }
 
-  /* dropdonw menu  */
-  .navbar .dropdown-menu {
-    position: absolute;
-    top: 1.75rem;
-    left: 0;
-    width: 10rem;
-    margin: 0;
-    padding: 1.5rem 1rem;
-    background-color: var(--secondary-color);
-    display: none;
-    transition: all 0.5s;
-  }
-
-  .navbar .dropdown-container:hover .dropdown-menu {
+  /* logo vissibility hidden/block */
+  .logo .desktop-logo {
     display: block;
   }
 
-  .navbar .dropdown-menu a {
-    margin-bottom: 0.25rem;
+  .logo .mobile-logo {
+    display: none;
+  }
+
+  .phone-num {
+    border-left: 1px solid var(--secondary-color);
   }
 
   /* expand navlinks on desktop  */
