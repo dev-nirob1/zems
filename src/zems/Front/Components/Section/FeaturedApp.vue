@@ -1,10 +1,5 @@
 <script setup>
 import { computed, ref } from 'vue';
-import BaseButton from '@/components/Elements/BaseButton.vue';
-import BaseImage from '@/components/Elements/BaseImage.vue';
-import BaseParagraph from '@/components/Elements/BaseParagraph.vue';
-import ListItem from '@/components/Elements/ListItem.vue';
-import SubTitle from '@/components/Elements/SubTitle.vue';
 import SectionTitle from '@/components/Widget/SectionTitle.vue';
 import { RouterLink } from 'vue-router';
 
@@ -87,16 +82,18 @@ const currentFeature = computed(() => {
           <BaseImage :image="currentFeature.image" :alt="currentFeature.alt" />
         </div>
         <div>
-          <SubTitle>{{currentFeature.subtitle}}</SubTitle>
-          <BaseParagraph>
+          <SubTitle data-zems="animate__fadeInRight" class="animate__animated">{{currentFeature.subtitle}}</SubTitle>
+
+          <BaseParagraph data-zems="animate__fadeInRight" class="animate__animated">
             {{currentFeature.description}}
           </BaseParagraph>
+
           <ul class="feature-list">
-            <ListItem v-for="(data, i) in currentFeature.features" :key="i">{{ data }}</ListItem>
+            <ListItem data-zems="animate__fadeInUp" class="animate__animated" v-for="(data, i) in currentFeature.features" :key="i">{{ data }}</ListItem>
           </ul>
 
           <div class="flex gap-1">
-            <RouterLink :to="`/projects/${currentFeature.title}`" class="btn bg-primary text-white">VIEW DETAILS</RouterLink>
+            <RouterLink  :to="`/projects/${currentFeature.title}`" class="btn bg-primary text-white animate__animated">VIEW DETAILS</RouterLink>
           </div>
 
         </div>
