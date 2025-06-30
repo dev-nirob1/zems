@@ -1,7 +1,4 @@
-<script setup lang="ts">
-import BaseButton from '@/components/Elements/BaseButton.vue';
-import BaseTextArea from '@/components/Elements/BaseTextArea.vue';
-import InputField from '@/components/Elements/InputField.vue';
+<script setup>
 import SelectDropdown from '@/components/Elements/SelectDropdown.vue';
 import SectionTitle from '@/components/Widget/SectionTitle.vue';
 

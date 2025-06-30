@@ -8,8 +8,8 @@ console.log(route);
 <template>
   <section class="breadcrumb">
     <ul class="container flex align-center gap-1">
-      <li><a href="/">Home</a></li>
-      <li>{{route.name}}</li>
+      <ListItem><a href="/">Home</a></ListItem>
+      <Listitem>{{route.name}}</Listitem>
     </ul>
   </section>
 </template>

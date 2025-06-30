@@ -1,10 +1,3 @@
-<script setup>
-import BaseButton from '@/components/Elements/BaseButton.vue';
-import BaseImage from '@/components/Elements/BaseImage.vue';
-import BaseParagraph from '@/components/Elements/BaseParagraph.vue';
-import HeroTitle from '@/components/Elements/HeroTitle.vue';
-
-</script>
 
 <template>
   <section class="hero">

@@ -3,8 +3,8 @@ import { computed, ref } from 'vue';
 import SectionTitle from '@/components/Widget/SectionTitle.vue';
 import { RouterLink } from 'vue-router';
 
-const selectedTab = ref('Restaurant Solution')
-const tabData = ref(['Restaurant Solution', 'Grocery POS', 'Real Estate App']);
+const selectedId = ref(1)
+
 const featured = ref([
   {
     "id": 1,
@@ -52,15 +52,13 @@ const featured = ref([
     ]
   }
 ])
-const currentTab = (tab) => {
-  selectedTab.value = tab;
-  // console.log(selectedTab.value)
+const currentTab = (id) => {
+  selectedId.value = id;
 }
-
 const currentFeature = computed(() => {
-  return featured.value.find(data => data.title === selectedTab.value)
+  return featured.value.find(data => data.id === selectedId.value)
 })
-// console.log(currentFeature);
+
 
 </script>
 
@@ -71,8 +69,12 @@ const currentFeature = computed(() => {
 
       <div class="tab-panel">
         <ul>
-          <ListItem v-for="(tab, i) in tabData" :key="i">
+          <!-- <ListItem v-for="(tab, i) in tabData" :key="i">
             <BaseButton :class="{ active: selectedTab === tab }" @click="currentTab(tab)">{{ tab }}</BaseButton>
+          </ListItem> -->
+          <ListItem v-for="(tab, i) in featured" :key="i">
+            <BaseButton :class="{ active: selectedId === tab.id }" @click="currentTab(tab.id)">{{ tab.title }}
+            </BaseButton>
           </ListItem>
         </ul>
       </div>
@@ -82,18 +84,20 @@ const currentFeature = computed(() => {
           <BaseImage :image="currentFeature.image" :alt="currentFeature.alt" />
         </div>
         <div>
-          <SubTitle data-zems="animate__fadeInRight" class="animate__animated">{{currentFeature.subtitle}}</SubTitle>
+          <SubTitle data-zems="animate__fadeInRight" class="animate__animated">{{ currentFeature.subtitle }}</SubTitle>
 
           <BaseParagraph data-zems="animate__fadeInRight" class="animate__animated">
-            {{currentFeature.description}}
+            {{ currentFeature.description }}
           </BaseParagraph>
 
           <ul class="feature-list">
-            <ListItem data-zems="animate__fadeInUp" class="animate__animated" v-for="(data, i) in currentFeature.features" :key="i">{{ data }}</ListItem>
+            <ListItem data-zems="animate__fadeInUp" class="animate__animated"
+              v-for="(data, i) in currentFeature.features" :key="i">{{ data }}</ListItem>
           </ul>
 
           <div class="flex gap-1">
-            <RouterLink  :to="`/projects/${currentFeature.title}`" class="btn bg-primary text-white animate__animated">VIEW DETAILS</RouterLink>
+            <RouterLink :to="`/projects/${currentFeature.title}`" class="btn bg-primary text-white animate__animated">
+              VIEW DETAILS</RouterLink>
           </div>
 
         </div>
@@ -138,9 +142,11 @@ const currentFeature = computed(() => {
   width: 100%;
   object-fit: cover;
 }
+
 .featured .btn {
-      padding: .75rem 1.5rem;
-    }
+  padding: .75rem 1.5rem;
+}
+
 .feature-list {
   list-style: none;
   padding-left: 1rem;

@@ -1,9 +1,4 @@
 <script setup>
-import BaseButton from '@/components/Elements/BaseButton.vue';
-import BaseParagraph from '@/components/Elements/BaseParagraph.vue';
-import HeroTitle from '@/components/Elements/HeroTitle.vue';
-import SubTitle from '@/components/Elements/SubTitle.vue';
-
 defineProps({
   price: {
     type: Object

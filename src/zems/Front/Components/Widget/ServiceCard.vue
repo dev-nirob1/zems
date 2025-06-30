@@ -1,6 +1,4 @@
 <script setup>
-import BaseParagraph from '@/components/Elements/BaseParagraph.vue';
-import SubTitle from '@/components/Elements/SubTitle.vue';
 import { RouterLink } from 'vue-router';
 defineProps({
   service: {

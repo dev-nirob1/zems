@@ -16,7 +16,7 @@ import { RouterLink } from 'vue-router';
         <RouterLink to="/contact-us" class="btn bg-white text-primary mt-1">CONTACT US</RouterLink>
       </div>
 
-        <div class="tech-orbit">
+        <div class="tech">
         <img src="/tech/javascript.png" alt="JavaScript" class="tech-logo logo-1">
         <img src="/tech/python.png" alt="Python" class="tech-logo logo-2">
         <img src="/tech/react.png" alt="React" class="tech-logo logo-3">
@@ -32,7 +32,7 @@ import { RouterLink } from 'vue-router';
 .call-to-action {
   position: relative;
   margin: 3.75rem 0 -7rem 0;
-  background-color: var(--primary-color);
+  background-color:#021212;
   padding: 2rem;
   display: flex;
   align-items: center;
@@ -56,8 +56,7 @@ import { RouterLink } from 'vue-router';
   color: var(--white-color);
 }
 
-/* Tech Orbit Animation */
-.tech-orbit {
+.tech {
   position: relative;
   width: 200px;
   height: 200px;
@@ -77,7 +76,6 @@ import { RouterLink } from 'vue-router';
   margin: -25px 0 0 -25px;
 }
 
-/* Circular Positioning */
 .logo-1 { transform: rotate(0deg) translateX(100px) rotate(0deg); }
 .logo-2 { transform: rotate(60deg) translateX(100px) rotate(-60deg); }
 .logo-3 { transform: rotate(120deg) translateX(100px) rotate(-120deg); }
@@ -85,15 +83,12 @@ import { RouterLink } from 'vue-router';
 .logo-5 { transform: rotate(240deg) translateX(100px) rotate(-240deg); }
 .logo-6 { transform: rotate(300deg) translateX(100px) rotate(-300deg); }
 
-/* Orbit Animation */
 @keyframes rotate-orbit {
   100% {
     transform: rotate(360deg);
   }
 }
 
-
-/* Responsive Design */
 @media (max-width: 768px) {
   .call-to-action {
     flex-direction: column;
@@ -113,7 +108,6 @@ import { RouterLink } from 'vue-router';
     margin: -20px 0 0 -20px;
   }
 
-  /* Adjust orbit radius */
   .logo-1 { transform: rotate(0deg) translateX(100px) rotate(0deg); }
   .logo-2 { transform: rotate(60deg) translateX(100px) rotate(-60deg); }
   .logo-3 { transform: rotate(120deg) translateX(100px) rotate(-120deg); }

@@ -1,8 +1,4 @@
-<script setup lang="ts">
-import BaseParagraph from '@/components/Elements/BaseParagraph.vue';
-import BaseTitle from '@/components/Elements/BaseTitle.vue';
-import ListItem from '@/components/Elements/ListItem.vue';
-import SubTitle from '@/components/Elements/SubTitle.vue';
+<script setup>
 
 </script>
 

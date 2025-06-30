@@ -1,15 +1,12 @@
 <script setup>
 import { ref, onMounted } from 'vue'
-import BaseParagraph from '@/components/Elements/BaseParagraph.vue'
-import BaseTitle from '@/components/Elements/BaseTitle.vue'
-import ListItem from '@/components/Elements/ListItem.vue'
 
 const projectCount = ref(0)
 const clientCount = ref(0)
 const techStackCount = ref(0)
 const awardCount = ref(0)
 
-const targetValues = {
+const values = {
   project: 120,
   client: 80,
   techStack: 25,
@@ -19,19 +16,19 @@ const targetValues = {
 onMounted(() => {
   const interval = setInterval(() => {
     let done = true
-    if (projectCount.value < targetValues.project) {
+    if (projectCount.value < values.project) {
       projectCount.value++
       done = false
     }
-    if (clientCount.value < targetValues.client) {
+    if (clientCount.value < values.client) {
       clientCount.value++
       done = false
     }
-    if (techStackCount.value < targetValues.techStack) {
+    if (techStackCount.value < values.techStack) {
       techStackCount.value++
       done = false
     }
-    if (awardCount.value < targetValues.award) {
+    if (awardCount.value < values.award) {
       awardCount.value++
       done = false
     }
