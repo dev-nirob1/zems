@@ -32,19 +32,30 @@ const images = ref([
 ])
 
 const isModalOpen = ref(false)
-const selectedImage = ref()
+const selectedIndex = ref(0)
 
 const handleOpenModal = (imageIndex) => {
   isModalOpen.value = true
-  console.log('index', imageIndex);
-  const clickedImage = images.value.find((image, i) => i == imageIndex)
-  selectedImage.value = clickedImage.url
-  console.log('selected',selectedImage, 'clicked', clickedImage);
+  // console.log('index', imageIndex);
+  selectedIndex.value = imageIndex;
+  // console.log('selected',selectedIndex, 'clicked', imageIndex);
 }
 const handleCloseModal = () => {
   isModalOpen.value = false
 }
 
+const handlePrev = () => {
+  if (selectedIndex.value > 0) {
+    selectedIndex.value -= 1;
+  }
+}
+const handleNext = () => {
+  selectedIndex.value += 1;
+  if (selectedIndex.value === images.value.length) {
+    selectedIndex.value = 0;
+    console.log('selected ', selectedIndex);
+  }
+}
 
 </script>
 
@@ -53,17 +64,11 @@ const handleCloseModal = () => {
 
   <div class="gallery">
     <div class="container">
-
-      <PopUP :isModalOpen="isModalOpen" :handleCloseModal="handleCloseModal">
-        <BaseButton class="btn-prev">PREV</BaseButton>
-        <BaseImage :image="selectedImage" alt="" />
-        <BaseButton class="btn-next">NEXT</BaseButton>
-      </PopUP>
-
       <SectionTitle class="text-center mb-2" title="Our Photo Gallery" sub-title="Gallery" />
       <div class="medium-2 large-3 gap-2">
         <div class="gallery-item" v-for="(img, index) in images" :key="index">
           <BaseImage :image="img.url" :alt="img.alt" />
+
           <div class="button-overlay">
             <button @click="handleOpenModal(index)" class="plus-button"><i class="fa-solid fa-plus fa-2x"></i></button>
           </div>
@@ -71,6 +76,11 @@ const handleCloseModal = () => {
       </div>
     </div>
   </div>
+
+  <PopUP :isModalOpen="isModalOpen" :handleCloseModal="handleCloseModal" :handleNext="handleNext"
+    :handlePrev="handlePrev">
+    <BaseImage :image="images[selectedIndex].url" :alt="images[selectedIndex].alt" />
+  </PopUP>
 </template>
 
 <style scoped>
