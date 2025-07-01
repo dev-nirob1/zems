@@ -4,7 +4,8 @@ import { RouterLink } from 'vue-router';
 </script>
 
 <template>
-  <section class="cta-badge container">
+  <section class="mt-4">
+    <div class="cta-badge container">
     <div class="cta-content">
       <BaseTitle>Need Software Solutions?</BaseTitle>
       <BaseParagraph>
@@ -15,6 +16,7 @@ import { RouterLink } from 'vue-router';
     <div class="box-1"></div>
     <div class="box-2"></div>
     <div class="box-3"></div>
+  </div>
   </section>
 </template>
 
@@ -24,7 +26,7 @@ import { RouterLink } from 'vue-router';
   padding: 4rem 1.5rem 6rem 1.5rem;
   text-align: center;
   color: var(--white-color);
-  background-color: var(--dark-color);
+  background-color: var(--secondary-color);
   border-radius: 0 0 100% 100%;
   position: relative;
   overflow: hidden;
@@ -41,7 +43,7 @@ import { RouterLink } from 'vue-router';
   position: absolute;
   height: 100px;
   width: 100px;
-  background-color: var(--secondary-color);
+  background-color: var(--dark-color);
   border-radius: 50%;
   opacity: .25;
   z-index: 0;
@@ -96,7 +98,7 @@ import { RouterLink } from 'vue-router';
 @media (min-width: 768px) {
   .cta-badge {
     padding: 4rem 3rem;
-    border-radius: 0 0 100% 100% / 0 0 100% 100%;
+    border-radius: 0 0 100% 100% / 0 0 100% 100% ;
   }
 }
 </style>

@@ -82,7 +82,7 @@ onMounted(() => {
 
 .logo img {
   height: 65px;
-  width: 150px;
+  width: auto;
 }
 
 /* logo vissibility hidden/block */
