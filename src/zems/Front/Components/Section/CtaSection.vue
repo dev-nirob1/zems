@@ -1,43 +1,111 @@
 <script setup>
-import BaseParagraph from '@/components/Elements/BaseParagraph.vue';
-import BaseTitle from '@/components/Elements/BaseTitle.vue';
 import { RouterLink } from 'vue-router';
 
 </script>
 
 <template>
-  <section class="container">
+  <section class="container relative">
     <div class="call-to-action">
       <div class="cta-content">
-        <BaseTitle>Need Custom Software Solutions?</BaseTitle>
+        <BaseTitle>Need Software Solutions?</BaseTitle>
         <BaseParagraph>
-          Our experts are ready to discuss your unique business requirements
+          Let our experts craft the perfect digital solution for your specific business needs
         </BaseParagraph>
         <RouterLink to="/contact-us" class="btn bg-white text-primary mt-1">CONTACT US</RouterLink>
       </div>
-
-        <div class="tech">
-        <img src="/tech/javascript.png" alt="JavaScript" class="tech-logo logo-1">
-        <img src="/tech/python.png" alt="Python" class="tech-logo logo-2">
-        <img src="/tech/react.png" alt="React" class="tech-logo logo-3">
-        <img src="/tech/vue.png" alt="Vue" class="tech-logo logo-4">
-        <img src="/tech/django.png" alt="Django" class="tech-logo logo-5">
-        <img src="/tech/laravel.png" alt="Laravel" class="tech-logo logo-6">
-      </div>
+    </div>
+    <div class="box"></div>
+    <div class="box-2"></div>
+    <!-- <div class="box-3"></div> -->
+    <div class="badge flex align-center justify-center">
+      <BaseTitle>Trusted</BaseTitle>
     </div>
   </section>
 </template>
 
 <style scoped>
 .call-to-action {
-  position: relative;
   margin: 3.75rem 0 -7rem 0;
-  background-color:#021212;
+  background-color: var(--dark-color);
   padding: 2rem;
   display: flex;
   align-items: center;
-  justify-content: space-between;
+  justify-content: center;
+  text-align: center;
   color: var(--white-color);
+  z-index: -1;
+}
+
+.cta-content {
+  z-index: 2;
+}
+
+.badge {
+  position: absolute;
+  top: 0;
+  right: 5%;
+  width: 10rem;
+  height: 10rem;
+  background-color: var(--secondary-color);
+  border-radius: 0 0 50% 50%;
+}
+
+.badge::before {
+  content: '';
+  position: absolute;
+  top: -1rem;
+  right: -1rem;
+  height: 2rem;
+  width: 12rem;
+  background-color: var(--secondary-color);
+  box-shadow: var(--box-shadow);
+  border-radius: .75rem .75rem 0 0;
+}
+
+.badge .title {
+  position: relative;
+  display: inline-block;
+  z-index: 1;
+  color: var(--white-color);
+}
+
+.badge .title::before {
+  content: '';
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 12rem;
+  height: 2rem;
+  background-color: var(--secondary-color);
+  z-index: -1;
+  border-radius: 4px;
+}
+.box {
+  position: absolute;
+  top: 60%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  height: 10rem;
+  width: 10rem;
+  rotate: 30deg;
+  background-color: var(--secondary-color);
+  z-index: 1;
+  opacity: .1;
+}
+
+.box-2 {
+  position: absolute;
+  top: 65%;
+  left: 10%;
+  transform: translate(-50%, -50%);
+  height: 10rem;
+  width: 10rem;
+  border-radius: 50%;
+  rotate: 65deg;
+  background-color: var(--secondary-color);
+  z-index: 1;
+  opacity: .15;
 }
 
 .call-to-action p {
@@ -56,63 +124,9 @@ import { RouterLink } from 'vue-router';
   color: var(--white-color);
 }
 
-.tech {
-  position: relative;
-  width: 200px;
-  height: 200px;
-  min-width: 200px;
-  border-radius: 50%;
-  background: var(--secondary-color);
-  animation: rotate-orbit 40s linear infinite;
-}
-
-.tech-logo {
-  position: absolute;
-  width: 50px;
-  height: 50px;
-  transition: all 0.3s ease;
-  top: 50%;
-  left: 50%;
-  margin: -25px 0 0 -25px;
-}
-
-.logo-1 { transform: rotate(0deg) translateX(100px) rotate(0deg); }
-.logo-2 { transform: rotate(60deg) translateX(100px) rotate(-60deg); }
-.logo-3 { transform: rotate(120deg) translateX(100px) rotate(-120deg); }
-.logo-4 { transform: rotate(180deg) translateX(100px) rotate(-180deg); }
-.logo-5 { transform: rotate(240deg) translateX(100px) rotate(-240deg); }
-.logo-6 { transform: rotate(300deg) translateX(100px) rotate(-300deg); }
-
-@keyframes rotate-orbit {
-  100% {
-    transform: rotate(360deg);
+@media (min-width: 992px) {
+  .cta-content {
+    max-width: 70%;
   }
-}
-
-@media (max-width: 768px) {
-  .call-to-action {
-    flex-direction: column;
-    text-align: center;
-    padding: 2rem;
-  }
-
-  .tech-orbit {
-    margin-top: 2rem;
-    width: 250px;
-    height: 250px;
-  }
-
-  .tech-logo {
-    width: 40px;
-    height: 40px;
-    margin: -20px 0 0 -20px;
-  }
-
-  .logo-1 { transform: rotate(0deg) translateX(100px) rotate(0deg); }
-  .logo-2 { transform: rotate(60deg) translateX(100px) rotate(-60deg); }
-  .logo-3 { transform: rotate(120deg) translateX(100px) rotate(-120deg); }
-  .logo-4 { transform: rotate(180deg) translateX(100px) rotate(-180deg); }
-  .logo-5 { transform: rotate(240deg) translateX(100px) rotate(-240deg); }
-  .logo-6 { transform: rotate(300deg) translateX(100px) rotate(-300deg); }
 }
 </style>

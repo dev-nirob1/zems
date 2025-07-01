@@ -90,7 +90,9 @@ import BaseParagraph from '../Elements/BaseParagraph.vue';
 <style scoped>
 .footer {
   padding-top: 10rem;
-  background-color: rgb(from var(--primary-color) r g b / 10%);
+  background-color: var(--primary-color);
+  color: var(--white-color);
+  /* background-color: rgb(from var(--primary-color) r g b / 10%); */
 }
 .footer h5 {
   margin-bottom: 1.5rem;
@@ -106,7 +108,7 @@ import BaseParagraph from '../Elements/BaseParagraph.vue';
 }
 .footer .logo img {
   height: 70px;
-  width: 80px;
+  width: auto;
 }
 .social-links {
   display: flex;
@@ -123,7 +125,7 @@ import BaseParagraph from '../Elements/BaseParagraph.vue';
   display: flex;
   align-items: center;
   justify-content: center;
-  background-color: var(--primary-color);
+  background-color: var(--secondary-color);
   color: var(--white-color);
 }
 .social-links a:hover i {
@@ -137,7 +139,7 @@ import BaseParagraph from '../Elements/BaseParagraph.vue';
   bottom: 0;
   width: 70px;
   height: 3px;
-  background-color: var(--primary-color);
+  background-color: var(--white-color);
 }
 .footer ul {
   list-style: none;
@@ -162,7 +164,6 @@ import BaseParagraph from '../Elements/BaseParagraph.vue';
   transition: all 0.3s ease;
 }
 .footer ul a:hover {
-  color: var(--primary-color);
   padding-left: 5px;
 }
 .footer ul a:hover::before {
@@ -184,7 +185,7 @@ import BaseParagraph from '../Elements/BaseParagraph.vue';
 }
 .subscribe-form .btn {
   padding: 1rem 2rem;
-  background-color: var(--primary-color);
+  background-color: var(--secondary-color);
   color: var(--white-color);
   border: none;
 }
@@ -192,6 +193,6 @@ import BaseParagraph from '../Elements/BaseParagraph.vue';
 .footer-bottom {
   padding: 1rem;
   text-align: center;
-  background-color: rgb(from var(--primary-color)r g b / 5%);
+  background-color: rgb(from var(--dark-color)r g b / 50%);
 }
 </style>
