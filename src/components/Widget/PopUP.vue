@@ -29,7 +29,7 @@ defineProps({
         <i class="fa-solid fa-chevron-right fa-2x"></i>
       </button>
 
-      <!-- Image Wrapper -->
+      <!-- modal content -->
       <div class="modal-details">
         <slot></slot>
       </div>
@@ -42,13 +42,12 @@ defineProps({
   </div>
 </template>
 
-
 <style>
 .modal {
   position: relative;
 }
 
-.modal-content {
+.modal .modal-content {
   position: fixed;
   top: 0;
   left: 0;
@@ -67,40 +66,37 @@ defineProps({
   border: none;
   color: var(--white-color);
   padding: 1rem;
-  cursor: pointer;
-  z-index: 1000;
 }
-
-.close-btn {
+.modal .close-btn {
   top: 1rem;
   right: 1rem;
 }
-
-.btn-prev {
+.modal .btn-prev,
+.modal .btn-next {
   top: 50%;
+  transform: translateY(-50%);
+
+}
+.modal .btn-prev {
   left: 1rem;
-  transform: translateY(-50%);
 }
-
-.btn-next {
-  top: 50%;
+.modal .btn-next {
   right: 2rem;
-  transform: translateY(-50%);
 }
-
-.modal-details {
-  height: 85vh;
-  width: 50vw;
-  border: 5px solid;
-  display: flex;
-  align-items: center;
-  justify-content: center;
+.modal .modal-details {
+  height: 90vh;
+  width: 80vw;
 }
-
-.modal-details img {
+.modal .modal-details img {
   width: 100%;
   height: 100%;
   object-fit: cover;
+}
+@media (min-width: 768px){
+ .modal .modal-details {
+  height: 85vh;
+  width: 50vw;
+}
 }
 
 </style>

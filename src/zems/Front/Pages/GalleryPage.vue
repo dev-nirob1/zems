@@ -53,10 +53,9 @@ const handleNext = () => {
   selectedIndex.value += 1;
   if (selectedIndex.value === images.value.length) {
     selectedIndex.value = 0;
-    console.log('selected ', selectedIndex);
+    // console.log('selected ', selectedIndex);
   }
 }
-
 </script>
 
 <template>
