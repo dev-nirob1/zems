@@ -1,7 +1,5 @@
-
-
 <template>
-  <section class="team-member">
+  <section class="founder-two">
     <div class="container">
       <div class="medium-3 align-center gap-2">
         <div>
@@ -21,7 +19,7 @@
         <div>
           <div class="flex gap-1">
             <div>
-              <i class=" icon fa-solid fa-chart-line fa-2x"></i>
+              <i class="icon fa-solid fa-chart-line fa-2x"></i>
             </div>
             <div>
               <SubTitle>Proven Success</SubTitle>
@@ -53,17 +51,17 @@
   </section>
 </template>
 <style scoped>
-/* team-member  */
-.team-member {
+/* founder-two  */
+.founder-two {
   padding: 3.75rem 0;
   position: relative;
 }
 
-.team-member img {
+.founder-two img {
   border-radius: .75rem;
 }
 
-.team-member .icon {
+.founder-two .icon {
   border-radius: .5rem;
   background-color: var(--primary-color);
   color: var(--white-color);
@@ -74,11 +72,11 @@
   justify-content: center;
 }
 
-.team-member p {
+.founder-two p {
   margin-top: .75rem;
 }
 
-.team-member::after {
+.founder-two::after {
   content: '';
   width: 100vw;
   height: 50%;
@@ -90,7 +88,7 @@
 }
 
 @media (min-width: 992px) {
-  .team-member::after {
+  .founder-two::after {
     height: 100%;
     top: 0;
     right: 0;

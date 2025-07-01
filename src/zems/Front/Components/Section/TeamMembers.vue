@@ -54,6 +54,14 @@ const members = ref([
         <div class="member-card bg-light" v-for="member in members" :key="member.id">
           <div class="image">
             <BaseImage :image="member.image" />
+
+            <div class="social-links">
+              <RouterLink to="/"><i class="fab fa-linkedin-in"></i></RouterLink>
+              <RouterLink to="/"><i class="fab fa-twitter"></i></RouterLink>
+              <RouterLink to="/"><i class="fab fa-facebook-f"></i></RouterLink>
+              <RouterLink to="/"><i class="fab fa-instagram"></i></RouterLink>
+            </div>
+
           </div>
           <div class="p-1">
             <SubTitle>{{ member.name }}</SubTitle>
@@ -68,7 +76,9 @@ const members = ref([
 .team-members {
   padding: 3.75rem 0;
 }
+
 .member-card {
+  position: relative;
   border-radius: .75rem;
 }
 
@@ -78,8 +88,45 @@ const members = ref([
 }
 
 .member-card .image {
+  position: relative;
   height: 300px;
   width: 100%;
+}
+
+.social-links {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 0;
+  padding: 1rem;
+  display: flex;
+  justify-content: center;
+  gap: 2rem;
+  background-color: rgb(from var(--secondary-color)r g b / 15%);
+  opacity: 0;
+  transition: all .3s ease-in-out
+}
+.member-card:hover .social-links {
+  width: 100%;
+  opacity: 1;
+}
+/* Social links with hover effects */
+.social-links a {
+  display: inline-block;
+  text-decoration: none;
+  font-size: 1.25rem;
+  height: 3rem;
+  width: 3rem;
+  border-radius: .25rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: var(--secondary-color);
+  color: var(--white-color);
+}
+.social-links a:hover i {
+  transform: scale(1.2);
+  transition: all 0.3s ease;
 }
 
 .member-card .image img {

@@ -71,7 +71,6 @@ defineProps({
   font-size: 1.25rem;
   background: var(--primary-color);
   color: var(--white-color);
-  width: 100%;
 }
 
 .pricing-card .btn:hover {
