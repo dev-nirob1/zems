@@ -79,7 +79,8 @@ import { RouterLink } from 'vue-router';
   height: 2rem;
   background-color: var(--secondary-color);
   z-index: -1;
-  border-radius: 4px;
+  border-radius: 1rem;
+  box-shadow: var(--box-shadow);
 }
 .box {
   position: absolute;

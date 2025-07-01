@@ -2,6 +2,8 @@
 import { ref } from 'vue'
 import BreadCrumb from '../Components/Section/BreadCrumb.vue';
 import SectionTitle from '@/components/Widget/SectionTitle.vue';
+import BaseImage from '@/components/Elements/BaseImage.vue';
+import PopUP from '@/components/Widget/PopUP.vue';
 const images = ref([
   {
     url: "https://images.pexels.com/photos/1181671/pexels-photo-1181671.jpeg",
@@ -29,18 +31,41 @@ const images = ref([
   }
 ])
 
+const isModalOpen = ref(false)
+const selectedImage = ref()
+
+const handleOpenModal = (imageIndex) => {
+  isModalOpen.value = true
+  console.log('index', imageIndex);
+  const clickedImage = images.value.find((image, i) => i == imageIndex)
+  selectedImage.value = clickedImage.url
+  console.log('selected',selectedImage, 'clicked', clickedImage);
+}
+const handleCloseModal = () => {
+  isModalOpen.value = false
+}
+
+
 </script>
+
 <template>
   <BreadCrumb />
+
   <div class="gallery">
     <div class="container">
+
+      <PopUP :isModalOpen="isModalOpen" :handleCloseModal="handleCloseModal">
+        <BaseButton class="btn-prev">PREV</BaseButton>
+        <BaseImage :image="selectedImage" alt="" />
+        <BaseButton class="btn-next">NEXT</BaseButton>
+      </PopUP>
 
       <SectionTitle class="text-center mb-2" title="Our Photo Gallery" sub-title="Gallery" />
       <div class="medium-2 large-3 gap-2">
         <div class="gallery-item" v-for="(img, index) in images" :key="index">
           <BaseImage :image="img.url" :alt="img.alt" />
           <div class="button-overlay">
-            <button class="plus-button"><i class="fa-solid fa-plus fa-2x"></i></button>
+            <button @click="handleOpenModal(index)" class="plus-button"><i class="fa-solid fa-plus fa-2x"></i></button>
           </div>
         </div>
       </div>
