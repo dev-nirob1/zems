@@ -12,7 +12,7 @@ const toggleMenu = () => {
 
 onMounted(() => {
   const navbar = document.querySelector('.nav-links')
-  console.log(navbar.childNodes);
+  // console.log(navbar.childNodes);
   navbar.childNodes.forEach(element => {
     element.addEventListener('click', () => {
       isMenuOpen.value = false

@@ -74,6 +74,10 @@ onMounted(() => {
   padding: .75rem 1rem;
 }
 .swiper-testimonials {
-  overflow-x: hidden;
+  padding: 1rem 0;
+  overflow: auto;
+}
+.swiper-testimonials::-webkit-scrollbar{
+  display: none;
 }
 </style>

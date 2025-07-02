@@ -80,6 +80,7 @@ const members = ref([
 .member-card {
   position: relative;
   border-radius: .75rem;
+  overflow: hidden;
 }
 
 .member-card p {
@@ -102,7 +103,7 @@ const members = ref([
   display: flex;
   justify-content: center;
   gap: 2rem;
-  background-color: rgb(from var(--secondary-color)r g b / 15%);
+  background-color: rgb(from var(--dark-color)r g b / 15%);
   opacity: 0;
   transition: all .3s ease-in-out
 }
@@ -121,8 +122,8 @@ const members = ref([
   display: flex;
   align-items: center;
   justify-content: center;
-  background-color: var(--secondary-color);
-  color: var(--white-color);
+  background-color: var(--white-color);
+  color: var(--secondary-color);
 }
 .social-links a:hover i {
   transform: scale(1.2);

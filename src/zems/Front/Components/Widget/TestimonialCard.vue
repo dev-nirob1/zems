@@ -8,6 +8,7 @@ defineProps({
 
 <template>
   <div class="testimonial-card">
+    <i class="bg-graphic fa-solid fa-quote-right fa-10x"></i>
     <div class="flex">
       <BaseParagraph>
         <i class="fa-solid fa-quote-left fa-2x"></i>
@@ -27,6 +28,7 @@ defineProps({
 
 <style>
 .testimonial-card {
+  position: relative;
   min-width: 280px;
   padding: 2rem 1.5rem;
   background: var(--white-color);
@@ -40,6 +42,12 @@ defineProps({
   height: 4rem;
   width: 4rem;
   border-radius: .5rem;
+}
+.bg-graphic {
+  position: absolute;
+  right: 1rem;
+  bottom:0;
+  opacity: .1;
 }
 
 @media (min-width: 540px) {
@@ -57,5 +65,10 @@ defineProps({
   .testimonial-card span {
     font-size: 1.15rem;
   }
+
+  .bg-graphic {
+  right: 2rem;
+  bottom: 0;
+}
 }
 </style>

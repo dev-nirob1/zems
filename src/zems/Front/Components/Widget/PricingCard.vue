@@ -12,7 +12,7 @@ defineProps({
     <!-- badge  -->
     <div v-if="price.badge" class="exclusive-badge">
       <BaseParagraph class="badge">
-        <i :class="`fa-solid ${price.badge}`"></i>
+        <i class="fa-solid fa-crown"></i>
         Most Popular
       </BaseParagraph>
     </div>
@@ -81,8 +81,8 @@ defineProps({
 
 .pricing-card .exclusive-badge {
   width: 280px;
+  margin-left: .5rem;
   position: relative;
-  margin-right: -1.75rem !important;
   margin-top: -1.5rem;
   overflow: hidden;
 }
@@ -90,22 +90,28 @@ defineProps({
 .badge {
   background-color: var(--secondary-color);
   color: var(--white-color);
-  padding: 1rem 1rem 1rem 3rem;
+  padding: 1rem;
   text-align: center;
   font-weight: bold;
   text-transform: uppercase;
   box-shadow: 3px 3px 6px rgba(0, 0, 0, 0.3);
 }
 
-.pricing-card .badge::before {
+.pricing-card .badge::before,
+.pricing-card .badge::after  {
   content: "";
   position: absolute;
   top: 1.1rem;
-  left: -1.75rem;
   height: 3.5rem;
   width: 3.5rem;
   rotate: 45deg;
   background: var(--white-color);
+}
+.pricing-card .badge::before {
+  left: -1.75rem;
+}
+.pricing-card .badge::after {
+  right: -1.75rem;
 }
 
 .feature-list {

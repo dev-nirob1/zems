@@ -1,4 +1,5 @@
 <script setup>
+import BaseImage from '@/components/Elements/BaseImage.vue';
 import { RouterLink } from 'vue-router';
 defineProps({
   service: {
@@ -9,8 +10,9 @@ defineProps({
 
 <template>
   <div class="service-card">
+    <BaseImage class="graphic-img" :image="service.icon" alt="image"/>
     <div class="icon">
-      <img :src="service.icon" alt="icon">
+      <BaseImage :image="service.icon" alt="image"/>
     </div>
     <div class="mt-1">
       <SubTitle>{{ service.title }}</SubTitle>
@@ -22,12 +24,21 @@ defineProps({
 
 <style scoped>
 .service-card {
+  position: relative;
   border-radius: .75rem;
   padding: 2rem 1.5rem;
   background-color: var(--white-color);
   box-shadow: var(--box-shadow);
   cursor: pointer;
   transition: all 0.3s ease;
+}
+.graphic-img {
+  position: absolute;
+  bottom: .5rem;
+  right: .5rem;
+  height: 150px;
+  width: 150px;
+  opacity: .15;
 }
 .service-card p {
   margin: .75rem 0;

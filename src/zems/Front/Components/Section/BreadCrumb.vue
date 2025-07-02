@@ -9,7 +9,7 @@ console.log(route);
   <section class="breadcrumb">
     <ul class="container flex align-center gap-1">
       <ListItem><a href="/">Home</a></ListItem>
-      <Listitem>{{route.name}}</Listitem>
+      <ListItem>{{route.name}}</ListItem>
     </ul>
   </section>
 </template>
