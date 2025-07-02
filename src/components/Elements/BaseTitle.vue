@@ -1,15 +1,5 @@
-<script setup>
- defineProps({
-    tag: {
-        type: String,
-        default: 'h3'
-    }
-})
-</script>
-
 <template>
-    <tag class="title">
+    <h3 class="title">
         <slot></slot>
-    </tag>
+    </h3>
 </template>
-<style scoped></style>

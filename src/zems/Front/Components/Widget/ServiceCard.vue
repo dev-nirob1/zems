@@ -40,6 +40,14 @@ defineProps({
   width: 150px;
   opacity: .15;
 }
+.service-card .icon {
+  width: 80px;
+  height: 80px;
+}
+.service-card .icon img {
+  height: 100%;
+  width: auto;
+}
 .service-card p {
   margin: .75rem 0;
 }

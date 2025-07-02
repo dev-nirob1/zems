@@ -209,12 +209,15 @@ a {
 .btn {
   display: inline-block;
   text-decoration: none;
-  border: 1px solid var(--primary-color);
+  border: 1px solid var(--primary-light-color);
   outline: none;
   /* padding: 1rem 1rem; */
   font-size: 1rem;
   text-align: center;
   transition: all 0.3s ease;
+}
+.bg-primary.btn {
+  border-color: var(--primary-color);
 }
 
 .btn-primary {

@@ -9,7 +9,7 @@ const services = ref([
       "description": "Custom websites and web applications built with modern technologies."
     },
     {
-      "icon": "/services/mobile-app.png",
+      "icon": "/services/app-development.png",
       "title": "Mobile Apps",
       "description": "iOS and Android applications developed with native or hybrid frameworks."
     },
@@ -19,12 +19,12 @@ const services = ref([
       "description": "Scalable cloud infrastructure and deployment services."
     },
     {
-      "icon": "/services/ai.png",
+      "icon": "/services/artificial-intelligence.png",
       "title": "AI Integration",
       "description": "Implement machine learning and automation into your workflows."
     },
     {
-      "icon": "/services/ui.png",
+      "icon": "/services/ui-design.png",
       "title": "UI/UX Design",
       "description": "Beautiful interfaces with intuitive user experiences."
     },
