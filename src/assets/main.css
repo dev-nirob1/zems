@@ -12,8 +12,8 @@ html {
   --roboto-font: 'Roboto', serif;
 
   --primary-color: #03624c;
-  --primary-light-color: #22C503;
-  --secondary-color: #0F9781;
+  --primary-light-color: #22c503;
+  --secondary-color: #0f9781;
   --alternative-color: #f58f92;
   --dark-color: #002223;
   --light-color: rgb(from var(--primary-color) r g b / 5%);
@@ -207,17 +207,64 @@ a {
 
 /* button styles  */
 .btn {
+  position: relative;
   display: inline-block;
   text-decoration: none;
   border: 1px solid var(--primary-light-color);
   outline: none;
-  /* padding: 1rem 1rem; */
+  overflow: hidden;
   font-size: 1rem;
   text-align: center;
-  transition: all 0.3s ease;
+  transition: all 0.3s ease-in-out;
+}
+.btn:hover {
+  background: linear-gradient(to right, var(--primary-light-color), var(--secondary-color));
+  color: var(--white-color);
+}
+.bg-primary.btn:hover {
+  background: linear-gradient(to left, var(--primary-light-color), var(--secondary-color));
+  color: var(--white-color);
+}
+.btn:hover::before,
+.btn:hover::after {
+  content: '';
+  position: absolute;
+  height: 100%;
+  width: 20px;
+  top: 0;
+  background: linear-gradient(to bottom, transparent, rgba(0, 0, 0, 0.2));
+  transform: skewX(-20deg);
+  z-index: 0;
+}
+.btn::before {
+  left: 0;
+}
+
+.btn::after {
+  right: 0;
 }
 .bg-primary.btn {
-  border-color: var(--primary-color);
+  /* border-color: var(--primary-color); */
+  background: linear-gradient(to right, var(--primary-light-color), var(--secondary-color));
+}
+.bg-primary.btn::before,
+.bg-primary.btn::after {
+  content: '';
+  position: absolute;
+  height: 100%;
+  width: 20px;
+  top: 0;
+  background: linear-gradient(to bottom, transparent, rgba(0, 0, 0, 0.2));
+  transform: skewX(-20deg);
+  z-index: 0;
+}
+
+.bg-primary.btn::before {
+  left: 0;
+}
+
+.bg-primary.btn::after {
+  right: 0;
 }
 
 .btn-primary {

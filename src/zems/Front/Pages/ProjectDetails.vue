@@ -70,7 +70,7 @@ const project = {
               {{ tech }}
             </div>
           </div>
-          <div class="flex gap-1 mt-3">
+          <div class="flex gap-1 mt-2">
             <BaseButton><a :href="project.live_link">Live Demo</a></BaseButton>
             <BaseButton class="bg-secondary text-white">Order Now</BaseButton>
           </div>

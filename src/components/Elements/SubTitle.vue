@@ -3,8 +3,8 @@
       <slot></slot>
     </h5>
 </template>
-<style scoped>
-/* .sub-title{
-    font-size: 1.3rem;
-} */
+<style>
+.sub-title{
+    font-size: 1rem;
+}
 </style>

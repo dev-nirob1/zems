@@ -47,7 +47,7 @@ const apps = ref([
 <template>
   <div class="our-app">
     <div class="container">
-      <div class="flex justify-between align-center mb-2">
+      <div class="flex justify-between align-center gap-1 mb-2">
         <SectionTitle title="Industry-Standard Applications" sub-title="Our Application" />
         <RouterLink to="/projects">See More →</RouterLink>
       </div>
@@ -69,5 +69,6 @@ const apps = ref([
   text-decoration: none;
   color: var(--secondary-color);
   border: 1px solid var(--secondary-color);
+  white-space: nowrap;
 }
 </style>

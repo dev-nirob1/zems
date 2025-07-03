@@ -19,33 +19,25 @@ defineProps({
 .sub-title {
   position: relative;
   display: inline-block;
-  font-weight: 700;
-  color: #fff;
-  background: linear-gradient(to right, var(--primary-light-color), var(--secondary-color));
-  padding: 0.25rem 1.5rem;
+  font-weight: 500;
+  padding: 0.75rem 1rem;
   overflow: hidden;
   text-transform: uppercase;
 }
-
 .sub-title::before,
 .sub-title::after {
   content: '';
   position: absolute;
-  height: 100%;
-  width: 20px;
-  top: 0;
-  background: linear-gradient(to bottom, transparent, rgba(0, 0, 0, 0.2));
-  transform: skewX(-20deg);
+  height: 3px;
+  width: 40%;
+  bottom: 0;
+  background: var(--primary-light-color);
   z-index: 0;
 }
-
 .sub-title::before {
   left: 0;
 }
-
 .sub-title::after {
   right: 0;
 }
-
-
 </style>
