@@ -69,9 +69,6 @@ const currentFeature = computed(() => {
 
       <div class="tab-panel">
         <ul>
-          <!-- <ListItem v-for="(tab, i) in tabData" :key="i">
-            <BaseButton :class="{ active: selectedTab === tab }" @click="currentTab(tab)">{{ tab }}</BaseButton>
-          </ListItem> -->
           <ListItem v-for="(tab, i) in featured" :key="i">
             <BaseButton :class="{ active: selectedId === tab.id }" @click="currentTab(tab.id)">{{ tab.title }}
             </BaseButton>
@@ -84,9 +81,9 @@ const currentFeature = computed(() => {
           <BaseImage :image="currentFeature.image" :alt="currentFeature.alt" />
         </div>
         <div>
-          <SubTitle data-zems="animate__fadeInRight" class="animate__animated">{{ currentFeature.subtitle }}</SubTitle>
+          <SubTitle data-zems="animate__fadeInUp" class="animate__animated">{{ currentFeature.subtitle }}</SubTitle>
 
-          <BaseParagraph data-zems="animate__fadeInRight" class="animate__animated">
+          <BaseParagraph data-zems="animate__fadeInUP" class="animate__animated">
             {{ currentFeature.description }}
           </BaseParagraph>
 
@@ -124,11 +121,10 @@ const currentFeature = computed(() => {
   font-size: 1rem;
   padding: .75rem 1rem;
   margin: 0;
-  border: 1px solid var(--primary-color);
 }
 
 .active {
-  background-color: var(--primary-color);
+  background: linear-gradient(to left, var(--primary-light-color), var(--secondary-color));
   color: var(--white-color);
 }
 

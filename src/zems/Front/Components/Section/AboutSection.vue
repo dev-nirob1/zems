@@ -13,10 +13,10 @@ import SectionTitle from '@/components/Widget/SectionTitle.vue';
       <!-- about us content  -->
       <div>
         <SectionTitle title="Behind Zems Success" sub-title="About Us"/>
-        <BaseParagraph data-zems="animate__fadeInRight" class="animate__animated animate__faster">Zems empowers businesses with cutting-edge software solutions designed to streamline operations,
+        <BaseParagraph data-zems="animate__fadeInUp" class="animate__animated animate__faster">Zems empowers businesses with cutting-edge software solutions designed to streamline operations,
           boost efficiency, and drive growth. Our customizable platforms adapt to your unique workflow needs.
         </BaseParagraph>
-        <ul data-zems="animate__fadeInRight" class="animate__animated animate__fast">
+        <ul data-zems="animate__fadeInUp" class="animate__animated animate__fast">
           <ListItem>12+ years of industry-specific software expertise</ListItem>
           <ListItem>500+ successful implementations across industries</ListItem>
           <ListItem>Dedicated support teams for every clien</ListItem>
