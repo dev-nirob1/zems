@@ -32,9 +32,7 @@ import SectionTitle from '@/components/Widget/SectionTitle.vue';
 .about {
   padding: 3.75rem 0;
 }
-.about .section-header .title {
-  color: var(--primary-light-color);
-}
+
 .about p {
   font-size: 1.1rem;
 }
