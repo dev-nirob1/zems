@@ -1,6 +1,22 @@
 <script setup>
 import SectionTitle from '@/components/Widget/SectionTitle.vue';
-
+const aboutData = {
+  image: {
+    src: "https://zems.uk//uploads/media/1744748295.png",
+    alt: "Zems team collaborating on software solutions"
+  },
+  titles: {
+    title: "Behind Zems Success",
+    subTitle: "About Us"
+  },
+  description: "Zems empowers businesses with cutting-edge software solutions designed to streamline operations, boost efficiency, and drive growth. Our customizable platforms adapt to your unique workflow needs.",
+  features: [
+    "12+ years of industry-specific software expertise",
+    "500+ successful implementations across industries",
+    "Dedicated support teams for every client",
+    "Continuous innovation with quarterly feature updates"
+  ],
+}
 </script>
 
 <template>
@@ -8,19 +24,17 @@ import SectionTitle from '@/components/Widget/SectionTitle.vue';
     <div class="container medium-2 gap-3 align-center">
       <!-- img container  -->
       <div class="width-full height-full">
-        <BaseImage image="https://zems.uk//uploads/media/1744748295.png" alt="about-image" />
+        <BaseImage :image="aboutData.image.src" :alt="aboutData.image.alt" />
       </div>
+
       <!-- about us content  -->
       <div>
-        <SectionTitle title="Behind Zems Success" sub-title="About Us"/>
-        <BaseParagraph data-zems="animate__fadeInUp" class="animate__animated animate__faster">Zems empowers businesses with cutting-edge software solutions designed to streamline operations,
-          boost efficiency, and drive growth. Our customizable platforms adapt to your unique workflow needs.
+        <SectionTitle :title="aboutData.titles.title" :sub-title="aboutData.titles.subTitle"/>
+        <BaseParagraph data-zems="animate__fadeInUp" class="animate__animated">
+          {{ aboutData.description }}
         </BaseParagraph>
-        <ul data-zems="animate__fadeInUp" class="animate__animated animate__fast">
-          <ListItem>12+ years of industry-specific software expertise</ListItem>
-          <ListItem>500+ successful implementations across industries</ListItem>
-          <ListItem>Dedicated support teams for every clien</ListItem>
-          <ListItem>Continuous innovation with quarterly feature updates</ListItem>
+        <ul data-zems="animate__fadeInUp" class="animate__animated">
+          <ListItem v-for="(feature, i ) in aboutData.features" :key="i">{{feature}}</ListItem>
         </ul>
         <BaseButton data-zems="animate__fadeInUp" class="bg-primary text-white animate__animated">OUR SERVICES</BaseButton>
       </div>
@@ -32,16 +46,11 @@ import SectionTitle from '@/components/Widget/SectionTitle.vue';
 .about {
   padding: 3.75rem 0;
 }
-
-.about p {
-  font-size: 1.1rem;
-}
 .about img {
   width: 100%;
   height: 80vh;
   object-fit: cover;
 }
-
 .about .btn {
   padding: 1rem;
   font-size: 1.15rem;
@@ -50,13 +59,11 @@ import SectionTitle from '@/components/Widget/SectionTitle.vue';
   list-style: none;
   padding-left: 1rem;
 }
-
 .about ul li {
   position: relative;
   padding-left: 1rem;
   margin-bottom: .25rem;
 }
-
 .about ul li::before {
   content: "✓";
   position: absolute;
@@ -64,6 +71,12 @@ import SectionTitle from '@/components/Widget/SectionTitle.vue';
   color: var(--primary-color);
 }
 @media (min-width: 768px){
+  .about p {
+  font-size: 1.1rem;
+}
+.about img {
+  width: auto;
+}
  .about .btn {
   padding: 1.25rem 2rem;
 }

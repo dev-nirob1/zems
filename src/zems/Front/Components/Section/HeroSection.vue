@@ -1,22 +1,25 @@
+<script setup>
+</script>
 
 <template>
   <section class="hero">
     <div class="container medium-2 align-center gap-2 pt-5">
       <!-- content container  -->
       <div>
-        <HeroTitle>
-          Transform Your Ideas Into Powerful Software
+        <HeroTitle data-zems="animate__fadeInUp" class="animate__animated">
+          High-Performance Software Solutions
         </HeroTitle>
-        <BaseParagraph>
-          We craft custom digital solutions that drive growth.
-          From startups to enterprises, our full-cycle development delivers results.
+        <BaseParagraph data-zems="animate__fadeInUp" class="animate__animated">
+          We design, develop and deploy custom software systems that solve real business challenges.
+          Whether you need web applications, mobile solutions, or enterprise platforms,
+          our full-stack expertise brings your vision to life.
         </BaseParagraph>
         <!-- button container  -->
         <div class="flex align-center gap-1">
-          <BaseButton class="bg-primary text-white">
-            OUR SERVICES
+          <BaseButton data-zems="" class="bg-primary text-white flex anmate__animated">
+            OUR SERVICES <i class="fa-solid fa-arrow-right"></i>
           </BaseButton>
-          <BaseButton>
+          <BaseButton data-zems="animate__fadeInUp" class="animate__animated">
             LEARN MORE
           </BaseButton>
         </div>
@@ -32,17 +35,21 @@
 <style scoped>
 .hero {
   padding: 3.75rem 0;
- background-color: rgb(from var(--primary-color) r g b / 10%);
+  min-height: 100vh;
+  background-color: rgb(from var(--primary-color) r g b / 10%);
 }
+
 .hero .btn {
   padding: 1rem;
 }
+
 .hero p {
   font-size: 1.15rem;
 }
-@media (min-width: 768px){
- .hero .btn {
-  padding: 1.25rem 2rem;
-}
+
+@media (min-width: 768px) {
+  .hero .btn {
+    padding: 1.25rem 2rem;
+  }
 }
 </style>
