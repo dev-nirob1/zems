@@ -27,7 +27,7 @@ console.log(route);
   padding: 0;
 }
 .breadcrumb ul li a {
-  color: var(--primary-color);
+  color: var(--primary-light-color);
   text-decoration: none;
 }
 .breadcrumb ul li:hover a {

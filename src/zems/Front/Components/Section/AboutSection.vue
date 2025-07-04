@@ -21,7 +21,7 @@ const aboutData = {
 
 <template>
   <section class="about">
-    <div class="container medium-2 gap-3 align-center">
+    <div class="container medium-2 gap-2 align-center">
       <!-- img container  -->
       <div class="width-full height-full">
         <BaseImage :image="aboutData.image.src" :alt="aboutData.image.alt" />

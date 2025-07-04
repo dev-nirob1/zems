@@ -7,12 +7,6 @@ import PricingSection from '../Components/Section/PricingSection.vue';
 import ServicesSection from '../Components/Section/ServicesSection.vue';
 import StatisticsSection from '../Components/Section/StatisticsSection.vue';
 import TestimonialSection from '../Components/Section/TestimonialSection.vue';
-
-import { zems_animate } from '@/plugins/zems_animation';
-import { onMounted } from 'vue';
-onMounted(()=> {
-  zems_animate()
-})
 </script>
 
 <template>

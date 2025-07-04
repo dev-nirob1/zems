@@ -14,7 +14,6 @@ import SectionTitle from '@/components/Widget/SectionTitle.vue';
       </div>
       <div class="order-1 large-order-2">
         <SectionTitle class="mb-1" title="Meet Our Inspiring Founder" sub-title="Founder Spotlight" />
-
         <div class="mb-1">
           <SubTitle>Meet the Visionary</SubTitle>
           <BaseParagraph>
@@ -71,7 +70,7 @@ import SectionTitle from '@/components/Widget/SectionTitle.vue';
   border-radius: .75rem;
   background-color: rgb(from var(--primary-color) r g b/ 80%);
   color: var(--white-color);
-  text-align: center;
+  /* text-align: center; */
 }
 
 
@@ -81,7 +80,7 @@ import SectionTitle from '@/components/Widget/SectionTitle.vue';
   }
 
   .founder-image img {
-    height: 350px;
+    height: 400px;
     width: 350px;
   }
 }

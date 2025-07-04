@@ -25,4 +25,5 @@ app.component('BaseImage', BaseImage)
 app.component('BaseParagraph', BaseParagraph)
 app.component('BaseTextArea', BaseTextArea)
 app.component('ListItem', ListItem)
+
 app.mount('#app')

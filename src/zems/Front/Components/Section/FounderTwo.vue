@@ -1,7 +1,12 @@
+<script setup>
+import SectionTitle from '@/components/Widget/SectionTitle.vue';
+
+</script>
+
 <template>
   <section class="founder-two">
     <div class="container">
-      <div class="medium-3 align-center gap-2">
+      <div class="large-3 align-center gap-2">
         <div>
           <SectionTitle class="mb-1" title="Our Visionary Leadership" sub-title="Zems Founder" />
           <div>
@@ -11,13 +16,12 @@
               lives.</BaseParagraph>
           </div>
         </div>
-
         <div>
           <BaseImage class="width-full" image="https://images.pexels.com/photos/2379005/pexels-photo-2379005.jpeg"
             alt="Alex Johnson, Co-Founder and CEO" />
         </div>
-        <div>
-          <div class="flex gap-1">
+        <ul>
+          <ListItem class="flex gap-1">
             <div>
               <i class="icon fa-solid fa-chart-line fa-2x"></i>
             </div>
@@ -26,8 +30,8 @@
               <BaseParagraph>Founded 3 successful startups. Consistently identify market needs and deliver results.
               </BaseParagraph>
             </div>
-          </div>
-          <div class="flex gap-1">
+          </ListItem>
+          <ListItem class="flex gap-1">
             <div>
               <i class="icon fa-solid fa-lightbulb fa-2x"></i>
             </div>
@@ -35,8 +39,8 @@
               <SubTitle>Deep Expertise</SubTitle>
               <BaseParagraph>25+ years in tech. Consumer-focused solutions that drive success.</BaseParagraph>
             </div>
-          </div>
-          <div class="flex gap-1">
+          </ListItem>
+          <ListItem class="flex gap-1">
             <div>
               <i class="icon fa-solid fa-puzzle-piece fa-2x"></i>
             </div>
@@ -44,8 +48,8 @@
               <SubTitle>Innovative Thinking</SubTitle>
               <BaseParagraph>Multiple patents. Award-winning designs. Unique problem-solving approach.</BaseParagraph>
             </div>
-          </div>
-        </div>
+          </ListItem>
+        </ul>
       </div>
     </div>
   </section>
@@ -74,6 +78,15 @@
 
 .founder-two p {
   margin-top: .75rem;
+}
+
+.founder-two ul {
+  list-style: none;
+  padding-left: 0;
+}
+
+ul li:not(:last-child) {
+  margin: 0;
 }
 
 .founder-two::after {

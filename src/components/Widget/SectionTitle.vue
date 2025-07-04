@@ -15,29 +15,30 @@ defineProps({
   </div>
 </template>
 
-<style scoped>
-.sub-title {
+<style>
+.section-header .sub-title {
   position: relative;
   display: inline-block;
   font-weight: 500;
-  padding: 0.75rem 1rem;
+  padding: 0.75rem 0;
   overflow: hidden;
   text-transform: uppercase;
 }
-.sub-title::before,
-.sub-title::after {
+.section-header .sub-title::before,
+.section-header .sub-title::after {
   content: '';
   position: absolute;
-  height: 3px;
+  height: 2px;
   width: 40%;
   bottom: 0;
   background: var(--primary-light-color);
   z-index: 0;
+  white-space: nowrap;
 }
-.sub-title::before {
+.section-header .sub-title::before {
   left: 0;
 }
-.sub-title::after {
+.section-header .sub-title::after {
   right: 0;
 }
 </style>
