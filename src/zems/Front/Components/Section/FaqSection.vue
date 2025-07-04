@@ -48,7 +48,7 @@ const toggleAccordion = (id) => {
   <div class="faq bg-light">
     <div class="container">
       <SectionTitle class="text-center mb-3" title="Everything You Should Know" sub-title="User Guide" />
-      <div class="large-2 align-center">
+      <div class="large-2 gap-3 align-center">
         <div class="acc-img">
           <BaseImage image="https://zems.uk//uploads/media/1744748295.png" alt="image" />
         </div>
@@ -103,7 +103,7 @@ const toggleAccordion = (id) => {
   padding: 1rem;
   font-weight: 600;
   color: var(--white-color);
-  background-color: var(--dark-color);
+  background-color: var(--primary-color);
   cursor: pointer;
   display: flex;
   justify-content: space-between;
@@ -111,9 +111,6 @@ const toggleAccordion = (id) => {
   transition: background-color 0.2s ease;
 }
 
-.accordion-title:hover {
-  background-color: var(--darker-color);
-}
 
 .accordion-title.active {
   border-radius: 0.5rem 0.5rem 0 0;
