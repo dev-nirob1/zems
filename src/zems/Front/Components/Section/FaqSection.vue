@@ -45,7 +45,7 @@ const toggleAccordion = (id) => {
 </script>
 
 <template>
-  <div class="faq">
+  <div class="faq bg-light">
     <div class="container">
       <SectionTitle class="text-center mb-3" title="Everything You Should Know" sub-title="User Guide" />
       <div class="large-2 align-center">

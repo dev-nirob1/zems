@@ -4,6 +4,7 @@ import FaqSection from '../Components/Section/FaqSection.vue';
 import FeaturedApp from '../Components/Section/FeaturedApp.vue';
 import HeroSection from '../Components/Section/HeroSection.vue';
 import OurApplication from '../Components/Section/OurApplication.vue';
+import PartnarSection from '../Components/Section/PartnarSection.vue';
 import PricingSection from '../Components/Section/PricingSection.vue';
 import ServicesSection from '../Components/Section/ServicesSection.vue';
 import StatisticsSection from '../Components/Section/StatisticsSection.vue';
@@ -12,12 +13,13 @@ import TestimonialSection from '../Components/Section/TestimonialSection.vue';
 
 <template>
   <HeroSection />
-  <FaqSection/>
   <AboutSection />
+  <StatisticsSection />
   <FeaturedApp />
   <ServicesSection />
   <OurApplication/>
-  <StatisticsSection />
   <PricingSection />
+  <FaqSection/>
+  <PartnarSection/>
   <TestimonialSection/>
 </template>
