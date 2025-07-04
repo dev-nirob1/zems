@@ -56,7 +56,7 @@ const pricing = ref([
 </script>
 
 <template>
-  <section class="pricing bg-lighten">
+  <section class="pricing">
     <div class="container">
       <!-- Section header -->
       <SectionTitle class="text-center mb-2" title="Scalable Development Packages" sub-title="Pricing Options">
@@ -72,7 +72,6 @@ const pricing = ref([
 </template>
 
 <style scoped>
-/* ========== 8. PRICING PLANS ========== */
 .pricing {
   padding: 3.75rem 0;
 }

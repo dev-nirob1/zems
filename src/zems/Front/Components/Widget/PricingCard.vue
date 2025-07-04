@@ -11,11 +11,10 @@ defineProps({
   <div class="pricing-card">
     <!-- badge  -->
     <div v-if="price.badge" class="exclusive-badge">
-      <BaseParagraph class="badge">
-        <i class="fa-solid fa-crown"></i>
-        Most Popular
-      </BaseParagraph>
+      <i class="fa-solid fa-crown"></i>
+      Most Popular
     </div>
+
     <span class="price-icon">
       <i :class="`fa-solid ${price.icon}`"></i>
     </span>
@@ -40,6 +39,7 @@ defineProps({
   background-color: var(--white-color);
   box-shadow: var(--box-shadow);
   cursor: pointer;
+  overflow: hidden;
 }
 
 .pricing-card .price-icon {
@@ -60,6 +60,27 @@ defineProps({
   align-items: center;
 }
 
+.exclusive-badge {
+  border: 1px solid;
+  padding: 1rem 2rem;
+  position: relative;
+  margin-right: -2.05rem;
+  text-align: right;
+  font-size: 1.25rem;
+  color: var(--white-color);
+  background-color: var(--primary-light-color);
+}
+.exclusive-badge::before{
+  content: '';
+  position: absolute;
+  top: 0;
+  left:-2rem;
+  rotate: 45deg;
+  height: 4rem;
+  width: 4rem;
+  background-color: var(--white-color);
+}
+
 .pricing-card .hero-title span {
   font-size: 1.75rem;
   font-weight: bold;
@@ -75,41 +96,6 @@ defineProps({
 .pricing-card .btn:hover {
   color: var(--white-color);
   border: 1px solid var(--primary-color);
-}
-
-.pricing-card .exclusive-badge {
-  width: 280px;
-  margin-left: .5rem;
-  position: relative;
-  margin-top: -1.5rem;
-  overflow: hidden;
-}
-
-.badge {
-  background-color: var(--secondary-color);
-  color: var(--white-color);
-  padding: 1rem;
-  text-align: center;
-  font-weight: bold;
-  text-transform: uppercase;
-  box-shadow: 3px 3px 6px rgba(0, 0, 0, 0.3);
-}
-
-.pricing-card .badge::before,
-.pricing-card .badge::after  {
-  content: "";
-  position: absolute;
-  top: 1.1rem;
-  height: 3.5rem;
-  width: 3.5rem;
-  rotate: 45deg;
-  background: var(--white-color);
-}
-.pricing-card .badge::before {
-  left: -1.75rem;
-}
-.pricing-card .badge::after {
-  right: -1.75rem;
 }
 
 .feature-list {
@@ -128,16 +114,12 @@ defineProps({
   content: "✓";
   position: absolute;
   left: 0;
-  color: var(--primary-color);
+  color: var(--primary-light-color);
 }
 
 @media (min-width: 992px) {
   .pricing-card {
     padding: 3rem 2rem;
-  }
-
-  .pricing-card .exclusive-badge {
-    margin-right: -2rem;
   }
 }
 </style>
