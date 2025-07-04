@@ -51,7 +51,6 @@ const apps = ref([
         <SectionTitle title="Industry-Standard Applications" sub-title="Our Application" />
         <RouterLink to="/projects">See More →</RouterLink>
       </div>
-
       <div class="medium-2 large-3 gap-2">
         <ApplicationCard v-for="app in apps" :key="app.id" :app="app" />
       </div>
@@ -63,12 +62,11 @@ const apps = ref([
 .our-app {
   padding: 3.75rem 0;
 }
-
 .our-app a {
   padding: .5rem .75rem;
   text-decoration: none;
-  color: var(--secondary-color);
-  border: 1px solid var(--secondary-color);
+  color: var(--primary-light-color);
+  border: 1px solid var(--primary-light-color);
   white-space: nowrap;
 }
 </style>

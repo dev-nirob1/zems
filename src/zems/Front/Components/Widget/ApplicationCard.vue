@@ -46,7 +46,7 @@ defineProps({
   position: relative;
   overflow: hidden;
   height: 220px;
-  width: 100%;
+  width: auto;
   border-radius: .75rem .75rem 0 0;
 }
 
@@ -63,7 +63,5 @@ defineProps({
 .app-card .image:hover img {
   transform: scale(1.1);
 }
-.app-card a {
-  margin: .5rem 0;
-}
+
 </style>

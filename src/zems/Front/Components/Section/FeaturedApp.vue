@@ -81,7 +81,9 @@ const currentFeature = computed(() => {
           <BaseImage :image="currentFeature.image" :alt="currentFeature.alt" />
         </div>
         <div>
-          <SubTitle data-zems="animate__fadeInUp" class="animate__animated">{{ currentFeature.subtitle }}</SubTitle>
+          <SubTitle data-zems="animate__fadeInUp" class="animate__animated">
+            {{ currentFeature.subtitle }}
+          </SubTitle>
 
           <BaseParagraph data-zems="animate__fadeInUP" class="animate__animated">
             {{ currentFeature.description }}
@@ -96,7 +98,6 @@ const currentFeature = computed(() => {
             <RouterLink :to="`/projects/${currentFeature.title}`" class="btn bg-primary text-white animate__animated">
               VIEW DETAILS</RouterLink>
           </div>
-
         </div>
       </div>
     </div>
@@ -158,19 +159,18 @@ const currentFeature = computed(() => {
   content: "✓";
   position: absolute;
   left: 0;
-  color: var(--primary-color);
+  color: var(--primary-light-color);
 }
 
 @media (min-width: 768px) {
+  .featured .btn {
+    font-size: 1.15rem;
+    margin-top: .5rem;
+  }
+
   .tab-panel ul li .btn {
     font-size: 1.15rem;
     padding: 1.15rem 1.75rem;
-  }
-
-  @media (min-width: 768px) {
-    .featured .btn {
-      font-size: 1.15rem;
-    }
   }
 }
 </style>
