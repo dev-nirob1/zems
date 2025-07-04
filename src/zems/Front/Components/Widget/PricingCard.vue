@@ -87,15 +87,9 @@ defineProps({
 }
 
 .pricing-card .btn {
-  border: 1px solid transparent;
   margin-top: 1.5rem;
   font-size: 1.25rem;
   color: var(--white-color);
-}
-
-.pricing-card .btn:hover {
-  color: var(--white-color);
-  border: 1px solid var(--primary-color);
 }
 
 .feature-list {

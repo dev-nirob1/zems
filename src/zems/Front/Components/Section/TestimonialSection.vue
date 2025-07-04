@@ -52,7 +52,7 @@ onMounted(() => {
 <template>
   <section class="testimonials bg-light">
     <div class="container">
-      <div class="mb-2 flex align-center justify-between">
+      <div class="flex align-center justify-between gap-1 mb-2 ">
         <SectionTitle title="What Our Clients Say" sub-title="Success Stories" />
         <div class="flex justify-center gap-1">
           <BaseButton class="bg-primary text-white" id="prev">&laquo; Prev</BaseButton>
@@ -71,7 +71,8 @@ onMounted(() => {
   padding: 3.75rem 0;
 }
 .testimonials .btn {
-  padding: .75rem 1rem;
+  padding: .5rem;
+  white-space: nowrap;
 }
 .swiper-testimonials {
   padding: 1rem 0;
@@ -79,5 +80,10 @@ onMounted(() => {
 }
 .swiper-testimonials::-webkit-scrollbar{
   display: none;
+}
+@media (min-width: 768px){
+  .testimonials .btn {
+  padding: .75rem 1rem;
+}
 }
 </style>

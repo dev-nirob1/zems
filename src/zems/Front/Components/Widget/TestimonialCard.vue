@@ -17,7 +17,7 @@ defineProps({
     </div>
     <div class="flex align-center gap-1">
       <BaseImage class="height-full width-full"
-        :image="review.image" />
+        :image="review.image" :alt="review.description" />
       <div>
         <SubTitle>{{review.name}}</SubTitle>
         <span>{{review.description}}</span>
@@ -41,6 +41,7 @@ defineProps({
 .testimonial-card img {
   height: 4rem;
   width: 4rem;
+  object-fit: cover;
   border-radius: .5rem;
 }
 .bg-graphic {
