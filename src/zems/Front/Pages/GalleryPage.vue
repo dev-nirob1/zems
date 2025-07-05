@@ -2,7 +2,6 @@
 import { ref } from 'vue'
 import BreadCrumb from '../Components/Section/BreadCrumb.vue';
 import SectionTitle from '@/components/Widget/SectionTitle.vue';
-import BaseImage from '@/components/Elements/BaseImage.vue';
 import PopUP from '@/components/Widget/PopUP.vue';
 const images = ref([
   {
@@ -30,10 +29,8 @@ const images = ref([
     alt: "Developer with code on laptop screen"
   }
 ])
-
 const isModalOpen = ref(false)
 const selectedIndex = ref(0)
-
 const handleOpenModal = (imageIndex) => {
   isModalOpen.value = true
   // console.log('index', imageIndex);
@@ -43,7 +40,6 @@ const handleOpenModal = (imageIndex) => {
 const handleCloseModal = () => {
   isModalOpen.value = false
 }
-
 const handlePrev = () => {
   if (selectedIndex.value > 0) {
     selectedIndex.value -= 1;
@@ -67,9 +63,9 @@ const handleNext = () => {
       <div class="medium-2 large-3 gap-2">
         <div class="gallery-item" v-for="(img, index) in images" :key="index">
           <BaseImage :image="img.url" :alt="img.alt" />
-
           <div class="button-overlay">
-            <button @click="handleOpenModal(index)" class="plus-button"><i class="fa-solid fa-plus fa-2x"></i></button>
+            <BaseButton @click="handleOpenModal(index)" class="plus-button"><i class="fa-solid fa-plus fa-2x"></i>
+            </BaseButton>
           </div>
         </div>
       </div>
@@ -98,11 +94,11 @@ const handleNext = () => {
   height: 100%;
   object-fit: cover;
   display: block;
-  transition: transform 0.4s ease;
+  transition: transform 0.8s ease;
 }
 
 .gallery-item:hover img {
-  transform: scale(1.05);
+  transform: scale(1.1);
 }
 
 /* + Button */
@@ -123,11 +119,17 @@ const handleNext = () => {
   background-color: var(--white-color);
   border-radius: 1.8rem;
   border: none;
-  opacity: 0;
+  opacity: 1;
   transition: all .3s ease-in-out;
 }
 
-.gallery-item:hover .plus-button {
-  opacity: 1;
+@media (min-width: 768px) {
+  .plus-button {
+    opacity: 0;
+  }
+
+  .gallery-item:hover .plus-button {
+    opacity: 1;
+  }
 }
 </style>

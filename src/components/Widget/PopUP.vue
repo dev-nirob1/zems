@@ -22,12 +22,12 @@ defineProps({
   <div v-if="isModalOpen" class="modal">
     <div class="modal-content">
       <!-- Navigation Buttons -->
-      <button @click="handlePrev" class="btn btn-prev">
+      <BaseButton @click="handlePrev" class="btn-prev">
         <i class="fa-solid fa-chevron-left fa-2x"></i>
-      </button>
-      <button @click="handleNext" class="btn btn-next">
+      </BaseButton>
+      <BaseButton @click="handleNext" class="btn-next">
         <i class="fa-solid fa-chevron-right fa-2x"></i>
-      </button>
+      </BaseButton>
 
       <!-- modal content -->
       <div class="modal-details">
@@ -35,9 +35,9 @@ defineProps({
       </div>
 
       <!-- Close Button -->
-      <button @click="handleCloseModal" class="btn close-btn">
+      <BaseButton @click="handleCloseModal" class="close-btn">
         <i class="fa-solid fa-xmark fa-2x"></i>
-      </button>
+      </BaseButton>
     </div>
   </div>
 </template>
@@ -46,7 +46,6 @@ defineProps({
 .modal {
   position: relative;
 }
-
 .modal .modal-content {
   position: fixed;
   top: 0;
@@ -59,32 +58,31 @@ defineProps({
   justify-content: center;
   z-index: 999;
 }
-
 .modal .btn {
-  position: absolute;
-  background: transparent;
-  border: none;
+  position: fixed;
+  background: var(--dark-color);
   color: var(--white-color);
-  padding: 1rem;
-}
-.modal .close-btn {
-  top: 1rem;
-  right: 1rem;
+  border-radius: 50%;
+  border: none;
 }
 .modal .btn-prev,
 .modal .btn-next {
   top: 50%;
   transform: translateY(-50%);
-
 }
 .modal .btn-prev {
   left: 1rem;
 }
 .modal .btn-next {
-  right: 2rem;
+  right: 1rem;
+}
+.modal .close-btn {
+  position: fixed;
+  top: 1rem;
+  right: 1rem;
 }
 .modal .modal-details {
-  height: 90vh;
+  height: 70vh;
   width: 80vw;
 }
 .modal .modal-details img {
@@ -92,11 +90,11 @@ defineProps({
   height: 100%;
   object-fit: cover;
 }
-@media (min-width: 768px){
- .modal .modal-details {
-  height: 85vh;
-  width: 50vw;
-}
-}
 
+@media (min-width: 768px) {
+  .modal .modal-details {
+    height: 80vh;
+    width: 50vw;
+  }
+}
 </style>
