@@ -70,6 +70,9 @@ onMounted(() => {
 .testimonials {
   padding: 3.75rem 0;
 }
+.testimonials .sub-title {
+  white-space: nowrap;
+}
 .testimonials .btn {
   padding: .5rem;
   white-space: nowrap;

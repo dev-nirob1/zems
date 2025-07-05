@@ -19,14 +19,20 @@ defineProps({
 .section-header .sub-title {
   position: relative;
   display: inline-block;
-  text-align: center;
   font-weight: 600;
-  font-size: 1.2rem;
   margin-bottom: 2.5rem;
   padding: 0 .25rem;
 }
-
-/* Wrapper line with </> in the middle */
+.section-header .sub-title::before {
+  content: "";
+  position: absolute;
+  bottom: -16px;
+  left: 0;
+  width: 100%;
+  height: 3px;
+  background-color: var(--primary-light-color);
+  z-index: 0;
+}
 .section-header .sub-title::after {
   content: "</>";
   position: absolute;
@@ -40,21 +46,8 @@ defineProps({
   z-index: 1;
   box-shadow: 1px 0 0 var(--body-bg), -1px 0 0 var(--body-bg);
 }
-
 .bg-light .section-header .sub-title::after {
   background-color: #EEF1EE;
-    box-shadow: 1px 0 0 #EEF1EE, -1px 0 0 #EEF1EE;
-}
-
-/* Left line */
-.section-header .sub-title::before {
-  content: "";
-  position: absolute;
-  bottom: -16px;
-  left: 0;
-  width: 100%;
-  height: 3px;
-  background-color: var(--primary-light-color);
-  z-index: 0;
+  box-shadow: 1px 0 0 #EEF1EE, -1px 0 0 #EEF1EE;
 }
 </style>

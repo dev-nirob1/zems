@@ -21,7 +21,6 @@ import SectionTitle from '@/components/Widget/SectionTitle.vue';
             company to empower businesses through smart technology solutions.
           </BaseParagraph>
         </div>
-
         <div class="medium-2 gap-1">
           <div class="founder-card">
             <div class="py-1">
@@ -32,7 +31,6 @@ import SectionTitle from '@/components/Widget/SectionTitle.vue';
               With 10+ years of experience, our founder leads with purpose and a vision to build impactful software.
             </BaseParagraph>
           </div>
-
           <div class="founder-card">
             <div class="py-1">
               <i class="fa-solid fa-lightbulb fa-2x"></i>
@@ -44,7 +42,6 @@ import SectionTitle from '@/components/Widget/SectionTitle.vue';
           </div>
         </div>
       </div>
-
     </div>
   </section>
 </template>

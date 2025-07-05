@@ -29,14 +29,15 @@ const aboutData = {
 
       <!-- about us content  -->
       <div>
-        <SectionTitle :title="aboutData.titles.title" :sub-title="aboutData.titles.subTitle"/>
+        <SectionTitle :title="aboutData.titles.title" :sub-title="aboutData.titles.subTitle" />
         <BaseParagraph data-zems="animate__fadeInUp" class="animate__animated">
           {{ aboutData.description }}
         </BaseParagraph>
         <ul data-zems="animate__fadeInUp" class="animate__animated">
-          <ListItem v-for="(feature, i ) in aboutData.features" :key="i">{{feature}}</ListItem>
+          <ListItem v-for="(feature, i) in aboutData.features" :key="i">{{ feature }}</ListItem>
         </ul>
-        <BaseButton data-zems="animate__fadeInUp" class="bg-primary text-white animate__animated">OUR SERVICES</BaseButton>
+        <BaseButton data-zems="animate__fadeInUp" class="bg-primary text-white animate__animated">OUR SERVICES
+        </BaseButton>
       </div>
     </div>
   </section>
@@ -70,10 +71,9 @@ const aboutData = {
   left: 0;
   color: var(--primary-light-color);
 }
-
-@media (min-width: 768px){
- .about .btn {
-  padding: 1.25rem 2rem;
-}
+@media (min-width: 768px) {
+  .about .btn {
+    padding: 1.25rem 2rem;
+  }
 }
 </style>

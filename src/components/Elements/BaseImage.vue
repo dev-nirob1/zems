@@ -6,7 +6,7 @@ defineProps({
 })
 </script>
 <template>
-    <img :src="image" alt="banner image">
+    <img :src="image" alt="image">
 </template>
 
 <style scoped>
