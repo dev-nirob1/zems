@@ -46,21 +46,20 @@ const toggleAccordion = (id) => {
   <div class="faq bg-light">
     <div class="container">
       <SectionTitle class="text-center mb-3" title="Everything You Should Know" sub-title="User Guide" />
-      <div class="large-2 gap-3 align-center">
+      <div class="large-2 gap-3">
         <div class="acc-img">
           <BaseImage image="https://zems.uk//uploads/media/1744748295.png" alt="image" />
         </div>
 
-        <div class="accordion-list">
-          <div v-for="item in faqItems" :key="item.id" class="accordion-item">
+        <div>
+          <div v-for="item in faqItems" :key="item.id" class="accordion">
             <div @click="toggleAccordion(item.id)" class="accordion-title">
               {{ item.question }}
-              <!-- <span class="accordion-icon">{{ activeItems.includes(item.id) ? '−' : '+' }}</span> -->
+              <i class="fa-solid fa-plus"></i>
             </div>
             <div class="accordion-body" :class="{ 'active': currentOpenItem == item.id }">
               {{ item.answer }}
             </div>
-
           </div>
         </div>
       </div>
@@ -76,30 +75,38 @@ const toggleAccordion = (id) => {
   height: 100%;
   width: auto;
 }
+
 .faq img {
   height: 100%;
   width: 100%;
   object-fit: cover;
 }
-.accordion-item {
+
+.accordion {
   margin-bottom: 1.5rem;
   border-radius: 0.5rem;
   overflow: hidden;
 }
+
 .accordion-title {
   padding: 1rem;
   font-weight: 600;
   color: var(--white-color);
-  background-color: var(--primary-color);
+  background-color: var(--secondary-color);
   cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
 }
+
 .accordion-body {
   padding: 0;
   max-height: 0;
   overflow: hidden;
-  background-color: rgb(from var(--dark-color) r g b / 5%);
+  background-color: var(--white-color);
   transition: all 0.3s ease;
 }
+
 .accordion-body.active {
   padding: 1rem;
   max-height: 500px;

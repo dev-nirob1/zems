@@ -19,26 +19,42 @@ defineProps({
 .section-header .sub-title {
   position: relative;
   display: inline-block;
-  font-weight: 500;
-  padding: 0.75rem 0;
-  overflow: hidden;
-  text-transform: uppercase;
+  text-align: center;
+  font-weight: 600;
+  font-size: 1.2rem;
+  margin-bottom: 2.5rem;
+  padding: 0 .25rem;
 }
-.section-header .sub-title::before,
+
+/* Wrapper line with </> in the middle */
 .section-header .sub-title::after {
-  content: '';
+  content: "</>";
   position: absolute;
-  height: 2px;
-  width: 40%;
-  bottom: 0;
-  background: var(--primary-light-color);
-  z-index: 0;
-  white-space: nowrap;
+  bottom: -27px;
+  left: 50%;
+  transform: translateX(-50%);
+  color: var(--primary-light-color);
+  background-color: var(--body-bg);
+  font-family: monospace;
+  padding: 0 3px;
+  z-index: 1;
+  box-shadow: 1px 0 0 var(--body-bg), -1px 0 0 var(--body-bg);
 }
+
+.bg-light .section-header .sub-title::after {
+  background-color: #EEF1EE;
+    box-shadow: 1px 0 0 #EEF1EE, -1px 0 0 #EEF1EE;
+}
+
+/* Left line */
 .section-header .sub-title::before {
+  content: "";
+  position: absolute;
+  bottom: -16px;
   left: 0;
-}
-.section-header .sub-title::after {
-  right: 0;
+  width: 100%;
+  height: 3px;
+  background-color: var(--primary-light-color);
+  z-index: 0;
 }
 </style>

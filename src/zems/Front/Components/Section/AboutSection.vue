@@ -7,7 +7,7 @@ const aboutData = {
   },
   titles: {
     title: "Behind Zems Success",
-    subTitle: "About Us"
+    subTitle: "About Zems"
   },
   description: "Zems empowers businesses with cutting-edge software solutions designed to streamline operations, boost efficiency, and drive growth. Our customizable platforms adapt to your unique workflow needs.",
   features: [
