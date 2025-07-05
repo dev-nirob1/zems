@@ -98,20 +98,16 @@ const members = ref([
   position: absolute;
   bottom: 0;
   left: 0;
-  width: 0;
+  width: 100%;
   padding: 1rem;
   display: flex;
   justify-content: center;
   gap: 2rem;
   background-color: rgb(from var(--dark-color)r g b / 15%);
-  opacity: 0;
+  opacity: 1;
   transition: all .3s ease-in-out
 }
-.member-card:hover .social-links {
-  width: 100%;
-  opacity: 1;
-}
-/* Social links with hover effects */
+
 .social-links a {
   display: inline-block;
   text-decoration: none;
@@ -125,6 +121,7 @@ const members = ref([
   background-color: var(--white-color);
   color: var(--secondary-color);
 }
+
 .social-links a:hover i {
   transform: scale(1.2);
   transition: all 0.3s ease;
@@ -135,5 +132,17 @@ const members = ref([
   width: 100%;
   height: 100%;
   object-fit: cover;
+}
+
+@media (min-width: 992px) {
+  .social-links {
+    width: 0;
+    opacity: 0;
+  }
+
+  .member-card:hover .social-links {
+    width: 100%;
+    opacity: 1;
+  }
 }
 </style>
