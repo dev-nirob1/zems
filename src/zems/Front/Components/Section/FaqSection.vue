@@ -30,18 +30,16 @@ const faqItems = ref([
   }
 ]);
 
-
-// Track open/closed state for each item
-const activeItems = ref([]);
+const currentOpenItem = ref();
 
 const toggleAccordion = (id) => {
-  const index = activeItems.value.indexOf(id);
-  if (index > -1) {
-    activeItems.value.splice(index, 1); // Close if open
+  if (currentOpenItem.value == id) {
+    currentOpenItem.value = null;
   } else {
-    activeItems.value.push(id); // Open if closed
+    currentOpenItem.value = id;
   }
 };
+
 </script>
 
 <template>
@@ -55,15 +53,14 @@ const toggleAccordion = (id) => {
 
         <div class="accordion-list">
           <div v-for="item in faqItems" :key="item.id" class="accordion-item">
-            <div @click="toggleAccordion(item.id)" class="accordion-title"
-              :class="{ 'active': activeItems.includes(item.id) }">
+            <div @click="toggleAccordion(item.id)" class="accordion-title">
               {{ item.question }}
-              <span class="accordion-icon">{{ activeItems.includes(item.id) ? '−' : '+' }}</span>
+              <!-- <span class="accordion-icon">{{ activeItems.includes(item.id) ? '−' : '+' }}</span> -->
             </div>
-
-            <div class="accordion-body" :class="{ 'active': activeItems.includes(item.id) }">
+            <div class="accordion-body" :class="{ 'active': currentOpenItem == item.id }">
               {{ item.answer }}
             </div>
+
           </div>
         </div>
       </div>
@@ -75,74 +72,36 @@ const toggleAccordion = (id) => {
 .faq {
   padding: 3.75rem 0;
 }
-
 .faq .acc-image {
   height: 100%;
   width: auto;
 }
-
 .faq img {
   height: 100%;
   width: 100%;
   object-fit: cover;
 }
-
-.accordion-list {
-  width: 100%;
-  margin-top: 1.5rem;
-}
-
 .accordion-item {
-  margin-bottom: 1rem;
+  margin-bottom: 1.5rem;
   border-radius: 0.5rem;
   overflow: hidden;
-  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
 }
-
 .accordion-title {
   padding: 1rem;
   font-weight: 600;
   color: var(--white-color);
   background-color: var(--primary-color);
   cursor: pointer;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  transition: background-color 0.2s ease;
 }
-
-
-.accordion-title.active {
-  border-radius: 0.5rem 0.5rem 0 0;
-}
-
-.accordion-icon {
-  font-size: 1.2rem;
-}
-
 .accordion-body {
   padding: 0;
   max-height: 0;
   overflow: hidden;
-  background-color: rgb(from var(--dark-color) r g b / 10%);
-  transition: max-height 0.3s ease, padding 0.3s ease;
+  background-color: rgb(from var(--dark-color) r g b / 5%);
+  transition: all 0.3s ease;
 }
-
 .accordion-body.active {
   padding: 1rem;
   max-height: 500px;
-  /* Adjust based on your content */
-}
-
-/* Animation for smooth transitions */
-.accordion-enter-active,
-.accordion-leave-active {
-  transition: all 0.3s ease;
-}
-
-.accordion-enter-from,
-.accordion-leave-to {
-  opacity: 0;
-  max-height: 0;
 }
 </style>
