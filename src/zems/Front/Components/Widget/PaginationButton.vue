@@ -1,21 +1,21 @@
 <template>
- <ul class="pagination">
-        <li>
-          <a href="/coupon_list">« Prev </a>
-        </li>
-        <li>
-          <a href="#" class="active">1</a>
-        </li>
-        <li>
-          <a href="#">2</a>
-        </li>
-        <li>
-          <a href="#">3</a>
-        </li>
-        <li>
-          <a href="#"> Next »</a>
-        </li>
-      </ul>
+  <ul class="pagination">
+    <ListItem>
+      <a href="/coupon_list">« Prev </a>
+    </ListItem>
+    <ListItem>
+      <a href="#" class="active">1</a>
+    </ListItem>
+    <ListItem>
+      <a href="#">2</a>
+    </ListItem>
+    <ListItem>
+      <a href="#">3</a>
+    </ListItem>
+    <ListItem>
+      <a href="#"> Next »</a>
+    </ListItem>
+  </ul>
 </template>
 <style scoped>
 .pagination {
@@ -28,20 +28,23 @@
   justify-content: center;
   gap: 0.5rem;
 }
+
 .pagination li {
   border-radius: 0.5rem;
   font-weight: 500;
-  color: var(--primary-color);
+  color: var(--primary-light-color);
   background-color: var(--white-color);
 }
+
 .pagination li a {
   display: inline-block;
   padding: 0.5rem 1rem;
   text-decoration: none;
   border-radius: 0.5rem;
 }
+
 .pagination li a.active {
-  background-color: var(--primary-color);
+  background-color: var(--primary-light-color);
   color: var(--white-color);
 }
 </style>

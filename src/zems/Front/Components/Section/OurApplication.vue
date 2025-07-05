@@ -68,5 +68,10 @@ const apps = ref([
   color: var(--primary-light-color);
   border: 1px solid var(--primary-light-color);
   white-space: nowrap;
+  transition: all .3s ease-in-out
+}
+.our-app a:hover {
+  background-color: var(--primary-light-color);
+  color: var(--white-color);
 }
 </style>

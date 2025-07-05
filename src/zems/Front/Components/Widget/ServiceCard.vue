@@ -1,6 +1,5 @@
 <script setup>
 import BaseImage from '@/components/Elements/BaseImage.vue';
-import { RouterLink } from 'vue-router';
 defineProps({
   service: {
     type: Object
@@ -17,7 +16,6 @@ defineProps({
     <div class="mt-1">
       <SubTitle>{{ service.title }}</SubTitle>
       <BaseParagraph>{{ service.description }}</BaseParagraph>
-      <RouterLink to="">Learn More <i class="fas fa-arrow-right"></i></RouterLink>
     </div>
   </div>
 </template>

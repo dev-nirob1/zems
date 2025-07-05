@@ -20,7 +20,7 @@ defineProps({
   position: relative;
   display: inline-block;
   font-weight: 600;
-  margin-bottom: 2.5rem;
+  margin-bottom: 1.5rem;
   padding: 0 .25rem;
 }
 .section-header .sub-title::before {
