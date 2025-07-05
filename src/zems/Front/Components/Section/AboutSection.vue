@@ -47,21 +47,17 @@ const aboutData = {
   padding: 3.75rem 0;
 }
 .about-image {
-  /* height: 100%; */
-  width: auto;
+  height: 100%;
+  width: 100%;
 }
 .about-image img {
-  width: 100%;
   height: 100%;
+  width: 100%;
   object-fit: cover;
 }
 .about .btn {
   padding: 1rem;
   font-size: 1.15rem;
-}
-.about ul {
-  list-style: none;
-  padding-left: 1rem;
 }
 .about ul li {
   position: relative;
@@ -74,13 +70,8 @@ const aboutData = {
   left: 0;
   color: var(--primary-light-color);
 }
+
 @media (min-width: 768px){
-  .about p {
-  font-size: 1.1rem;
-}
-.about img {
-  width: auto;
-}
  .about .btn {
   padding: 1.25rem 2rem;
 }

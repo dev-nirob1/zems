@@ -1,6 +1,7 @@
 <script setup>
 import SectionTitle from '@/components/Widget/SectionTitle.vue';
 import { ref } from 'vue';
+import AccordionFaq from '../Widget/AccordionFaq.vue';
 
 const faqItems = ref([
   {
@@ -46,21 +47,14 @@ const toggleAccordion = (id) => {
   <div class="faq bg-light">
     <div class="container">
       <SectionTitle class="text-center mb-3" title="Everything You Should Know" sub-title="User Guide" />
-      <div class="large-2 gap-3">
-        <div class="acc-img">
+      <div class="large-2 align-center gap-3">
+        <div class="faq-img">
           <BaseImage image="https://zems.uk//uploads/media/1744748295.png" alt="image" />
         </div>
 
         <div>
-          <div v-for="item in faqItems" :key="item.id" class="accordion">
-            <div @click="toggleAccordion(item.id)" class="accordion-title">
-              {{ item.question }}
-              <i class="fa-solid fa-plus"></i>
-            </div>
-            <div class="accordion-body" :class="{ 'active': currentOpenItem == item.id }">
-              {{ item.answer }}
-            </div>
-          </div>
+          <AccordionFaq v-for="item in faqItems" :key="item.id" :currentOpenItem="currentOpenItem" :accordionData="item"
+            :toggleAccordion="toggleAccordion" />
         </div>
       </div>
     </div>
@@ -71,44 +65,15 @@ const toggleAccordion = (id) => {
 .faq {
   padding: 3.75rem 0;
 }
-.faq .acc-image {
+
+.faq .faq-image {
   height: 100%;
-  width: auto;
+  width: 100%;
 }
 
 .faq img {
   height: 100%;
   width: 100%;
   object-fit: cover;
-}
-
-.accordion {
-  margin-bottom: 1.5rem;
-  border-radius: 0.5rem;
-  overflow: hidden;
-}
-
-.accordion-title {
-  padding: 1rem;
-  font-weight: 600;
-  color: var(--white-color);
-  background-color: var(--secondary-color);
-  cursor: pointer;
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-}
-
-.accordion-body {
-  padding: 0;
-  max-height: 0;
-  overflow: hidden;
-  background-color: var(--white-color);
-  transition: all 0.3s ease;
-}
-
-.accordion-body.active {
-  padding: 1rem;
-  max-height: 500px;
 }
 </style>

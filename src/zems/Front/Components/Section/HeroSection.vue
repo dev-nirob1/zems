@@ -1,4 +1,9 @@
 <script setup>
+const heroContent = {
+  title: "High-Performance Software Solutions",
+ description: "We build custom software that solves business challenges - from web apps to enterprise platforms, we bring your vision to life.",
+  image: "https://zems.uk/uploads/media/1744746136.webp"
+}
 </script>
 
 <template>
@@ -7,12 +12,10 @@
       <!-- content container  -->
       <div>
         <HeroTitle data-zems="animate__fadeInUp" class="animate__animated">
-          High-Performance Software Solutions
+          {{heroContent.title}}
         </HeroTitle>
         <BaseParagraph data-zems="animate__fadeInUp" class="animate__animated">
-          We design, develop and deploy custom software systems that solve real business challenges.
-          Whether you need web applications, mobile solutions, or enterprise platforms,
-          our full-stack expertise brings your vision to life.
+          {{heroContent.description}}
         </BaseParagraph>
         <!-- button container  -->
         <div class="flex align-center gap-1">
@@ -26,7 +29,7 @@
       </div>
       <!-- image container  -->
       <div class="width-full">
-        <BaseImage class="width-full" image="https://zems.uk/uploads/media/1744746136.webp" alt="hero-image" />
+        <BaseImage class="width-full" :image="heroContent.image" alt="hero-image" />
       </div>
     </div>
   </section>
@@ -42,11 +45,9 @@
 .hero .btn {
   padding: 1rem;
 }
-
 .hero p {
   font-size: 1.15rem;
 }
-
 @media (min-width: 768px) {
   .hero .btn {
     padding: 1.25rem 2rem;

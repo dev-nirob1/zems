@@ -32,7 +32,6 @@ defineProps({
   cursor: pointer;
   transition: all 0.3s ease;
 }
-
 .graphic-img {
   position: absolute;
   bottom: .5rem;
@@ -41,30 +40,24 @@ defineProps({
   width: auto;
   opacity: .05;
 }
-
 .service-card .icon {
   width: auto;
   height: 80px;
 }
-
 .service-card .icon img {
   height: 100%;
   width: auto;
 }
-
 .service-card p {
   margin: .75rem 0;
 }
-
 .service-card:hover {
   transform: translateY(-.5rem);
 }
-
 .service-card a,
 .service-card i {
   transition: all .3s ease-in-out;
 }
-
 .service-card a {
   text-decoration: none;
   color: var(--primary-color);
@@ -72,7 +65,6 @@ defineProps({
   align-items: center;
   gap: .5rem;
 }
-
 .service-card a:hover i {
   padding-left: .5rem;
 }

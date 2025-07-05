@@ -85,7 +85,7 @@ const currentFeature = computed(() => {
             {{ currentFeature.subtitle }}
           </SubTitle>
 
-          <BaseParagraph data-zems="animate__fadeInUP" class="animate__animated">
+          <BaseParagraph data-zems="animate__fadeInUp" class="animate__animated">
             {{ currentFeature.description }}
           </BaseParagraph>
 
@@ -108,7 +108,6 @@ const currentFeature = computed(() => {
 .featured {
   padding: 3.75rem 0;
 }
-
 .tab-panel ul {
   padding: 0;
   list-style: none;
@@ -117,38 +116,24 @@ const currentFeature = computed(() => {
   gap: 1rem;
   margin: 3rem 0;
 }
-
 .tab-panel ul li .btn {
   font-size: 1rem;
   padding: .75rem 1rem;
   margin: 0;
 }
-
 .active {
   background: linear-gradient(to left, var(--primary-light-color), var(--secondary-color));
   color: var(--white-color);
 }
-
 .featured .app-image {
   height: 100%;
   width: 100%;
 }
-
 .featured .app-image img {
   height: 100%;
   width: 100%;
   object-fit: cover;
 }
-
-.featured .btn {
-  padding: .75rem 1.5rem;
-}
-
-.feature-list {
-  list-style: none;
-  padding-left: 1rem;
-}
-
 .feature-list li {
   position: relative;
   padding-left: 1rem;
@@ -161,16 +146,17 @@ const currentFeature = computed(() => {
   left: 0;
   color: var(--primary-light-color);
 }
-
+.featured .btn {
+  padding: .75rem 1rem;
+}
 @media (min-width: 768px) {
   .featured .btn {
     font-size: 1.15rem;
     margin-top: .5rem;
   }
-
   .tab-panel ul li .btn {
     font-size: 1.15rem;
-    padding: 1.15rem 1.75rem;
+    padding: 1.15rem 2rem;
   }
 }
 </style>

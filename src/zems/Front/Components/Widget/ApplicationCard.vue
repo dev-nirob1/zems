@@ -33,15 +33,9 @@ defineProps({
   background-color: var(--white-color);
   box-shadow: var(--box-shadow);
 }
-
 .app-card p {
   margin-top: .5rem;
 }
-
-.app-card .btn {
-  padding: .75rem 1.5rem;
-}
-
 .app-card .image {
   position: relative;
   overflow: hidden;
@@ -49,7 +43,6 @@ defineProps({
   width: auto;
   border-radius: .75rem .75rem 0 0;
 }
-
 .app-card .image img {
   position: absolute;
   top: 0;
@@ -59,9 +52,10 @@ defineProps({
   object-fit: cover;
   transition: all .5s ease-in-out;
 }
-
 .app-card .image:hover img {
   transform: scale(1.1);
 }
-
+.app-card .btn {
+  padding: .75rem 1.5rem;
+}
 </style>

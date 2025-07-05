@@ -1,11 +1,11 @@
 <script setup>
 const logos = [
-  '/public/company/adidas.png',
-  '/public/company/nike.png',
-  '/public/company/amazon.png',
-  '/public/company/apple.png',
-  '/public/company/samsung.png',
-  '/public/company/zara.png'
+  '/company/adidas.png',
+  '/company/nike.png',
+  '/company/amazon.png',
+  '/company/apple.png',
+  '/company/samsung.png',
+  '/company/zara.png'
 ];
 </script>
 
@@ -29,7 +29,6 @@ const logos = [
   display: flex;
   gap: 2rem;
 }
-
 .marque {
   display: flex;
   align-items: center;
@@ -37,30 +36,8 @@ const logos = [
   gap: 2rem;
   min-width: 100%;
   flex-shrink: 0;
-  animation: 5s marque infinite linear;
+  animation: 30s marque infinite linear;
 }
-
-.partner-section::before,
-.partner-section::after {
-  content: "";
-  height: 100%;
-  width: 3rem;
-  position: absolute;
-  top: 0;
-}
-
-.partner-section::before {
-  left: 0;
-}
-
-.partner-section::after {
-  right: 0;
-}
-
-.partner-section img {
-  height: 80px;
-}
-
 @keyframes marque {
 
   to {

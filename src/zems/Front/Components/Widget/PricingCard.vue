@@ -24,13 +24,12 @@ defineProps({
       {{ price.description }}
     </BaseParagraph>
     <ul v-for="(feature, i) in price.features" :key="i" class="feature-list">
-      <li>{{ feature }}</li>
+      <ListItem>{{ feature }}</ListItem>
     </ul>
     <BaseButton class="bg-primary text-white">Get Started</BaseButton>
   </div>
 </template>
 <style scoped>
-/* pricing card */
 .pricing-card {
   position: relative;
   border-radius: 0.75rem;
@@ -41,25 +40,20 @@ defineProps({
   cursor: pointer;
   overflow: hidden;
 }
-
 .pricing-card .price-icon {
   font-size: 5rem;
   color: var(--primary-color);
 }
-
 .pricing-card:hover {
   transform: translateY(-0.5rem);
 }
-
 .pricing-card .sub-title {
   margin: 0.5rem 0;
 }
-
 .pricing-card .hero-title {
   display: flex;
   align-items: center;
 }
-
 .exclusive-badge {
   border: 1px solid;
   padding: 1rem 2rem;
@@ -80,35 +74,30 @@ defineProps({
   width: 4rem;
   background-color: var(--white-color);
 }
-
 .pricing-card .hero-title span {
   font-size: 1.75rem;
   font-weight: bold;
 }
-
-.pricing-card .btn {
-  margin-top: 1.5rem;
-  font-size: 1.25rem;
-  color: var(--white-color);
-}
-
 .feature-list {
   list-style: none;
   padding-left: 0;
   margin: 0;
 }
-
 .feature-list li {
   position: relative;
   padding-left: 1rem;
   margin-bottom: .25rem;
 }
-
 .feature-list li::before {
   content: "✓";
   position: absolute;
   left: 0;
   color: var(--primary-light-color);
+}
+.pricing-card .btn {
+  margin-top: 1.5rem;
+  font-size: 1.25rem;
+  color: var(--white-color);
 }
 
 @media (min-width: 992px) {
