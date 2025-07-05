@@ -1,22 +1,4 @@
-<template>
-  <section class="partner-section">
-    <div class="logos-container">
-      <div class="logos-track">
-        <div class="logos flex gap-8">
-          <img v-for="(logo, index) in duplicatedLogos"
-               :key="index"
-               :src="logo"
-               alt="Partner company logo"
-               class="logo-img">
-        </div>
-      </div>
-    </div>
-  </section>
-</template>
-
 <script setup>
-import { computed } from 'vue';
-
 const logos = [
   '/public/company/adidas.png',
   '/public/company/nike.png',
@@ -25,66 +7,64 @@ const logos = [
   '/public/company/samsung.png',
   '/public/company/zara.png'
 ];
-
-// Duplicate logos for seamless looping
-const duplicatedLogos = computed(() => [...logos, ...logos]);
 </script>
+
+<template>
+  <section class="partner-section">
+    <div class="marque">
+      <img v-for="(logo, index) in logos" :key="index" :src="logo" alt="Partner company logo" class="logo-img" />
+    </div>
+    <div class="marque">
+      <img v-for="(logo, index) in logos" :key="index" :src="logo" alt="Partner company logo" class="logo-img" />
+    </div>
+  </section>
+</template>
 
 <style scoped>
 .partner-section {
   padding: 3.75rem 0;
-  background: #f8fafc;
+  background: var(--white-color);
   overflow: hidden;
-}
-
-.logos-container {
-  width: 100%;
   position: relative;
-}
-
-.logos-track {
-  display: inline-block;
-  white-space: nowrap;
-  animation: scroll 20s linear infinite;
-}
-
-.logos {
-  display: inline-flex;
-  align-items: center;
+  display: flex;
   gap: 2rem;
-  padding: 1rem 0;
 }
 
-.logo-img {
+.marque {
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  gap: 2rem;
+  min-width: 100%;
+  flex-shrink: 0;
+  animation: 5s marque infinite linear;
+}
+
+.partner-section::before,
+.partner-section::after {
+  content: "";
+  height: 100%;
+  width: 3rem;
+  position: absolute;
+  top: 0;
+}
+
+.partner-section::before {
+  left: 0;
+}
+
+.partner-section::after {
+  right: 0;
+}
+
+.partner-section img {
   height: 80px;
-  width: auto;
-  object-fit: contain;
-  opacity: 0.8;
-  transition: all 0.3s ease;
 }
 
+@keyframes marque {
 
-@keyframes scroll {
-  0% { transform: translateX(0); }
-  100% { transform: translateX(-50%); }
-}
-
-/* Hide scrollbar but allow scrolling */
-.logos-container::-webkit-scrollbar {
-  display: none;
-}
-
-/* Responsive adjustments */
-@media (max-width: 768px) {
-  .logos {
-    gap: 1.5rem;
-  }
-  .logo-img {
-    height: 50px;
-  }
-  @keyframes scroll {
-    0% { transform: translateX(0); }
-    100% { transform: translateX(-50%); }
+  to {
+    transform: translateX(calc(-100% - 2rem));
   }
 }
 </style>

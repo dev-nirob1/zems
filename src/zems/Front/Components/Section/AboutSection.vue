@@ -23,7 +23,7 @@ const aboutData = {
   <section class="about">
     <div class="container medium-2 gap-2 align-center">
       <!-- img container  -->
-      <div class="width-full height-full">
+      <div class="about-image">
         <BaseImage :image="aboutData.image.src" :alt="aboutData.image.alt" />
       </div>
 
@@ -46,9 +46,13 @@ const aboutData = {
 .about {
   padding: 3.75rem 0;
 }
-.about img {
+.about-image {
+  /* height: 100%; */
+  width: auto;
+}
+.about-image img {
   width: 100%;
-  height: 80vh;
+  height: 100%;
   object-fit: cover;
 }
 .about .btn {
@@ -68,7 +72,7 @@ const aboutData = {
   content: "✓";
   position: absolute;
   left: 0;
-  color: var(--primary-color);
+  color: var(--primary-light-color);
 }
 @media (min-width: 768px){
   .about p {
