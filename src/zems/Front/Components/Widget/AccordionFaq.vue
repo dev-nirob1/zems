@@ -23,6 +23,7 @@ defineProps({
     </div>
   </div>
 </template>
+
 <style scoped>
 .accordion {
   margin-bottom: 1.5rem;

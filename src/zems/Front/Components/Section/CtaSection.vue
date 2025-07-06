@@ -22,8 +22,8 @@ import { RouterLink } from 'vue-router';
 
 <style scoped>
 .cta-badge {
-  margin-bottom: -6rem;
-  padding: 4rem 1.5rem 6rem 1.5rem;
+  margin-bottom: -8rem;
+  padding: 2rem 1.5rem 3rem 1.5rem;
   text-align: center;
   color: var(--white-color);
   background-color: var(--secondary-color);
@@ -97,7 +97,7 @@ import { RouterLink } from 'vue-router';
 /* Tablet & Up */
 @media (min-width: 768px) {
   .cta-badge {
-    padding: 6rem 3rem 3rem 3rem;
+    padding: 3rem 3rem 2rem 3rem;
     border-radius: 50% 50% 0 0;
   }
 }

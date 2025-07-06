@@ -119,8 +119,6 @@ ul {
 .justify-center {
   justify-content: center;
 }
-
-
 /* button styles  */
 .btn {
   position: relative;
@@ -173,20 +171,16 @@ ul {
   transform: skewX(-20deg);
   z-index: 0;
 }
-
 .bg-primary.btn::before {
   left: 0;
 }
-
 .bg-primary.btn::after {
   right: 0;
 }
-
 .btn-primary {
   background-color: var(--primary-color);
   color: var(--white-color);
 }
-
 :root {
   --heading-1: 2rem;
   --heading-2: 1.75rem;

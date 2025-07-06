@@ -33,7 +33,7 @@ defineProps({
 .pricing-card {
   position: relative;
   border-radius: 0.75rem;
-  padding: 3rem 1rem;
+  padding: 2rem 1rem;
   transition: all 0.5s;
   background-color: var(--white-color);
   box-shadow: var(--box-shadow);
@@ -102,7 +102,7 @@ defineProps({
 
 @media (min-width: 992px) {
   .pricing-card {
-    padding: 3rem 2rem;
+    padding: 1.5rem 2rem;
   }
 }
 </style>

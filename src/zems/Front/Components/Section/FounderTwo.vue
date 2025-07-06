@@ -30,15 +30,14 @@ const leadershipData = {
         <div>
           <SectionTitle class="mb-1" title="Our Visionary Leadership" sub-title="Zems Founder" />
           <div>
-            <SubTitle>{{leadershipData.intro.title}}</SubTitle>
+            <SubTitle>{{ leadershipData.intro.title }}</SubTitle>
             <BaseParagraph>
-              {{leadershipData.intro.description}}
+              {{ leadershipData.intro.description }}
             </BaseParagraph>
           </div>
         </div>
         <div>
-          <BaseImage class="width-full" :image="leadershipData.image"
-            alt="Alex Johnson, Co-Founder and CEO" />
+          <BaseImage class="width-full" :image="leadershipData.image" alt="Alex Johnson, Co-Founder and CEO" />
         </div>
         <ul>
           <ListItem class="flex gap-1">
@@ -46,8 +45,8 @@ const leadershipData = {
               <i class="icon fa-solid fa-chart-line fa-2x"></i>
             </div>
             <div>
-              <SubTitle>{{leadershipData.qualities[0].title}}</SubTitle>
-              <BaseParagraph>{{leadershipData.qualities[0].description}}
+              <SubTitle>{{ leadershipData.qualities[0].title }}</SubTitle>
+              <BaseParagraph>{{ leadershipData.qualities[0].description }}
               </BaseParagraph>
             </div>
           </ListItem>
@@ -56,8 +55,8 @@ const leadershipData = {
               <i class="icon fa-solid fa-lightbulb fa-2x"></i>
             </div>
             <div>
-              <SubTitle>{{leadershipData.qualities[1].title}}</SubTitle>
-              <BaseParagraph>{{leadershipData.qualities[1].description}}</BaseParagraph>
+              <SubTitle>{{ leadershipData.qualities[1].title }}</SubTitle>
+              <BaseParagraph>{{ leadershipData.qualities[1].description }}</BaseParagraph>
             </div>
           </ListItem>
           <ListItem class="flex gap-1">
@@ -65,8 +64,8 @@ const leadershipData = {
               <i class="icon fa-solid fa-puzzle-piece fa-2x"></i>
             </div>
             <div>
-              <SubTitle>{{leadershipData.qualities[1].title}}</SubTitle>
-              <BaseParagraph>{{leadershipData.qualities[1].description}}</BaseParagraph>
+              <SubTitle>{{ leadershipData.qualities[1].title }}</SubTitle>
+              <BaseParagraph>{{ leadershipData.qualities[1].description }}</BaseParagraph>
             </div>
           </ListItem>
         </ul>
@@ -80,9 +79,11 @@ const leadershipData = {
   padding: 3.75rem 0;
   position: relative;
 }
+
 .founder-two img {
   border-radius: .75rem;
 }
+
 .founder-two .icon {
   border-radius: .5rem;
   background-color: var(--primary-color);
@@ -93,16 +94,20 @@ const leadershipData = {
   align-items: center;
   justify-content: center;
 }
+
 .founder-two p {
   margin-top: .75rem;
 }
+
 .founder-two ul {
   list-style: none;
   padding-left: 0;
 }
+
 ul li:not(:last-child) {
   margin: 0;
 }
+
 .founder-two::after {
   content: '';
   width: 100vw;

@@ -61,11 +61,10 @@ const project = {
             </ListItem>
           </ul>
         </div>
-
         <!-- Technologies -->
         <div>
           <SubTitle>Technology Used</SubTitle>
-          <div class="flex flex-wrap mt-1 gap-1">
+          <div class="mt-1 gap-1">
             <div class="tech" v-for="(tech, i) in project.technologies" :key="i">
               {{ tech }}
             </div>
@@ -147,6 +146,8 @@ ul {
 
 .tech {
   padding: .25rem .75rem;
+  display: inline-block;
+  margin: .5rem;
   background-color: var(--light-color);
 }
 

@@ -5,28 +5,28 @@ import SectionTitle from '@/components/Widget/SectionTitle.vue';
 import PopUP from '@/components/Widget/PopUP.vue';
 const images = ref([
   {
-    url: "https://images.pexels.com/photos/1181671/pexels-photo-1181671.jpeg",
-    alt: "Developer typing code on laptop"
+    url: "https://cdn.pixabay.com/photo/2020/01/26/20/14/computer-4795762_1280.jpg",
+    alt: "image"
   },
   {
-    url: "https://images.pexels.com/photos/3861969/pexels-photo-3861969.jpeg",
-    alt: "Team working on project at office"
+    url: "https://images.unsplash.com/photo-1600466888907-013366be7093?q=80&w=870&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+    alt: "image"
   },
   {
-    url: "https://images.pexels.com/photos/540518/pexels-photo-540518.jpeg",
-    alt: "Dual monitors with code editor"
+    url: "https://images.pexels.com/photos/380769/pexels-photo-380769.jpeg?_gl=1*9892og*_ga*OTAzOTgwMTguMTczNzAwNTI1OA..*_ga_8JE65Q40S6*czE3NTE3NzY5NjMkbzE5JGcxJHQxNzUxNzc2OTc0JGo0OSRsMCRoMA..",
+    alt: "image"
   },
   {
-    url: "https://images.pexels.com/photos/3183150/pexels-photo-3183150.jpeg",
-    alt: "UI/UX designer at desk"
+    url: "https://cdn.pixabay.com/photo/2024/05/21/19/57/computer-8779040_1280.jpg",
+    alt: "image"
   },
   {
-    url: "https://images.pexels.com/photos/3861958/pexels-photo-3861958.jpeg",
-    alt: "Software engineer discussing architecture"
+    url: "https://cdn.pixabay.com/photo/2017/05/31/11/17/office-2360063_1280.jpg",
+    alt: "image"
   },
   {
-    url: "https://images.pexels.com/photos/1181263/pexels-photo-1181263.jpeg",
-    alt: "Developer with code on laptop screen"
+    url: "https://images.unsplash.com/photo-1749738456487-2af715ab65ea?q=80&w=870&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDF8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+    alt: "image"
   }
 ])
 const isModalOpen = ref(false)
@@ -59,12 +59,13 @@ const handleNext = () => {
 
   <div class="gallery">
     <div class="container">
-      <SectionTitle class="text-center mb-2" title="Our Photo Gallery" sub-title="Gallery" />
+      <SectionTitle class="text-center mb-2" title="Our Photo Gallery" sub-title="Image Collection" />
       <div class="medium-2 large-3 gap-2">
         <div class="gallery-item" v-for="(img, index) in images" :key="index">
           <BaseImage :image="img.url" :alt="img.alt" />
           <div class="button-overlay">
-            <BaseButton @click="handleOpenModal(index)" class="plus-button"><i class="fa-solid fa-plus fa-2x"></i>
+            <BaseButton @click="handleOpenModal(index)" class="plus-button">
+              <i class="fa-solid fa-plus fa-2x"></i>
             </BaseButton>
           </div>
         </div>

@@ -13,6 +13,7 @@ import TestimonialSection from '../Components/Section/TestimonialSection.vue';
 
 <template>
   <HeroSection />
+  <TestimonialSection/>
   <AboutSection />
   <StatisticsSection />
   <FeaturedApp />
@@ -21,5 +22,4 @@ import TestimonialSection from '../Components/Section/TestimonialSection.vue';
   <PricingSection />
   <FaqSection/>
   <PartnarSection/>
-  <TestimonialSection/>
 </template>
