@@ -107,7 +107,7 @@ import BaseParagraph from '../Elements/BaseParagraph.vue';
   margin-bottom: 1rem;
 }
 .footer .logo img {
-  height: 70px;
+  height: 55px;
   width: auto;
 }
 .social-links {

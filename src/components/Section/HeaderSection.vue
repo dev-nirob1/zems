@@ -79,7 +79,7 @@ onMounted(() => {
   text-decoration: none;
 }
 .logo img {
-  height: 65px;
+  height: 55px;
   width: auto;
 }
 /* logo vissibility hidden/block */
@@ -135,7 +135,6 @@ onMounted(() => {
   color: var(--white-color);
   background-color: var(--primary-light-color);
   padding: .5rem;
-  border-radius: .25rem;
 }
 /* Mobile menu toggle */
 .hamburger {
