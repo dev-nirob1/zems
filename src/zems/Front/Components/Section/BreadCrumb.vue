@@ -27,14 +27,27 @@ console.log(route);
   padding: 0;
 }
 .breadcrumb ul li a {
+  position: relative;
   color: var(--primary-light-color);
   text-decoration: none;
+  padding-bottom: .5rem;
 }
-.breadcrumb ul li:hover a {
-  text-decoration: underline;
+.breadcrumb ul li a::after{
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  height: 2px;
+  width: 0;
+  background-color: var(--primary-light-color);
+  transition: all .3s ease-in-out;
+}
+.breadcrumb ul li a:hover::after {
+  width: 100%;
 }
 .breadcrumb ul li:not(:last-child)::after {
-  content: "/";
+  content: ">";
+  font-family: monospace;
   padding-left: 1rem;
 }
 @media (min-width: 768px){
