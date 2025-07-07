@@ -30,7 +30,6 @@ defineProps({
   position: relative;
   padding: 2rem 1.5rem;
   background: var(--white-color);
-  border-radius: 0.5rem;
   box-shadow: var(--box-shadow);
   scroll-snap-align: start;
 }
@@ -39,7 +38,6 @@ defineProps({
   height: 4rem;
   width: 4rem;
   object-fit: cover;
-  border-radius: .5rem;
 }
 
 .bg-graphic {

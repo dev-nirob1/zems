@@ -80,12 +80,7 @@ const leadershipData = {
   position: relative;
 }
 
-.founder-two img {
-  border-radius: .75rem;
-}
-
 .founder-two .icon {
-  border-radius: .5rem;
   background-color: var(--primary-color);
   color: var(--white-color);
   height: 80px;

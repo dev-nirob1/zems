@@ -70,7 +70,6 @@
 
 .contact-info ul li i {
   padding: 1rem;
-  border-radius: .25rem;
   background-color: var(--primary-color);
   color: var(--white-color);
   display: flex;

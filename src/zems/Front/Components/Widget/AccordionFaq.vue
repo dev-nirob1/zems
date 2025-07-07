@@ -27,7 +27,6 @@ defineProps({
 <style scoped>
 .accordion {
   margin-bottom: 1.5rem;
-  border-radius: 0.5rem;
   overflow: hidden;
 }
 .accordion-title {

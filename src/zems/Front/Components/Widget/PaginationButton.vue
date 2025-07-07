@@ -26,11 +26,10 @@
   display: flex;
   align-items: center;
   justify-content: center;
-  gap: 0.5rem;
+  gap: 0.75rem;
 }
 
 .pagination li {
-  border-radius: 0.5rem;
   font-weight: 500;
   color: var(--primary-light-color);
   background-color: var(--white-color);
@@ -40,7 +39,7 @@
   display: inline-block;
   padding: 0.5rem 1rem;
   text-decoration: none;
-  border-radius: 0.5rem;
+  white-space: nowrap;
 }
 
 .pagination li a.active {

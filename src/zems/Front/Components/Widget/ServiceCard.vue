@@ -23,7 +23,6 @@ defineProps({
 <style scoped>
 .service-card {
   position: relative;
-  border-radius: .75rem;
   padding: 2rem 1.5rem;
   background-color: var(--white-color);
   box-shadow: var(--box-shadow);

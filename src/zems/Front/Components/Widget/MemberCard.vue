@@ -26,7 +26,6 @@ defineProps({
 <style scoped>
 .member-card {
   position: relative;
-  border-radius: .75rem;
   overflow: hidden;
 }
 
@@ -60,7 +59,6 @@ defineProps({
   font-size: 1.25rem;
   height: 3rem;
   width: 3rem;
-  border-radius: .25rem;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -70,11 +68,10 @@ defineProps({
 
 .member-card .social-links a:hover i {
   transform: scale(1.2);
-  transition: all 0.3s ease;
+  transition: all 0.3s ease-in-out;
 }
 
 .member-card .image img {
-  border-radius: .75rem .75rem 0 0;
   width: 100%;
   height: 100%;
   object-fit: cover;

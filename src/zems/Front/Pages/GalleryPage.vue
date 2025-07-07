@@ -118,7 +118,6 @@ const handleNext = () => {
 
 .plus-button {
   background-color: var(--white-color);
-  border-radius: 1.8rem;
   border: none;
   opacity: 1;
   transition: all .3s ease-in-out;

@@ -55,7 +55,6 @@ const items = ref([
   background-color: var(--white-color);
   box-shadow: var(--box-shadow);
   padding: 2rem;
-  border-radius: 0.75rem;
   display: flex;
   flex-direction: column;
   align-items: center;

@@ -29,7 +29,6 @@ defineProps({
 
 <style scoped>
 .app-card {
-  border-radius: .75rem;
   background-color: var(--white-color);
   box-shadow: var(--box-shadow);
 }
@@ -41,7 +40,6 @@ defineProps({
   overflow: hidden;
   height: 220px;
   width: auto;
-  border-radius: .75rem .75rem 0 0;
 }
 .app-card .image img {
   position: absolute;

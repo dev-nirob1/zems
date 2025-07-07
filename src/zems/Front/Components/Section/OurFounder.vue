@@ -71,12 +71,10 @@ const founderData = {
 .founder-image img {
   height: 280px;
   width: 280px;
-  border-radius: 1rem;
   object-fit: cover;
 }
 .founder-card {
   padding: 1rem;
-  border-radius: .75rem;
   background-color: rgb(from var(--primary-color) r g b/ 80%);
   color: var(--white-color);
 }

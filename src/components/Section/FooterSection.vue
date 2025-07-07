@@ -121,7 +121,6 @@ import BaseParagraph from '../Elements/BaseParagraph.vue';
   font-size: 1.25rem;
   height: 36px;
   width: 36px;
-  border-radius: .25rem;
   display: flex;
   align-items: center;
   justify-content: center;

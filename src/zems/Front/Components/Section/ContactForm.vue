@@ -54,7 +54,6 @@ textarea {
   border: none;
   background-color: var(--white-color);
   box-shadow: var(--box-shadow);
-  border-radius: .25rem;
 }
 
 input:focus,
@@ -73,5 +72,4 @@ select::placeholder {
   color: var(--white-color);
 }
 
-@media (min-width: 992px) {}
 </style>

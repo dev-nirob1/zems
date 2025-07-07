@@ -60,9 +60,8 @@ defineProps({
 }
 .modal .btn {
   position: fixed;
-  background: var(--dark-color);
+  background: var(--primary-color);
   color: var(--white-color);
-  border-radius: 50%;
   border: none;
 }
 .modal .btn-prev,
