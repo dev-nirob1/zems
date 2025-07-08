@@ -1,6 +1,6 @@
 <script setup>
 import SectionTitle from '@/components/Widget/SectionTitle.vue';
-import BreadCrumb from '../Components/Section/BreadCrumb.vue';
+import BreadCrumb from '@zems/Front/Components/Section/BreadCrumb.vue';
 
 const project = {
   type: "Web Application",

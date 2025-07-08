@@ -1,5 +1,5 @@
 .zems_slider {
-  width: 100%; /* Adjust as needed */
+  width: calc(100% + 2.25rem); /* Adjust as needed */
   overflow: hidden;
   position: relative;
   padding: 2rem 0;
@@ -12,6 +12,7 @@
 }
 .zems_slider .zems_slider_container .zems_slide {
   height: auto;
+  flex-grow: 1;
 }
 
 .zems_slider .zems_slide_pager {

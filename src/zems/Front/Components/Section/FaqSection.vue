@@ -1,7 +1,7 @@
 <script setup>
 import SectionTitle from '@/components/Widget/SectionTitle.vue';
 import { ref } from 'vue';
-import AccordionFaq from '../Widget/AccordionFaq.vue';
+import AccordionFaq from '@zems/Front/Components/Widget/AccordionFaq.vue';
 
 const faqItems = ref([
   {

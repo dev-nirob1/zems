@@ -1,10 +1,10 @@
-import MainLayout from './Layout/MainLayout.vue'
+import MainLayout from '@zems/Front/Layout/MainLayout.vue'
 import HomePage from '@zems/Front/Pages/HomePage.vue'
-import AboutPage from './Pages/AboutPage.vue'
-import ContactPage from './Pages/ContactPage.vue'
-import ProjectsPage from './Pages/ProjectsPage.vue'
-import ProjectDetails from './Pages/ProjectDetails.vue'
-import GalleryPage from './Pages/GalleryPage.vue'
+import AboutPage from '@zems/Front/Pages/AboutPage.vue'
+import ContactPage from '@zems/Front/Pages/ContactPage.vue'
+import ProjectsPage from '@zems/Front/Pages/ProjectsPage.vue'
+import ProjectDetails from '@zems/Front/Pages/ProjectDetails.vue'
+import GalleryPage from '@zems/Front/Pages/GalleryPage.vue'
 
 export default [
   {

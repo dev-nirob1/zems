@@ -1,7 +1,7 @@
 <script setup>
 import SectionTitle from '@/components/Widget/SectionTitle.vue';
 import { ref } from 'vue';
-import PricingCard from '../Widget/PricingCard.vue';
+import PricingCard from '@zems/Front/Components/Widget/PricingCard.vue';
 
 const pricing = ref([
   {

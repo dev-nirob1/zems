@@ -1,9 +1,9 @@
 <script setup>
 import SectionTitle from '@/components/Widget/SectionTitle.vue';
-import BreadCrumb from '../Components/Section/BreadCrumb.vue';
+import BreadCrumb from '@zems/Front/Components/Section/BreadCrumb.vue';
 import { ref } from 'vue';
-import ApplicationCard from '../Components/Widget/ApplicationCard.vue';
-import PaginationButton from '../Components/Widget/PaginationButton.vue';
+import ApplicationCard from '@zems/Front/Components/Widget/ApplicationCard.vue';
+import PaginationButton from '@zems/Front/Components/Widget/PaginationButton.vue';
 const apps = ref([
   {
     "id": 1,

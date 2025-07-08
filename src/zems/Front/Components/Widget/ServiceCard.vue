@@ -1,5 +1,4 @@
 <script setup>
-import BaseImage from '@/components/Elements/BaseImage.vue';
 defineProps({
   service: {
     type: Object

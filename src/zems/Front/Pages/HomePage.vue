@@ -1,19 +1,18 @@
 <script setup>
-import AboutSection from '../Components/Section/AboutSection.vue';
-import FaqSection from '../Components/Section/FaqSection.vue';
-import FeaturedApp from '../Components/Section/FeaturedApp.vue';
-import HeroSection from '../Components/Section/HeroSection.vue';
-import OurApplication from '../Components/Section/OurApplication.vue';
-import PartnarSection from '../Components/Section/PartnarSection.vue';
-import PricingSection from '../Components/Section/PricingSection.vue';
-import ServicesSection from '../Components/Section/ServicesSection.vue';
-import StatisticsSection from '../Components/Section/StatisticsSection.vue';
-import TestimonialSection from '../Components/Section/TestimonialSection.vue';
+import AboutSection from '@zems/Front/Components/Section/AboutSection.vue';
+import FaqSection from '@zems/Front/Components/Section/FaqSection.vue';
+import FeaturedApp from '@zems/Front/Components/Section/FeaturedApp.vue';
+import HeroSection from '@zems/Front/Components/Section/HeroSection.vue';
+import OurApplication from '@zems/Front/Components/Section/OurApplication.vue';
+import PartnarSection from '@zems/Front/Components/Section/PartnarSection.vue';
+import PricingSection from '@zems/Front/Components/Section/PricingSection.vue';
+import ServicesSection from '@zems/Front/Components/Section/ServicesSection.vue';
+import StatisticsSection from '@zems/Front/Components/Section/StatisticsSection.vue';
+import TestimonialSection from '@zems/Front/Components/Section/TestimonialSection.vue';
 </script>
 
 <template>
   <HeroSection />
-  <TestimonialSection/>
   <AboutSection />
   <StatisticsSection />
   <FeaturedApp />
@@ -22,4 +21,5 @@ import TestimonialSection from '../Components/Section/TestimonialSection.vue';
   <PricingSection />
   <FaqSection/>
   <PartnarSection/>
+  <TestimonialSection/>
 </template>

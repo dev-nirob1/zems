@@ -1,5 +1,4 @@
 <script setup>
-import SelectDropdown from '@/components/Elements/SelectDropdown.vue';
 import SectionTitle from '@/components/Widget/SectionTitle.vue';
 
 </script>

@@ -1,7 +1,7 @@
 <script setup>
-import BreadCrumb from '../Components/Section/BreadCrumb.vue';
-import ContactForm from '../Components/Section/ContactForm.vue';
-import ContactInfor from '../Components/Section/ContactInfor.vue';
+import BreadCrumb from '@zems/Front/Components/Section/BreadCrumb.vue';
+import ContactForm from '@zems/Front/Components/Section/ContactForm.vue';
+import ContactInfor from '@zems/Front/Components/Section/ContactInfor.vue';
 
 </script>
 

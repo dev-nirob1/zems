@@ -2,7 +2,7 @@
 import SectionTitle from '@/components/Widget/SectionTitle.vue';
 import { ref } from 'vue';
 import { RouterLink } from 'vue-router';
-import ApplicationCard from '../Widget/ApplicationCard.vue';
+import ApplicationCard from '@zems/Front/Components/Widget/ApplicationCard.vue';
 
 const apps = ref([
   {

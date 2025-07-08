@@ -1,6 +1,6 @@
 <script setup>
 import { ref } from 'vue';
-import ServiceCard from '../Widget/ServiceCard.vue';
+import ServiceCard from '@zems/Front/Components/Widget/ServiceCard.vue';
 import SectionTitle from '@/components/Widget/SectionTitle.vue';
 const services = ref([
   {

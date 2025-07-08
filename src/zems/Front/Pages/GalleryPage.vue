@@ -1,6 +1,6 @@
 <script setup>
 import { ref } from 'vue'
-import BreadCrumb from '../Components/Section/BreadCrumb.vue';
+import BreadCrumb from '@zems/Front/Components/Section/BreadCrumb.vue';
 import SectionTitle from '@/components/Widget/SectionTitle.vue';
 import PopUP from '@/components/Widget/PopUP.vue';
 const images = ref([

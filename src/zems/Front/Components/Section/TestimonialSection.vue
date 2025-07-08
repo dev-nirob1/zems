@@ -2,9 +2,8 @@
 import { onMounted, ref } from 'vue';
 import BaseButton from '@/components/Elements/BaseButton.vue';
 import SectionTitle from '@/components/Widget/SectionTitle.vue';
-import TestimonialCard from '../Widget/TestimonialCard.vue'
+import TestimonialCard from '@zems/Front/Components/Widget/TestimonialCard.vue'
 import { zemsSlider_basic } from '@/plugins/zems_slider/zems_slider';
-// import { owlCarousel } from '@/plugins/slider';
 
 
 const reviews = ref([
@@ -83,15 +82,6 @@ onMounted(() => {
   padding: .5rem;
   white-space: nowrap;
 }
-
-/* .swiper-testimonials {
-  padding: 1rem 0;
-  overflow: auto;
-}
-
-.swiper-testimonials::-webkit-scrollbar {
-  display: none;
-} */
 
 @media (min-width: 768px) {
   .testimonials .btn {

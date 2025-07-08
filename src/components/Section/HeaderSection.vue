@@ -1,7 +1,5 @@
 <script setup>
 import { RouterLink } from 'vue-router';
-import BaseButton from '../Elements/BaseButton.vue';
-import ListItem from '../Elements/ListItem.vue';
 import { onMounted, ref } from 'vue';
 
 const isMenuOpen = ref(false)

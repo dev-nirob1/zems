@@ -1,6 +1,6 @@
 <script setup>
 import SectionTitle from '@/components/Widget/SectionTitle.vue';
-import MemberCard from '../Widget/MemberCard.vue';
+import MemberCard from '@zems/Front/Components/Widget/MemberCard.vue';
 import { ref } from 'vue';
 
 const members = ref([

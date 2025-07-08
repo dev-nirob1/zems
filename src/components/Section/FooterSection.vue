@@ -1,11 +1,5 @@
 <script setup>
 import { RouterLink } from 'vue-router';
-import BaseImage from '../Elements/BaseImage.vue';
-import SubTitle from '../Elements/SubTitle.vue';
-import ListItem from '../Elements/ListItem.vue';
-import BaseButton from '../Elements/BaseButton.vue';
-import InputField from '../Elements/InputField.vue';
-import BaseParagraph from '../Elements/BaseParagraph.vue';
 
 </script>
 

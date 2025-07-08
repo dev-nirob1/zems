@@ -13,9 +13,6 @@ import { RouterLink } from 'vue-router';
         </BaseParagraph>
         <RouterLink to="/contact-us" class="btn">CONTACT US</RouterLink>
       </div>
-      <div class="box-1"></div>
-      <div class="box-2"></div>
-      <div class="box-3"></div>
     </div>
   </section>
 </template>
@@ -37,21 +34,17 @@ import { RouterLink } from 'vue-router';
   z-index: 5;
 }
 
-.btn {
+.cta .btn {
   margin-top: .75rem;
   background-color: var(--white-color);
   color: var(--primary-color);
   padding: 1rem 2rem;
-  font-size: 1rem;
   font-weight: 600;
   border: none;
 }
-
-.btn:hover {
-  background-color: var(--primary-color);
+.cta .btn:hover {
   color: var(--white-color);
 }
-
 @media (min-width: 768px) {
   .cta {
     padding: 7rem 3rem 2rem 3rem;

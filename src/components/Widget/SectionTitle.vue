@@ -1,7 +1,4 @@
 <script setup>
-import BaseTitle from '../Elements/BaseTitle.vue';
-import SubTitle from '../Elements/SubTitle.vue';
-
 defineProps({
   title: String,
   subTitle: String
