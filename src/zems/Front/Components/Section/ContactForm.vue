@@ -9,7 +9,7 @@ import SectionTitle from '@/components/Widget/SectionTitle.vue';
     <div class="container">
      <SectionTitle class="text-center mb-2" title="We're here to help" sub-title="Say Hello" />
       <form>
-        <div class="medium-2 align-center gap-1">
+        <div class="medium-2 align-center gap-2">
           <div>
             <label for="name"></label>
             <InputField id="name" type="text" placeholder="Enter Your Name" />
@@ -32,7 +32,7 @@ import SectionTitle from '@/components/Widget/SectionTitle.vue';
             </SelectDropdown>
           </div>
         </div>
-        <div class="my-1">
+        <div class="my-2">
           <label for="message"></label>
           <BaseTextArea rows="6" id="message" placeholder="Enter Message..."></BaseTextArea>
         </div>
@@ -51,6 +51,7 @@ input,
 select,
 textarea {
   padding: 1.25rem;
+  margin: 0;
   border: none;
   background-color: var(--white-color);
   box-shadow: var(--box-shadow);
@@ -70,6 +71,7 @@ select::placeholder {
 .form .btn {
   padding: 1.25rem 2rem;
   color: var(--white-color);
+  margin: 0;
 }
 
 </style>
