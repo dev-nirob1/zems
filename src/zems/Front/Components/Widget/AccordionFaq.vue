@@ -16,7 +16,7 @@ defineProps({
   <div class="accordion">
     <div @click="toggleAccordion(accordionData.id)" class="accordion-title">
       {{ accordionData.question }}
-      <i class="fa-solid fa-plus"></i>
+      <i :class="currentOpenItem == accordionData.id ? 'fa-solid fa-minus' : 'fa-solid fa-plus'"></i>
     </div>
     <div class="accordion-body" :class="{ 'active': currentOpenItem == accordionData.id }">
       {{ accordionData.answer }}

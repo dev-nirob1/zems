@@ -54,7 +54,6 @@ defineProps({
   align-items: center;
 }
 .exclusive-badge {
-  border: 1px solid;
   padding: 1rem 2rem;
   position: relative;
   margin-right: -2.05rem;
@@ -78,9 +77,7 @@ defineProps({
   font-weight: bold;
 }
 .feature-list {
-  list-style: none;
   padding-left: 0;
-  margin: 0;
 }
 .feature-list li {
   position: relative;

@@ -40,7 +40,6 @@ const toggleAccordion = (id) => {
     currentOpenItem.value = id;
   }
 };
-
 </script>
 
 <template>
@@ -75,5 +74,10 @@ const toggleAccordion = (id) => {
   height: 100%;
   width: 100%;
   object-fit: cover;
+}
+@media (min-width: 768px){
+  .faq img {
+  width: auto;
+}
 }
 </style>

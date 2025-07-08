@@ -2,7 +2,7 @@
 import { useRoute } from 'vue-router';
 
 const route = useRoute()
-console.log(route);
+// console.log(route);
 </script>
 
 <template>
@@ -13,6 +13,7 @@ console.log(route);
     </ul>
   </section>
 </template>
+
 <style scoped>
 .breadcrumb {
   padding: 8rem 0 3rem 0;
@@ -22,7 +23,6 @@ console.log(route);
   background: rgb(from var(--primary-color)r g b / 5%);
 }
 .breadcrumb ul {
-  list-style: none;
   font-size: 1rem;
   padding: 0;
 }

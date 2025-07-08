@@ -3,7 +3,7 @@ const zems_animate = () => {
 
   const isInView = document.querySelectorAll('.animate__animated')
 
-  const elementInView = (el, divideBy = 1) => {
+  const elementInView = (el, divideBy = .25) => {
     const elementTop = el.getBoundingClientRect().top
 
     return elementTop <= (window.innerHeight || document.documentElement.clientHeight) / divideBy
