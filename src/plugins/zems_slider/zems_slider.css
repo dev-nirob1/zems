@@ -1,18 +1,18 @@
 .zems_slider {
-  width: calc(100% + 2.25rem); /* Adjust as needed */
+  width: 100%; /* Adjust as needed */
   overflow: hidden;
   position: relative;
   padding: 2rem 0;
 }
 .zems_slider .zems_slider_container {
   display: flex;
+  gap: 1rem;
   width: -moz-max-content;
   width: max-content;
   transition: transform 0.3s ease-in-out;
 }
 .zems_slider .zems_slider_container .zems_slide {
   height: auto;
-  flex-grow: 1;
 }
 
 .zems_slider .zems_slide_pager {
@@ -46,3 +46,4 @@
 .zems_slider .next-btn {
   right: 10px;
 }/*# sourceMappingURL=zems_slider.css.map */
+
