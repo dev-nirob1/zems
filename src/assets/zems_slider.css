@@ -1,5 +1,5 @@
 .zems_slider {
-  width: 100%; /* Adjust as needed */
+  width: 100%;
   overflow: hidden;
   position: relative;
   padding: 2rem 0;
@@ -45,5 +45,5 @@
 }
 .zems_slider .next-btn {
   right: 10px;
-}/*# sourceMappingURL=zems_slider.css.map */
+}
 
