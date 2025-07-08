@@ -31,9 +31,10 @@ const founderData = {
       </div>
       <div class="order-1 large-order-2">
         <SectionTitle class="mb-1" title="Meet Our Inspiring Founder" sub-title="Founder Spotlight" />
+
         <div class="mb-1">
-          <SubTitle>{{founderData.intro.title}}</SubTitle>
-          <BaseParagraph>
+          <SubTitle  data-zems="animate__slideInUp" class="animate__animated">{{founderData.intro.title}}</SubTitle>
+          <BaseParagraph data-zems="animate__slideInUp" class="animate__animated">
             {{founderData.intro.description}}
           </BaseParagraph>
         </div>

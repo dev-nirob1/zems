@@ -10,8 +10,8 @@ defineProps({
 
 <template>
   <div class="section-header">
-    <SubTitle data-zems="animate__slideInUp" class="animate__animated animate__faster">{{ subTitle }}</SubTitle>
-    <BaseTitle data-zems="animate__slideInUp" class="animate__animated animate__fast">{{ title }}</BaseTitle>
+    <SubTitle data-zems="animate__slideInUp" class="animate__animated">{{ subTitle }}</SubTitle>
+    <BaseTitle data-zems="animate__slideInUp" class="animate__animated">{{ title }}</BaseTitle>
   </div>
 </template>
 

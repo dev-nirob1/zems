@@ -59,7 +59,6 @@ const currentFeature = computed(() => {
   return featured.value.find(data => data.id === selectedId.value)
 })
 
-
 </script>
 
 <template>
@@ -70,7 +69,7 @@ const currentFeature = computed(() => {
       <div class="tab-panel">
         <ul>
           <ListItem v-for="(tab, i) in featured" :key="i">
-            <BaseButton :class="{ active: selectedId === tab.id }" @click="currentTab(tab.id)">{{ tab.title }}
+            <BaseButton :class="{ 'btn bg-primary': selectedId === tab.id }" @click="currentTab(tab.id)">{{ tab.title }}
             </BaseButton>
           </ListItem>
         </ul>
@@ -110,20 +109,14 @@ const currentFeature = computed(() => {
 }
 .tab-panel ul {
   padding: 0;
-  list-style: none;
   display: flex;
   flex-wrap: wrap;
   gap: 1rem;
   margin: 3rem 0;
 }
 .tab-panel ul li .btn {
-  font-size: 1rem;
   padding: .75rem 1rem;
   margin: 0;
-}
-.active {
-  background: linear-gradient(to left, var(--primary-light-color), var(--secondary-color));
-  color: var(--white-color);
 }
 .featured .app-image {
   height: 100%;

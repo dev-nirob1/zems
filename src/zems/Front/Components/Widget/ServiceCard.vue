@@ -35,7 +35,7 @@ defineProps({
   right: .5rem;
   height: 150px;
   width: auto;
-  opacity: .05;
+  opacity: .08;
 }
 .service-card .icon {
   width: auto;
@@ -43,6 +43,7 @@ defineProps({
 }
 .service-card .icon img {
   height: 100%;
+  opacity: .85;
   width: auto;
 }
 .service-card p {

@@ -24,14 +24,14 @@ const leadershipData = {
 </script>
 
 <template>
-  <section class="founder-two">
+  <section class="founder">
     <div class="container">
       <div class="large-3 align-center gap-2">
         <div>
           <SectionTitle class="mb-1" title="Our Visionary Leadership" sub-title="Zems Founder" />
           <div>
-            <SubTitle>{{ leadershipData.intro.title }}</SubTitle>
-            <BaseParagraph>
+            <SubTitle data-zems="animate__slideInUp" class="animate__animated">{{ leadershipData.intro.title }}</SubTitle>
+            <BaseParagraph data-zems="animate__slideInUp" class="animate__animated">
               {{ leadershipData.intro.description }}
             </BaseParagraph>
           </div>
@@ -45,8 +45,8 @@ const leadershipData = {
               <i class="icon fa-solid fa-chart-line fa-2x"></i>
             </div>
             <div>
-              <SubTitle>{{ leadershipData.qualities[0].title }}</SubTitle>
-              <BaseParagraph>{{ leadershipData.qualities[0].description }}
+              <SubTitle data-zems="animate__slideInUp" class="animate__animated">{{ leadershipData.qualities[0].title }}</SubTitle>
+              <BaseParagraph data-zems="animate__slideInUp" class="animate__animated">{{ leadershipData.qualities[0].description }}
               </BaseParagraph>
             </div>
           </ListItem>
@@ -55,8 +55,8 @@ const leadershipData = {
               <i class="icon fa-solid fa-lightbulb fa-2x"></i>
             </div>
             <div>
-              <SubTitle>{{ leadershipData.qualities[1].title }}</SubTitle>
-              <BaseParagraph>{{ leadershipData.qualities[1].description }}</BaseParagraph>
+              <SubTitle data-zems="animate__slideInUp" class="animate__animated">{{ leadershipData.qualities[1].title }}</SubTitle>
+              <BaseParagraph data-zems="animate__slideInUp" class="animate__animated">{{ leadershipData.qualities[1].description }}</BaseParagraph>
             </div>
           </ListItem>
           <ListItem class="flex gap-1">
@@ -64,8 +64,8 @@ const leadershipData = {
               <i class="icon fa-solid fa-puzzle-piece fa-2x"></i>
             </div>
             <div>
-              <SubTitle>{{ leadershipData.qualities[1].title }}</SubTitle>
-              <BaseParagraph>{{ leadershipData.qualities[1].description }}</BaseParagraph>
+              <SubTitle data-zems="animate__slideInUp" class="animate__animated">{{ leadershipData.qualities[2].title }}</SubTitle>
+              <BaseParagraph data-zems="animate__slideInUp" class="animate__animated">{{ leadershipData.qualities[1].description }}</BaseParagraph>
             </div>
           </ListItem>
         </ul>
@@ -74,13 +74,12 @@ const leadershipData = {
   </section>
 </template>
 <style scoped>
-/* founder-two  */
-.founder-two {
+/* founder  */
+.founder {
   padding: 3.75rem 0;
   position: relative;
 }
-
-.founder-two .icon {
+.founder .icon {
   background-color: var(--primary-color);
   color: var(--white-color);
   height: 80px;
@@ -89,21 +88,18 @@ const leadershipData = {
   align-items: center;
   justify-content: center;
 }
-
-.founder-two p {
+.founder p {
   margin-top: .75rem;
 }
-
-.founder-two ul {
-  list-style: none;
+.founder ul {
   padding-left: 0;
 }
 
-ul li:not(:last-child) {
+.founder ul li:not(:last-child) {
   margin: 0;
 }
 
-.founder-two::after {
+.founder::after {
   content: '';
   width: 100vw;
   height: 50%;
@@ -115,7 +111,7 @@ ul li:not(:last-child) {
 }
 
 @media (min-width: 992px) {
-  .founder-two::after {
+  .founder::after {
     height: 100%;
     top: 0;
     right: 0;

@@ -11,10 +11,10 @@ defineProps({
     <div class="image">
       <BaseImage :image="memberData.image" />
       <div class="social-links">
-        <RouterLink to="/"><i class="fab fa-linkedin-in"></i></RouterLink>
-        <RouterLink to="/"><i class="fab fa-twitter"></i></RouterLink>
-        <RouterLink to="/"><i class="fab fa-facebook-f"></i></RouterLink>
-        <RouterLink to="/"><i class="fab fa-instagram"></i></RouterLink>
+        <a :href="memberData.social.linkedin" target="_blank"><i class="fab fa-linkedin-in"></i></a>
+        <a :href="memberData.social.twitter" target="_blank"><i class="fab fa-twitter"></i></a>
+        <a :href="memberData.social.facebook" target="_blank"><i class="fab fa-facebook-f"></i></a>
+        <a :href="memberData.social.instagram" target="_blank"><i class="fab fa-instagram"></i></a>
       </div>
     </div>
     <div class="p-1">
@@ -26,6 +26,7 @@ defineProps({
 <style scoped>
 .member-card {
   position: relative;
+  cursor:pointer;
   overflow: hidden;
 }
 

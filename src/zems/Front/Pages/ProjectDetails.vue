@@ -27,11 +27,9 @@ const project = {
   <BreadCrumb />
   <div class="project-details">
     <div class="container">
-      <!-- Image Grid -->
       <div class="image">
         <BaseImage :image="project.image" :alt="`${project.title}`" />
       </div>
-      <!-- Project Header -->
       <div class="project-header">
         <div>
           <SectionTitle :title="project.title" :sub-title="project.type"></SectionTitle>
@@ -40,10 +38,9 @@ const project = {
             <ListItem>{{ project.teamSize }}</ListItem>
           </ul>
         </div>
-
         <div class="flex">
-          <BaseTitle> Price:
-            <span class="price">599$</span>
+          <BaseTitle class="price"> Price:
+            <span >599$</span>
           </BaseTitle>
         </div>
       </div>
@@ -71,7 +68,7 @@ const project = {
           </div>
           <div class="flex gap-1 mt-2">
             <BaseButton><a :href="project.live_link">Live Demo</a></BaseButton>
-            <BaseButton class="bg-secondary text-white">Order Now</BaseButton>
+            <BaseButton class="bg-primary text-white">Order Now</BaseButton>
           </div>
         </div>
       </div>
@@ -83,39 +80,35 @@ const project = {
 .project-details {
   padding: 3.75rem 0;
 }
-
 .project-details .btn {
   padding: .75rem 1.5rem;
   white-space: nowrap;
 }
 .project-details .price {
   font-size: 1.75rem;
+}
+.project-details .price span {
   color: var(--secondary-color);
 }
 .project-details a {
   text-decoration: none;
 }
-
-.image {
+.project-details .image {
   width: 100%;
   max-height: 70vh;
   overflow: hidden;
 }
-
-img {
+.project-details img {
   width: 100%;
   height: 100%;
   object-fit: cover;
 }
-
-ul {
+.project-details ul {
   padding: 0;
-  list-style: none;
   margin: 0;
 }
 
-/* Project Header */
-.project-header {
+.project-details .project-header {
   display: flex;
   flex-wrap: wrap;
   justify-content: space-between;
@@ -124,27 +117,24 @@ ul {
   gap: 2rem;
 }
 
-/* Features List */
-.features-list {
+.project-details .features-list {
   list-style: none;
-  padding-left: 0;
   margin-top: .75rem;
 }
-
-.features-list li {
+.project-details .features-list li {
   position: relative;
   padding-left: 1rem;
   margin-bottom: .25rem;
 }
 
-.features-list li::before {
+.project-details .features-list li::before {
   content: "✓";
   position: absolute;
   left: 0;
   color: var(--primary-color);
 }
 
-.tech {
+.project-details  .tech {
   padding: .25rem .75rem;
   display: inline-block;
   margin: .5rem;
