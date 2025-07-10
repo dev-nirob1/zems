@@ -4,66 +4,62 @@ import { RouterLink } from 'vue-router';
 </script>
 
 <template>
-      <footer class="footer">
-      <div class="container medium-2 large-4 gap-2 pb-2">
-        <!-- Company logo and description -->
-        <div class="medium-span-2">
-          <RouterLink to="/" class="logo">
-            <BaseImage image="https://zems.uk/uploads/brands/logo.png" class="width-full" alt="Company Logo"/>
-          </RouterLink>
- <BaseParagraph>
-    Zems delivers next-generation software solutions, helping startups and enterprises across Ireland and beyond accelerate digital transformation, boost productivity, and scale with confidence.
-  </BaseParagraph>
-
-  <!-- Optional additional line (remove if not needed) -->
-  <BaseParagraph>
-    Trusted by industry leaders for reliability, innovation, and a customer-first approach.
-  </BaseParagraph>
-          <div class="social-links">
-            <RouterLink to="/"><i class="fab fa-linkedin-in"></i></RouterLink>
-            <RouterLink to="/"><i class="fab fa-twitter"></i></RouterLink>
-            <RouterLink to="/"><i class="fab fa-github"></i></RouterLink>
-            <RouterLink to="/"><i class="fab fa-facebook-f"></i></RouterLink>
-          </div>
-        </div>
-        <!-- Company information links -->
-        <div>
-          <SubTitle>Company</SubTitle>
-          <ul class="footer-links">
-            <ListItem>
-              <RouterLink to="/">About Us</RouterLink>
-            </ListItem>
-            <ListItem>
-              <RouterLink to="/">Careers</RouterLink>
-            </ListItem>
-            <ListItem>
-              <RouterLink to="/">Case Studies</RouterLink>
-            </ListItem>
-            <ListItem>
-              <RouterLink to="/">Privacy Policy</RouterLink>
-            </ListItem>
-            <ListItem>
-              <RouterLink to="/">Contact Us</RouterLink>
-            </ListItem>
-          </ul>
-        </div>
-        <!-- Newsletter subscription form -->
-        <div>
-          <h5 class="title">Stay Updated</h5>
-          <BaseParagraph>Subscribe to our newsletter for tech insights and company news</BaseParagraph>
-          <form class="subscribe-form">
-            <InputField type="email" placeholder="Your email address" required />
-            <BaseButton type="submit">
-              <i class="fas fa-paper-plane"></i>
-            </BaseButton>
-          </form>
+  <footer class="footer">
+    <div class="container medium-2 large-4 gap-2 pb-2">
+      <!-- Company logo and description -->
+      <div class="medium-span-2">
+        <RouterLink to="/" class="logo">
+          <BaseImage image="https://zems.uk/uploads/brands/logo.png" class="width-full" alt="Company Logo" />
+        </RouterLink>
+        <BaseParagraph>
+          Zems delivers next-generation software solutions, helping startups and enterprises across Ireland and beyond
+          accelerate digital transformation, boost productivity, and scale with confidence.
+        </BaseParagraph>
+        <div class="social-links">
+          <RouterLink to="/"><i class="fab fa-linkedin-in"></i></RouterLink>
+          <RouterLink to="/"><i class="fab fa-twitter"></i></RouterLink>
+          <RouterLink to="/"><i class="fab fa-github"></i></RouterLink>
+          <RouterLink to="/"><i class="fab fa-facebook-f"></i></RouterLink>
         </div>
       </div>
-      <!-- Footer bottom copyright with Irish location -->
-      <div class="footer-bottom">
-        <p>© 2025 Zems. All rights reserved. Registered in Ireland.</p>
+      <!-- Company information links -->
+      <div>
+        <SubTitle>Company</SubTitle>
+        <ul class="footer-links">
+          <ListItem>
+            <RouterLink to="/">About Us</RouterLink>
+          </ListItem>
+          <ListItem>
+            <RouterLink to="/">Careers</RouterLink>
+          </ListItem>
+          <ListItem>
+            <RouterLink to="/">Case Studies</RouterLink>
+          </ListItem>
+          <ListItem>
+            <RouterLink to="/">Privacy Policy</RouterLink>
+          </ListItem>
+          <ListItem>
+            <RouterLink to="/">Contact Us</RouterLink>
+          </ListItem>
+        </ul>
       </div>
-    </footer>
+      <!-- Newsletter subscription form -->
+      <div>
+        <h5 class="title">Stay Updated</h5>
+        <BaseParagraph>Subscribe to our newsletter for tech insights and company news</BaseParagraph>
+        <form class="subscribe-form">
+          <InputField type="email" placeholder="Your email address" required />
+          <BaseButton type="submit">
+            <i class="fas fa-paper-plane"></i>
+          </BaseButton>
+        </form>
+      </div>
+    </div>
+    <!-- Footer bottom copyright with Irish location -->
+    <div class="footer-bottom">
+      <p>© 2025 Zems. All rights reserved. Registered in Ireland.</p>
+    </div>
+  </footer>
 </template>
 
 <style scoped>
@@ -72,11 +68,13 @@ import { RouterLink } from 'vue-router';
   background-color: var(--primary-color);
   color: var(--white-color);
 }
+
 .footer h5 {
   margin-bottom: 1.5rem;
   position: relative;
   padding-bottom: 0.75rem;
 }
+
 .footer .logo {
   display: flex;
   align-items: center;
@@ -84,14 +82,17 @@ import { RouterLink } from 'vue-router';
   text-decoration: none;
   margin-bottom: 1rem;
 }
+
 .footer .logo img {
   height: 55px;
   width: auto;
 }
+
 .social-links {
   display: flex;
   gap: 1rem;
 }
+
 /* Social links with hover effects */
 .social-links a {
   display: inline-block;
@@ -105,10 +106,12 @@ import { RouterLink } from 'vue-router';
   background-color: var(--secondary-color);
   color: var(--white-color);
 }
+
 .social-links a:hover i {
   transform: scale(1.2);
   transition: all 0.3s ease;
 }
+
 .footer h5::after {
   content: "";
   position: absolute;
@@ -118,6 +121,7 @@ import { RouterLink } from 'vue-router';
   height: 3px;
   background-color: var(--white-color);
 }
+
 .footer ul {
   list-style: none;
   padding: 0;
@@ -126,6 +130,7 @@ import { RouterLink } from 'vue-router';
   flex-direction: column;
   gap: 1rem;
 }
+
 .footer ul a {
   text-decoration: none;
   transition: all 0.3s ease;
@@ -133,6 +138,7 @@ import { RouterLink } from 'vue-router';
   align-items: center;
   gap: 0.5rem;
 }
+
 .footer ul a::before {
   content: "→";
   /* color: var(--primary-light-color); */
@@ -140,13 +146,16 @@ import { RouterLink } from 'vue-router';
   display: none;
   transition: all 0.3s ease;
 }
+
 .footer ul a:hover {
   padding-left: 5px;
 }
+
 .footer ul a:hover::before {
   opacity: 1;
   display: block;
 }
+
 /* Newsletter form */
 .subscribe-form {
   display: flex;
@@ -160,21 +169,24 @@ import { RouterLink } from 'vue-router';
   font-size: 0.95rem;
   background-color: var(--white-color);
 }
+
 .subscribe-form .btn {
   padding: 1rem 2rem;
   background-color: var(--secondary-color);
   color: var(--white-color);
   border: none;
 }
+
 /* Footer copyright bar*/
 .footer-bottom {
   padding: 1rem;
   text-align: center;
   background-color: rgb(from var(--dark-color)r g b / 50%);
 }
-@media (min-width: 992px){
+
+@media (min-width: 992px) {
   .footer {
-  padding-top: 12rem;
-}
+    padding-top: 12rem;
+  }
 }
 </style>

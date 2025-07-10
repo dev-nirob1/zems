@@ -45,6 +45,9 @@ onMounted(() => {
             <RouterLink to="/projects">Projects</RouterLink>
           </ListItem>
           <ListItem>
+            <RouterLink to="/blogs">Blogs</RouterLink>
+          </ListItem>
+          <ListItem>
             <RouterLink to="/gallery">Gallery</RouterLink>
           </ListItem>
           <ListItem>

@@ -5,6 +5,7 @@ import ContactPage from '@zems/Front/Pages/ContactPage.vue'
 import ProjectsPage from '@zems/Front/Pages/ProjectsPage.vue'
 import ProjectDetails from '@zems/Front/Pages/ProjectDetails.vue'
 import GalleryPage from '@zems/Front/Pages/GalleryPage.vue'
+import BlogsPage from './Pages/BlogsPage.vue'
 
 export default [
   {
@@ -30,6 +31,11 @@ export default [
         path: '/projects/:slug',
         name: 'project-details',
         component: ProjectDetails
+      },
+      {
+        path: '/blogs',
+        name: 'blogs',
+        component: BlogsPage
       },
       {
         path: '/gallery',
