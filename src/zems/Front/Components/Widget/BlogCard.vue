@@ -14,8 +14,8 @@ defineProps({
     </div>
     <div class="card-body">
       <div class="flex justify-between">
-        <span><i class="fa-solid fa-calendar-days text-primary"></i> {{blog.date}}</span>
-        <span><i class="fa-solid fa-user text-primary"></i> {{blog.author}}</span>
+        <span><i class="fa-solid fa-calendar-days"></i> {{blog.date}}</span>
+        <span><i class="fas fa-tags"></i> {{blog.category}}</span>
       </div>
       <SubTitle>{{blog.title}}</SubTitle>
       <RouterLink :to="`/blogs/${blog.slug}`">Read More <i class="fa-solid fa-arrow-right"></i></RouterLink>
