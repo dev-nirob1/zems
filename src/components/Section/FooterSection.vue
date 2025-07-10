@@ -7,39 +7,24 @@ import { RouterLink } from 'vue-router';
       <footer class="footer">
       <div class="container medium-2 large-4 gap-2 pb-2">
         <!-- Company logo and description -->
-        <div>
+        <div class="medium-span-2">
           <RouterLink to="/" class="logo">
-            <BaseImage image="https://zems.uk/uploads/brands/logo-2.png" class="width-full" alt="Company Logo"/>
+            <BaseImage image="https://zems.uk/uploads/brands/logo.png" class="width-full" alt="Company Logo"/>
           </RouterLink>
+ <BaseParagraph>
+    Zems delivers next-generation software solutions, helping startups and enterprises across Ireland and beyond accelerate digital transformation, boost productivity, and scale with confidence.
+  </BaseParagraph>
 
-          <BaseParagraph>Innovative software solutions for businesses across Ireland and beyond</BaseParagraph>
+  <!-- Optional additional line (remove if not needed) -->
+  <BaseParagraph>
+    Trusted by industry leaders for reliability, innovation, and a customer-first approach.
+  </BaseParagraph>
           <div class="social-links">
             <RouterLink to="/"><i class="fab fa-linkedin-in"></i></RouterLink>
             <RouterLink to="/"><i class="fab fa-twitter"></i></RouterLink>
             <RouterLink to="/"><i class="fab fa-github"></i></RouterLink>
             <RouterLink to="/"><i class="fab fa-facebook-f"></i></RouterLink>
           </div>
-        </div>
-        <!-- Services links -->
-        <div>
-          <SubTitle>Our Services</SubTitle>
-          <ul class="footer-links">
-            <ListItem>
-              <RouterLink to="/">Software Development</RouterLink>
-            </ListItem>
-            <ListItem>
-              <RouterLink to="/">Web Applications</RouterLink>
-            </ListItem>
-            <ListItem>
-              <RouterLink to="/">Mobile App Development</RouterLink>
-            </ListItem>
-            <ListItem>
-              <RouterLink to="/">Cloud Solutions</RouterLink>
-            </ListItem>
-            <ListItem>
-              <RouterLink to="/">IT Consulting</RouterLink>
-            </ListItem>
-          </ul>
         </div>
         <!-- Company information links -->
         <div>

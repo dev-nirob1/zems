@@ -52,7 +52,7 @@ onMounted(() => {
           </ListItem>
         </ul>
         <div class="phone-num flex align-center">
-          <i class="fa-solid fa-phone"></i>
+          <i class="fa-brands fa-whatsapp"></i>
           <div>
             +353050436340</div>
         </div>
