@@ -80,7 +80,6 @@ import { RouterLink } from 'vue-router';
   align-items: center;
   font-size: 1.5rem;
   text-decoration: none;
-  margin-bottom: 1rem;
 }
 
 .footer .logo img {

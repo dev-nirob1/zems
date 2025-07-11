@@ -13,7 +13,7 @@
           <span><i class="fa-solid fa-calendar-days"></i> 11 July, 2025</span>
           <span><i class="fas fa-user"></i> Mr. Jack</span>
         </div>
-        <BaseTitle>Building Scalable Design Systems That Empower Developer Teams</BaseTitle>
+        <BaseTitle>secure-api-development-practices</BaseTitle>
 
         <div class="description mt-1">
           <SubTitle>Understanding Digital Minimalism</SubTitle>
@@ -73,7 +73,7 @@
 
 <style scoped>
 .blog-details {
-  padding: 3.75rem
+  padding: 3.75rem 0;
 }
 
 .blog-details img {

@@ -4,7 +4,7 @@ import { RouterLink } from 'vue-router';
 </script>
 
 <template>
-  <section class="mt-4">
+  <section class="mt-3">
     <div class="cta container">
       <div class="cta-content">
         <BaseTitle>Need Software Solutions?</BaseTitle>

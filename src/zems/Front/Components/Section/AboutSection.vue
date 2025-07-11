@@ -59,6 +59,7 @@ const aboutData = {
 .about .btn {
   padding: 1rem;
   font-size: 1.15rem;
+  margin-top: 1rem;
 }
 .about ul li {
   position: relative;
