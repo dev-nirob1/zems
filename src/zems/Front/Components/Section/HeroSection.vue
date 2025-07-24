@@ -40,6 +40,7 @@ const heroContent = {
   padding: 3.75rem 0;
   min-height: 100vh;
   background-color: rgb(from var(--primary-color) r g b / 10%);
+  display: flex;
 }
 
 .hero .btn {
